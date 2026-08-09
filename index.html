@@ -193,6 +193,13 @@ body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); 
 .free-level-name { font-size:1.2rem; font-weight:700; }
 .free-level-desc { font-size:0.85rem; opacity:0.8; }
 .free-level-count { font-size:0.8rem; opacity:0.6; margin-top:4px; }
+.free-level-group { margin-bottom:12px; }
+.free-level-group-title { font-size:1rem; font-weight:700; text-align:center; margin-bottom:10px; padding:8px; }
+.free-level-part-btn { background:var(--bg-card); border:2px solid #DDD; border-radius:var(--radius-sm); padding:14px; margin-bottom:8px; cursor:pointer; transition:var(--transition); box-shadow:var(--shadow); display:flex; justify-content:space-between; align-items:center; }
+.free-level-part-btn:hover { transform:translateY(-1px); box-shadow:var(--shadow-lg); }
+.free-level-part-btn:active { transform:scale(0.98); }
+.free-level-part-name { font-size:1rem; font-weight:700; }
+.free-level-part-count { font-size:0.85rem; color:var(--text-light); }
 
 @media (max-width:400px) {
   .flashcard .word { font-size:2rem; }
@@ -1727,24 +1734,59 @@ function showFreeStudyLevelSelect() {
   document.getElementById('studyProgress').textContent = '';
   document.getElementById('studyProgressBar').style.width = '0%';
   let tabsHtml = '';
-  for (let lvl = 1; lvl <= 5; lvl++) {
-    tabsHtml += '<div class="free-level-btn" onclick="startFreeStudyLevel(' + lvl + ')" style="background:' + LEVELS[lvl].color + '"><div class="free-level-icon">📚</div><div class="free-level-name">' + LEVELS[lvl].name + '</div><div class="free-level-desc">' + LEVELS[lvl].desc + '</div><div class="free-level-count">' + LEVEL_COUNTS[String(lvl)] + ' words</div></div>';
+  // Grade levels 1-4: study all words in one go
+  for (let lvl = 1; lvl <= 4; lvl++) {
+    tabsHtml += '<div class="free-level-btn" onclick="startFreeStudyLevel(' + lvl + ')" style="background:' + LEVELS[lvl].color + '"><div class="free-level-icon">📚</div><div class="free-level-name">' + LEVELS[lvl].name + '</div><div class="free-level-desc">' + LEVELS[lvl].desc + '</div><div class="free-level-count">' + LEVEL_COUNTS[String(lvl)] + ' words — all in one go</div></div>';
   }
+  // TOEFL: split into 8 parts
+  const toeflTotal = LEVEL_COUNTS['5'];
+  const partSize = Math.ceil(toeflTotal / 8);
+  tabsHtml += '<div class="free-level-group"><div class="free-level-group-title" style="color:#9B59B6">📖 TOEFL (' + toeflTotal + ' words — split into 8 parts)</div>';
+  for (let part = 1; part <= 8; part++) {
+    const startWord = (part - 1) * partSize;
+    const endWord = Math.min(part * partSize, toeflTotal);
+    const count = endWord - startWord;
+    tabsHtml += '<div class="free-level-part-btn" onclick="startFreeStudyTOEFLPart(' + part + ')" style="border-color:#9B59B6"><div class="free-level-part-name">TOEFL Part ' + part + '</div><div class="free-level-part-count">' + count + ' words</div></div>';
+  }
+  tabsHtml += '<div class="free-level-part-btn" onclick="startFreeStudyTOEFLAll()" style="border-color:#9B59B6;background:#9B59B6;color:white"><div class="free-level-part-name">TOEFL All</div><div class="free-level-part-count">' + toeflTotal + ' words</div></div>';
+  tabsHtml += '</div>';
+  // Mixed all
   tabsHtml += '<div class="free-level-btn" onclick="startFreeStudyAll()" style="background:linear-gradient(135deg,#2C3E50,#34495E)"><div class="free-level-icon">🎲</div><div class="free-level-name">Mixed All Levels</div><div class="free-level-desc">Random from everything</div><div class="free-level-count">' + TOTAL_WORDS + ' words</div></div>';
   content.innerHTML = '<div class="free-level-select"><h2 class="free-level-title">Choose a level to study</h2><p class="free-level-sub">Free study — no SRS tracking, just practice</p>' + tabsHtml + '</div>';
 }
 
 function startFreeStudyLevel(level) {
   const pool = WORDS.filter(function(w) { return w.level === level; });
-  studyQueue = pool.slice().sort(function() { return Math.random() - 0.5; }).slice(0, Math.min(20, pool.length)).map(function(w) { return w.word; });
+  studyQueue = pool.map(function(w) { return w.word; });
   studyIndex = 0;
   studyType = 'free';
   document.getElementById('studyTitle').textContent = '🆓 ' + LEVELS[level].name;
   renderStudyCard();
 }
 
+function startFreeStudyTOEFLPart(part) {
+  const toeflWords = WORDS.filter(function(w) { return w.level === 5; });
+  const partSize = Math.ceil(toeflWords.length / 8);
+  const startIdx = (part - 1) * partSize;
+  const endIdx = Math.min(part * partSize, toeflWords.length);
+  studyQueue = toeflWords.slice(startIdx, endIdx).map(function(w) { return w.word; });
+  studyIndex = 0;
+  studyType = 'free';
+  document.getElementById('studyTitle').textContent = '🆓 TOEFL Part ' + part;
+  renderStudyCard();
+}
+
+function startFreeStudyTOEFLAll() {
+  const toeflWords = WORDS.filter(function(w) { return w.level === 5; });
+  studyQueue = toeflWords.map(function(w) { return w.word; });
+  studyIndex = 0;
+  studyType = 'free';
+  document.getElementById('studyTitle').textContent = '🆓 TOEFL All';
+  renderStudyCard();
+}
+
 function startFreeStudyAll() {
-  studyQueue = WORDS.slice().sort(function() { return Math.random() - 0.5; }).slice(0, 20).map(function(w) { return w.word; });
+  studyQueue = WORDS.slice().map(function(w) { return w.word; });
   studyIndex = 0;
   studyType = 'free';
   document.getElementById('studyTitle').textContent = '🆓 Mixed All';
