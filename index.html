@@ -187,6 +187,17 @@ body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); 
 .bookmark-btn { background:none; border:none; font-size:1.4rem; cursor:pointer; padding:4px 8px; transition:var(--transition); opacity:0.6; }
 .bookmark-btn:hover { opacity:1; }
 .bookmark-btn.active { opacity:1; }
+
+/* Free Study nav */
+.nav-buttons { display:flex; gap:10px; width:100%; max-width:420px; }
+.nav-btn { flex:1; border:none; border-radius:var(--radius-sm); padding:14px 8px; font-size:0.95rem; font-weight:600; cursor:pointer; transition:var(--transition); display:flex; flex-direction:column; align-items:center; gap:2px; color:white; }
+.nav-btn:active { transform:scale(0.95); }
+.nav-btn .nav-key { font-size:0.65rem; opacity:0.7; }
+.nav-prev { background:var(--text-light); }
+.nav-flip { background:var(--green); }
+.nav-next { background:var(--blue); }
+.nav-hints { width:100%; max-width:420px; text-align:center; margin-top:10px; font-size:0.75rem; color:var(--text-muted); line-height:1.6; }
+.nav-hints kbd { background:#EEE; border-radius:4px; padding:2px 6px; font-family:monospace; font-size:0.7rem; }
 .bookmark-btn-inline { background:none; border:none; font-size:1.1rem; cursor:pointer; padding:2px 6px; transition:var(--transition); opacity:0.5; }
 .bookmark-btn-inline:hover { opacity:1; }
 .bookmark-btn-inline.active { opacity:1; }
@@ -2821,19 +2832,41 @@ function renderStudyCard() {
   const content = document.getElementById('studyContent');
   const bmIcon = isBookmarked(word) ? '🔖' : '🏷️';
   const bmClass = isBookmarked(word) ? 'bookmark-btn active' : 'bookmark-btn';
-  content.innerHTML = '<div class="flashcard-container"><div class="bookmark-row"><button class="' + bmClass + '" data-bm-word="' + word + '" onclick="event.stopPropagation();toggleBookmark(\'' + word + '\')">' + bmIcon + '</button></div><div class="flashcard" id="flashcard" onclick="flipCard()"><div class="flashcard-face"><div class="word">' + wd.word + '</div><div class="pos">' + wd.pos + '</div><div class="tap-hint">Tap to reveal</div></div><div class="flashcard-back flashcard-face"><div class="word">' + wd.word + '</div><div class="pos">' + wd.pos + '</div><div class="def">' + wd.def + '</div><div class="sentence">' + wd.sentence + '</div></div></div></div><div class="rating-buttons" id="ratingButtons" style="display:none"><button class="rate-btn rate-again" onclick="rateCard(1)">Again<span class="time-hint">1m</span></button><button class="rate-btn rate-hard" onclick="rateCard(2)">Hard<span class="time-hint">10m</span></button><button class="rate-btn rate-good" onclick="rateCard(3)">Good<span class="time-hint">1d</span></button><button class="rate-btn rate-easy" onclick="rateCard(4)">Easy<span class="time-hint">4d+</span></button></div>';
+  if (studyType === 'free') {
+    content.innerHTML = '<div class="flashcard-container"><div class="bookmark-row"><button class="' + bmClass + '" data-bm-word="' + word + '" onclick="event.stopPropagation();toggleBookmark(\'' + word + '\')">' + bmIcon + '</button></div><div class="flashcard" id="flashcard" onclick="flipCard()"><div class="flashcard-face"><div class="word">' + wd.word + '</div><div class="pos">' + wd.pos + '</div><div class="tap-hint">Tap or press Enter to reveal</div></div><div class="flashcard-back flashcard-face"><div class="word">' + wd.word + '</div><div class="pos">' + wd.pos + '</div><div class="def">' + wd.def + '</div><div class="sentence">' + wd.sentence + '</div></div></div></div><div class="nav-buttons"><button class="nav-btn nav-prev" onclick="prevCard()">◀️<span class="nav-key">←</span></button><button class="nav-btn nav-flip" onclick="flipCard()">🔄 Flip<span class="nav-key">Enter</span></button><button class="nav-btn nav-next" onclick="nextCard()">Next ▶️<span class="nav-key">→</span></button></div><div class="nav-hints"><kbd>Enter</kbd> flip · <kbd>←</kbd> prev · <kbd>→</kbd> next · <kbd>B</kbd> bookmark</div>';
+  } else {
+    content.innerHTML = '<div class="flashcard-container"><div class="bookmark-row"><button class="' + bmClass + '" data-bm-word="' + word + '" onclick="event.stopPropagation();toggleBookmark(\'' + word + '\')">' + bmIcon + '</button></div><div class="flashcard" id="flashcard" onclick="flipCard()"><div class="flashcard-face"><div class="word">' + wd.word + '</div><div class="pos">' + wd.pos + '</div><div class="tap-hint">Tap to reveal</div></div><div class="flashcard-back flashcard-face"><div class="word">' + wd.word + '</div><div class="pos">' + wd.pos + '</div><div class="def">' + wd.def + '</div><div class="sentence">' + wd.sentence + '</div></div></div></div><div class="rating-buttons" id="ratingButtons" style="display:none"><button class="rate-btn rate-again" onclick="rateCard(1)">Again<span class="time-hint">1m</span></button><button class="rate-btn rate-hard" onclick="rateCard(2)">Hard<span class="time-hint">10m</span></button><button class="rate-btn rate-good" onclick="rateCard(3)">Good<span class="time-hint">1d</span></button><button class="rate-btn rate-easy" onclick="rateCard(4)">Easy<span class="time-hint">4d+</span></button></div>';
+  }
 }
 
 function flipCard() {
   document.getElementById('flashcard').classList.toggle('flipped');
-  document.getElementById('ratingButtons').style.display = 'flex';
+  if (studyType !== 'free') { document.getElementById('ratingButtons').style.display = 'flex'; }
 }
 
-function rateCard(rating) {
-  const word = studyQueue[studyIndex];
-  if (studyType !== 'free') { rateWord(word, rating); }
+function nextCard() {
   studyIndex++;
+  if (studyIndex >= studyQueue.length) { showCompletion(); return; }
   renderStudyCard();
+}
+
+function prevCard() {
+  if (studyIndex > 0) studyIndex--;
+  renderStudyCard();
+}
+
+function toggleCurrentBookmark() {
+  toggleBookmark(studyQueue[studyIndex]);
+}
+
+function handleStudyKeydown(e) {
+  if (!document.getElementById('studyView').classList.contains('active')) return;
+  if (studyType !== 'free') return;
+  if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+  if (e.key === 'Enter') { e.preventDefault(); flipCard(); }
+  else if (e.key === 'ArrowRight') { e.preventDefault(); nextCard(); }
+  else if (e.key === 'ArrowLeft') { e.preventDefault(); prevCard(); }
+  else if (e.key === 'b' || e.key === 'B') { e.preventDefault(); toggleCurrentBookmark(); }
 }
 
 function showCompletion() {
@@ -2960,6 +2993,7 @@ function showToast(msg) {
   setTimeout(function() { t.classList.remove('show'); }, 2000);
 }
 
+document.addEventListener('keydown', handleStudyKeydown);
 renderStudentSelect();
 </script>
 </body>
