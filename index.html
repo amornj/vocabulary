@@ -182,6 +182,18 @@ body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); 
 .browse-item .def { font-size:0.9rem; color:var(--text-light); margin-top:4px; }
 .browse-item .sentence { font-size:0.85rem; color:var(--text-muted); margin-top:6px; font-style:italic; }
 
+/* Free Study Level Select */
+.free-level-select { max-width:480px; margin:0 auto; padding:20px; }
+.free-level-title { font-size:1.4rem; font-weight:800; text-align:center; margin-bottom:8px; }
+.free-level-sub { font-size:0.9rem; color:var(--text-light); text-align:center; margin-bottom:24px; }
+.free-level-btn { background:var(--bg-card); border:none; border-radius:var(--radius); padding:20px; margin-bottom:12px; cursor:pointer; transition:var(--transition); box-shadow:var(--shadow); display:flex; flex-direction:column; align-items:center; gap:4px; color:white; }
+.free-level-btn:hover { transform:translateY(-2px); box-shadow:var(--shadow-lg); }
+.free-level-btn:active { transform:scale(0.98); }
+.free-level-icon { font-size:1.8rem; }
+.free-level-name { font-size:1.2rem; font-weight:700; }
+.free-level-desc { font-size:0.85rem; opacity:0.8; }
+.free-level-count { font-size:0.8rem; opacity:0.6; margin-top:4px; }
+
 @media (max-width:400px) {
   .flashcard .word { font-size:2rem; }
   .quiz-prompt .text { font-size:1.4rem; }
@@ -1705,11 +1717,37 @@ function startLearnNew() {
 }
 
 function startFreeStudy() {
+  showFreeStudyLevelSelect();
+}
+
+function showFreeStudyLevelSelect() {
+  const content = document.getElementById('studyContent');
+  document.getElementById('studyView').classList.add('active');
+  document.getElementById('studyTitle').textContent = '🆓 Free Study';
+  document.getElementById('studyProgress').textContent = '';
+  document.getElementById('studyProgressBar').style.width = '0%';
+  let tabsHtml = '';
+  for (let lvl = 1; lvl <= 5; lvl++) {
+    tabsHtml += '<div class="free-level-btn" onclick="startFreeStudyLevel(' + lvl + ')" style="background:' + LEVELS[lvl].color + '"><div class="free-level-icon">📚</div><div class="free-level-name">' + LEVELS[lvl].name + '</div><div class="free-level-desc">' + LEVELS[lvl].desc + '</div><div class="free-level-count">' + LEVEL_COUNTS[String(lvl)] + ' words</div></div>';
+  }
+  tabsHtml += '<div class="free-level-btn" onclick="startFreeStudyAll()" style="background:linear-gradient(135deg,#2C3E50,#34495E)"><div class="free-level-icon">🎲</div><div class="free-level-name">Mixed All Levels</div><div class="free-level-desc">Random from everything</div><div class="free-level-count">' + TOTAL_WORDS + ' words</div></div>';
+  content.innerHTML = '<div class="free-level-select"><h2 class="free-level-title">Choose a level to study</h2><p class="free-level-sub">Free study — no SRS tracking, just practice</p>' + tabsHtml + '</div>';
+}
+
+function startFreeStudyLevel(level) {
+  const pool = WORDS.filter(function(w) { return w.level === level; });
+  studyQueue = pool.slice().sort(function() { return Math.random() - 0.5; }).slice(0, Math.min(20, pool.length)).map(function(w) { return w.word; });
+  studyIndex = 0;
+  studyType = 'free';
+  document.getElementById('studyTitle').textContent = '🆓 ' + LEVELS[level].name;
+  renderStudyCard();
+}
+
+function startFreeStudyAll() {
   studyQueue = WORDS.slice().sort(function() { return Math.random() - 0.5; }).slice(0, 20).map(function(w) { return w.word; });
   studyIndex = 0;
   studyType = 'free';
-  document.getElementById('studyView').classList.add('active');
-  document.getElementById('studyTitle').textContent = '🆓 Free Study';
+  document.getElementById('studyTitle').textContent = '🆓 Mixed All';
   renderStudyCard();
 }
 
