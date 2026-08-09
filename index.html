@@ -223,7 +223,7 @@ body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); 
 
 <div class="student-select" id="studentSelect">
   <h1>📚 English Vocabulary</h1>
-  <p class="subtitle">SRS Vocabulary Builder · Grades 9–12 + TOEFL</p>
+  <p class="subtitle">SRS Vocabulary Builder · Grades 9–12 + TOEFL/IELTS + GRE</p>
   <div class="student-buttons" id="studentButtons"></div>
 </div>
 
@@ -339,11 +339,11 @@ const LEVELS = {
   2: {name:"Grade 10", desc:"Intermediate", color:"#2ECC71"},
   3: {name:"Grade 11", desc:"Advanced", color:"#F39C12"},
   4: {name:"Grade 12", desc:"College Ready", color:"#E74C3C"},
-  5: {name:"TOEFL", desc:"Academic", color:"#9B59B6"},
+  5: {name:"TOEFL/IELTS", desc:"Academic", color:"#9B59B6"},
   6: {name:"GRE", desc:"Graduate Exam", color:"#16A085"}
 };
-const TOTAL_WORDS = 1932;
-const LEVEL_COUNTS = {"1": 101, "2": 100, "3": 98, "4": 115, "5": 814, "6": 704};
+const TOTAL_WORDS = 2100;
+const LEVEL_COUNTS = {"1": 101, "2": 100, "3": 98, "4": 115, "5": 982, "6": 704};
 
 const WORDS = [
   {level:1,word:"abstract",pos:"adj.",def:"existing as an idea but not as a physical thing",sentence:"The concept of justice is abstract, but its effects are very real."},
@@ -2277,7 +2277,175 @@ const WORDS = [
   {level:6,word:"vortex",pos:"noun",def:"a spinning mass",sentence:"The tornado's vortex drew everything into its center."},
   {level:6,word:"warranted",pos:"adj.",def:"justified",sentence:"The concern about the chemical is fully warranted by the data."},
   {level:6,word:"welter",pos:"noun",def:"a confused mixture",sentence:"The data presented a welter of conflicting numbers."},
-  {level:6,word:"whimsical",pos:"adj.",def:"playfully unpredictable",sentence:"The artist's whimsical paintings featured flying cats and talking trees."}
+  {level:6,word:"whimsical",pos:"adj.",def:"playfully unpredictable",sentence:"The artist's whimsical paintings featured flying cats and talking trees."},
+  {level:5,word:"affordability",pos:"noun",def:"the degree to which something is affordable",sentence:"The affordability of housing has become a major concern in large cities."},
+  {level:5,word:"ageing",pos:"noun",def:"the process of growing older",sentence:"The ageing population puts pressure on healthcare systems worldwide."},
+  {level:5,word:"antisocial",pos:"adj.",def:"harmful to the community",sentence:"Spraying graffiti on public walls is an antisocial behavior."},
+  {level:5,word:"apprenticeship",pos:"noun",def:"training while working for an employer",sentence:"He completed a three-year apprenticeship to become a certified electrician."},
+  {level:5,word:"austerity",pos:"noun",def:"strict economic measures",sentence:"The government imposed austerity measures to reduce the national debt."},
+  {level:5,word:"biodiversity",pos:"noun",def:"the variety of life in an ecosystem",sentence:"Protecting biodiversity is essential for the health of the planet."},
+  {level:5,word:"bureaucratic",pos:"adj.",def:"relating to excessive official rules",sentence:"Obtaining a permit required navigating bureaucratic red tape for weeks."},
+  {level:5,word:"childcare",pos:"noun",def:"the care of children",sentence:"Affordable childcare is critical for working parents."},
+  {level:5,word:"commercialization",pos:"noun",def:"the process of making something profit-oriented",sentence:"The commercialization of Christmas has overshadowed its religious meaning."},
+  {level:5,word:"commuter",pos:"noun",def:"one who travels to work daily",sentence:"Commuters packed the train during the morning rush hour."},
+  {level:5,word:"congestion",pos:"noun",def:"overcrowding causing delays",sentence:"Traffic congestion costs the city billions in lost productivity each year."},
+  {level:5,word:"conservationist",pos:"noun",def:"one who advocates for protecting nature",sentence:"The conservationist fought to preserve the wetlands from development."},
+  {level:5,word:"consumerism",pos:"noun",def:"the culture of buying goods",sentence:"Excessive consumerism is driving environmental degradation."},
+  {level:5,word:"overcrowding",pos:"noun",def:"having too many people in one space",sentence:"Overcrowding in prisons has reached crisis levels."},
+  {level:5,word:"deregulation",pos:"noun",def:"the removal of government controls",sentence:"Deregulation of the airline industry led to lower ticket prices."},
+  {level:5,word:"disposable",pos:"adj.",def:"intended to be thrown away after use",sentence:"Disposable plastics are a major source of environmental pollution."},
+  {level:5,word:"disparity",pos:"noun",def:"a great difference",sentence:"The income disparity between rich and poor continues to widen."},
+  {level:5,word:"gentrification",pos:"noun",def:"renovation of areas for wealthier residents",sentence:"Gentrification pushed long-time residents out of their neighborhood."},
+  {level:5,word:"globalization",pos:"noun",def:"the process of worldwide integration",sentence:"Globalization has connected economies but also widened inequality."},
+  {level:5,word:"homelessness",pos:"noun",def:"the state of having no home",sentence:"The city launched a new initiative to combat homelessness."},
+  {level:5,word:"household",pos:"noun",def:"a group living together",sentence:"The average household spends more on housing than on food."},
+  {level:5,word:"inequality",pos:"noun",def:"lack of fairness",sentence:"Economic inequality remains a pressing issue in many societies."},
+  {level:5,word:"livelihood",pos:"noun",def:"means of financial support",sentence:"Fishing is the main livelihood for families in the coastal village."},
+  {level:5,word:"municipality",pos:"noun",def:"a local government area",sentence:"The municipality provides garbage collection and water services."},
+  {level:5,word:"neighbourhood",pos:"noun",def:"a local community area",sentence:"The neighbourhood organized a watch program to reduce crime."},
+  {level:5,word:"pedestrianization",pos:"noun",def:"making streets for walkers only",sentence:"Pedestrianization of the city center reduced traffic and boosted shops."},
+  {level:5,word:"privatization",pos:"noun",def:"transferring services to private ownership",sentence:"The privatization of water utilities sparked public protests."},
+  {level:5,word:"socioeconomic",pos:"adj.",def:"relating to social and economic factors",sentence:"Socioeconomic status strongly influences educational outcomes."},
+  {level:5,word:"suburbanization",pos:"noun",def:"growth of areas outside cities",sentence:"Suburbanization led to increased car dependency and urban sprawl."},
+  {level:5,word:"sustainability",pos:"noun",def:"ability to maintain over the long term",sentence:"Sustainability is a core principle of modern urban planning."},
+  {level:5,word:"urbanization",pos:"noun",def:"the growth of cities",sentence:"Rapid urbanization has transformed rural landscapes worldwide."},
+  {level:5,word:"vocational",pos:"adj.",def:"relating to job training",sentence:"Vocational schools prepare students for specific trades."},
+  {level:5,word:"welfare",pos:"noun",def:"financial support from the government",sentence:"Welfare programs help families facing temporary hardship."},
+  {level:5,word:"workforce",pos:"noun",def:"the total number of workers",sentence:"The country faces a shortage of skilled workers in its workforce."},
+  {level:5,word:"underprivileged",pos:"adj.",def:"lacking advantages others have",sentence:"The charity provides scholarships to underprivileged children."},
+  {level:5,word:"unemployment",pos:"noun",def:"the state of not having a job",sentence:"Unemployment rose sharply during the economic recession."},
+  {level:5,word:"upbringing",pos:"noun",def:"the care given during childhood",sentence:"Her strict upbringing shaped her disciplined approach to life."},
+  {level:5,word:"expenditure",pos:"noun",def:"the act of spending money",sentence:"Government expenditure on education has increased this year."},
+  {level:5,word:"remuneration",pos:"noun",def:"payment for work done",sentence:"The remuneration package includes a salary and health benefits."},
+  {level:5,word:"pension",pos:"noun",def:"regular payment after retirement",sentence:"She receives a monthly pension from her former employer."},
+  {level:5,word:"taxation",pos:"noun",def:"the system of collecting taxes",sentence:"Higher taxation on tobacco has reduced smoking rates."},
+  {level:5,word:"taxpayer",pos:"noun",def:"a person who pays taxes",sentence:"Taxpayers deserve transparency in how their money is spent."},
+  {level:5,word:"entrepreneurship",pos:"noun",def:"the activity of starting businesses",sentence:"Entrepreneurship drives innovation and job creation."},
+  {level:5,word:"employability",pos:"noun",def:"the quality of being suitable for hiring",sentence:"Training programs improve the employability of young people."},
+  {level:5,word:"redundancy",pos:"noun",def:"the state of being no longer needed",sentence:"The factory closures resulted in mass redundancies."},
+  {level:5,word:"absenteeism",pos:"noun",def:"habitual absence from work",sentence:"Absenteeism costs companies millions in lost productivity each year."},
+  {level:5,word:"productivity",pos:"noun",def:"the rate of output per worker",sentence:"Investing in technology can boost productivity in manufacturing."},
+  {level:5,word:"outsourcing",pos:"noun",def:"contracting work to outside companies",sentence:"Outsourcing call centers to other countries is a common corporate strategy."},
+  {level:5,word:"deprivation",pos:"noun",def:"the state of lacking basic needs",sentence:"Children living in deprivation often struggle in school."},
+  {level:5,word:"destitution",pos:"noun",def:"extreme poverty",sentence:"The charity works to relieve destitution in developing nations."},
+  {level:5,word:"impoverished",pos:"adj.",def:"reduced to poverty",sentence:"The impoverished region received international aid after the drought."},
+  {level:5,word:"equitable",pos:"adj.",def:"fair and impartial",sentence:"We need an equitable distribution of resources across all regions."},
+  {level:5,word:"egalitarian",pos:"adj.",def:"believing in equality for all",sentence:"The country has an egalitarian approach to healthcare access."},
+  {level:5,word:"marginalized",pos:"adj.",def:"pushed to the edge of society",sentence:"Marginalized communities often lack access to quality education."},
+  {level:5,word:"disadvantaged",pos:"adj.",def:"in an unfavorable position",sentence:"Special programs support disadvantaged students in schools."},
+  {level:5,word:"multiculturalism",pos:"noun",def:"the coexistence of diverse cultures",sentence:"Multiculturalism enriches society but also presents integration challenges."},
+  {level:5,word:"integration",pos:"noun",def:"the act of combining into a whole",sentence:"The integration of immigrants into society benefits everyone."},
+  {level:5,word:"assimilation",pos:"noun",def:"absorbing into a culture",sentence:"Forced assimilation of indigenous peoples has been widely condemned."},
+  {level:5,word:"segregation",pos:"noun",def:"the enforced separation of groups",sentence:"Racial segregation in schools was outlawed in 1954."},
+  {level:5,word:"discrimination",pos:"noun",def:"unfair treatment of a group",sentence:"Age discrimination in hiring is illegal in most countries."},
+  {level:5,word:"stigmatization",pos:"noun",def:"treating someone as shameful",sentence:"The stigmatization of mental illness prevents people from seeking help."},
+  {level:5,word:"alienation",pos:"noun",def:"feeling isolated from society",sentence:"Urban alienation is a common theme in modern literature."},
+  {level:5,word:"polarization",pos:"noun",def:"division into opposing groups",sentence:"Political polarization has made compromise increasingly difficult."},
+  {level:5,word:"cohesion",pos:"noun",def:"the act of sticking together",sentence:"Social cohesion is vital for a stable and peaceful society."},
+  {level:5,word:"inclusivity",pos:"noun",def:"the practice of including all groups",sentence:"The school promotes inclusivity for students with disabilities."},
+  {level:5,word:"accessibility",pos:"noun",def:"the quality of being easy to reach",sentence:"Improving accessibility for wheelchair users is a legal requirement."},
+  {level:5,word:"accountability",pos:"noun",def:"being responsible for one's actions",sentence:"Government accountability is essential for a functioning democracy."},
+  {level:5,word:"transparency",pos:"noun",def:"openness about decisions",sentence:"Transparency in government spending builds public trust."},
+  {level:5,word:"bureaucracy",pos:"noun",def:"a system of complex official rules",sentence:"Cutting through bureaucracy to get a permit took three months."},
+  {level:5,word:"legislation",pos:"noun",def:"laws made by a government",sentence:"New legislation requires companies to report carbon emissions."},
+  {level:5,word:"regulatory",pos:"adj.",def:"relating to official rules",sentence:"Regulatory bodies oversee the safety of food and drugs."},
+  {level:5,word:"governance",pos:"noun",def:"the act of governing",sentence:"Good governance requires transparency and citizen participation."},
+  {level:5,word:"jurisdiction",pos:"noun",def:"the power to make legal decisions",sentence:"The court has jurisdiction over cases in this district."},
+  {level:5,word:"referendum",pos:"noun",def:"a direct vote by the public",sentence:"A referendum on independence was held last month."},
+  {level:5,word:"electorate",pos:"noun",def:"all the people who can vote",sentence:"The electorate will decide the country's future direction."},
+  {level:5,word:"constituency",pos:"noun",def:"a district represented by an official",sentence:"The MP visited her constituency to hear residents' concerns."},
+  {level:5,word:"incarceration",pos:"noun",def:"the state of being imprisoned",sentence:"Mass incarceration has devastating effects on families and communities."},
+  {level:5,word:"rehabilitation",pos:"noun",def:"the process of restoring to normal life",sentence:"Rehabilitation programs help former prisoners reintegrate into society."},
+  {level:5,word:"deterrence",pos:"noun",def:"the act of discouraging bad behavior",sentence:"Harsher penalties are intended as a deterrence against repeat offenses."},
+  {level:5,word:"recidivism",pos:"noun",def:"the tendency to reoffend",sentence:"Education programs in prisons have been shown to reduce recidivism."},
+  {level:5,word:"juvenile",pos:"adj.",def:"relating to young people",sentence:"The juvenile court handles cases involving minors."},
+  {level:5,word:"offender",pos:"noun",def:"one who commits a crime",sentence:"First-time offenders may receive lighter sentences."},
+  {level:5,word:"delinquency",pos:"noun",def:"minor criminal behavior by youth",sentence:"Juvenile delinquency is often linked to poverty and family problems."},
+  {level:5,word:"vandalism",pos:"noun",def:"deliberate damage to property",sentence:"Vandalism at the school cost thousands in repairs."},
+  {level:5,word:"surveillance",pos:"noun",def:"close observation of a person",sentence:"CCTV surveillance cameras are now ubiquitous in city centers."},
+  {level:5,word:"censorship",pos:"noun",def:"the suppression of information",sentence:"Internet censorship restricts access to information in some countries."},
+  {level:5,word:"infringement",pos:"noun",def:"a violation of a right",sentence:"The court found the company guilty of copyright infringement."},
+  {level:5,word:"exploitation",pos:"noun",def:"unfair use of someone for profit",sentence:"The exploitation of workers in sweatshops is a global concern."},
+  {level:5,word:"corruption",pos:"noun",def:"dishonest behavior by those in power",sentence:"Corruption undermines trust in public institutions."},
+  {level:5,word:"malpractice",pos:"noun",def:"improper professional conduct",sentence:"The doctor was sued for medical malpractice."},
+  {level:5,word:"deforestation",pos:"noun",def:"the clearing of forests",sentence:"Deforestation in the Amazon threatens countless species."},
+  {level:5,word:"desertification",pos:"noun",def:"the spread of desert conditions",sentence:"Desertification is destroying farmland across parts of Africa."},
+  {level:5,word:"degradation",pos:"noun",def:"the process of deteriorating",sentence:"Environmental degradation affects the quality of air and water."},
+  {level:5,word:"depletion",pos:"noun",def:"the reduction of something",sentence:"The depletion of the ozone layer has slowed since the ban on CFCs."},
+  {level:5,word:"contamination",pos:"noun",def:"the presence of harmful substances",sentence:"Soil contamination from industrial waste is a serious concern."},
+  {level:5,word:"emissions",pos:"noun",def:"gases released into the atmosphere",sentence:"Carbon emissions from factories contribute to global warming."},
+  {level:5,word:"biodegradable",pos:"adj.",def:"able to decompose naturally",sentence:"Biodegradable packaging reduces the burden on landfills."},
+  {level:5,word:"renewable",pos:"adj.",def:"able to be naturally replenished",sentence:"Renewable energy sources include wind and solar power."},
+  {level:5,word:"sustainable",pos:"adj.",def:"able to continue without harm",sentence:"Sustainable farming practices protect soil for future generations."},
+  {level:5,word:"conservation",pos:"noun",def:"the protection of natural resources",sentence:"Water conservation is critical during drought periods."},
+  {level:5,word:"preservation",pos:"noun",def:"the act of keeping something intact",sentence:"The preservation of historical buildings maintains cultural heritage."},
+  {level:5,word:"ecosystem",pos:"noun",def:"a community of living organisms",sentence:"A healthy ecosystem depends on a delicate balance of species."},
+  {level:5,word:"extinction",pos:"noun",def:"the end of a species",sentence:"Climate change is driving many species toward extinction."},
+  {level:5,word:"endangered",pos:"adj.",def:"at risk of dying out",sentence:"The giant panda is an endangered species protected by international law."},
+  {level:5,word:"overpopulation",pos:"noun",def:"too many people in an area",sentence:"Overpopulation strains resources and infrastructure in many cities."},
+  {level:5,word:"overconsumption",pos:"noun",def:"using more than is needed",sentence:"Overconsumption of goods drives environmental damage."},
+  {level:5,word:"landfill",pos:"noun",def:"a site for burying waste",sentence:"The landfill is scheduled to reach capacity within ten years."},
+  {level:5,word:"incineration",pos:"noun",def:"burning waste material",sentence:"Incineration reduces waste volume but produces air pollution."},
+  {level:5,word:"recycling",pos:"noun",def:"processing waste for reuse",sentence:"Recycling programs have significantly reduced household waste."},
+  {level:5,word:"sanitation",pos:"noun",def:"systems for clean conditions",sentence:"Poor sanitation in refugee camps can lead to disease outbreaks."},
+  {level:5,word:"sewage",pos:"noun",def:"waste water carried away",sentence:"The city's sewage system was overwhelmed by the heavy rainfall."},
+  {level:5,word:"drought",pos:"noun",def:"a long period without rain",sentence:"The drought destroyed crops and caused food shortages."},
+  {level:5,word:"scarcity",pos:"noun",def:"a shortage of something",sentence:"Water scarcity is becoming a global problem."},
+  {level:5,word:"ecological",pos:"adj.",def:"relating to the environment",sentence:"Ecological balance is essential for the survival of all species."},
+  {level:5,word:"irreversible",pos:"adj.",def:"cannot be undone",sentence:"The damage to the coral reef may be irreversible."},
+  {level:5,word:"extracurricular",pos:"adj.",def:"outside the regular curriculum",sentence:"Extracurricular activities help students develop social skills."},
+  {level:5,word:"literacy",pos:"noun",def:"the ability to read and write",sentence:"Adult literacy programs have improved job prospects for many."},
+  {level:5,word:"numeracy",pos:"noun",def:"the ability to work with numbers",sentence:"Numeracy skills are essential for managing personal finances."},
+  {level:5,word:"pedagogy",pos:"noun",def:"the method of teaching",sentence:"Modern pedagogy emphasizes student-centered learning."},
+  {level:5,word:"tuition",pos:"noun",def:"fee for instruction",sentence:"Tuition fees at universities have risen dramatically."},
+  {level:5,word:"scholarship",pos:"noun",def:"financial aid for study",sentence:"She won a scholarship to study at Oxford University."},
+  {level:5,word:"undergraduate",pos:"noun",def:"a university student before graduation",sentence:"The undergraduate program takes three years to complete."},
+  {level:5,word:"postgraduate",pos:"noun",def:"a student studying after a first degree",sentence:"She is a postgraduate researcher in molecular biology."},
+  {level:5,word:"qualification",pos:"noun",def:"an official record of achievement",sentence:"A teaching qualification is required for this position."},
+  {level:5,word:"assessment",pos:"noun",def:"the evaluation of performance",sentence:"Continuous assessment provides a fuller picture of student progress."},
+  {level:5,word:"attainment",pos:"noun",def:"the level achieved",sentence:"Educational attainment varies significantly across regions."},
+  {level:5,word:"aptitude",pos:"noun",def:"a natural ability",sentence:"The test measures aptitude for problem-solving."},
+  {level:5,word:"illiteracy",pos:"noun",def:"the inability to read",sentence:"Illiteracy remains a problem in some rural communities."},
+  {level:5,word:"truancy",pos:"noun",def:"absenteeism from school",sentence:"Truancy rates have dropped since the new attendance policy was introduced."},
+  {level:5,word:"credential",pos:"noun",def:"a document proving qualifications",sentence:"Teaching credentials must be renewed every five years."},
+  {level:5,word:"plateau",pos:"verb",def:"to reach a stable level",sentence:"Sales plateaued after the initial surge of interest."},
+  {level:5,word:"surge",pos:"verb",def:"to rise suddenly",sentence:"Demand for masks surged during the pandemic."},
+  {level:5,word:"peak",pos:"verb",def:"to reach the highest point",sentence:"Oil production peaked in 2019 and has been declining since."},
+  {level:5,word:"dip",pos:"verb",def:"to drop slightly",sentence:"Temperatures dipped below freezing last night."},
+  {level:5,word:"slump",pos:"verb",def:"to fall heavily",sentence:"Housing prices slumped during the financial crisis."},
+  {level:5,word:"rebound",pos:"verb",def:"to recover from a decline",sentence:"The economy rebounded strongly in the third quarter."},
+  {level:5,word:"stabilize",pos:"verb",def:"to become steady",sentence:"The patient's condition stabilized after the treatment."},
+  {level:5,word:"marginal",pos:"adj.",def:"small and not significant",sentence:"The improvement in test scores was only marginal."},
+  {level:5,word:"moderate",pos:"adj.",def:"not extreme",sentence:"The weather forecast predicts moderate winds this afternoon."},
+  {level:5,word:"substantial",pos:"adj.",def:"large in amount",sentence:"There has been a substantial increase in online learning."},
+  {level:5,word:"dramatic",pos:"adj.",def:"sudden and significant",sentence:"The new policy had a dramatic effect on crime rates."},
+  {level:5,word:"approximately",pos:"adv.",def:"close to but not exactly",sentence:"The population is approximately two million."},
+  {level:5,word:"respectively",pos:"adv.",def:"in the order given",sentence:"Sales in Asia and Europe grew 10% and 15% respectively."},
+  {level:5,word:"percentage",pos:"noun",def:"a portion out of a hundred",sentence:"A high percentage of students passed the exam."},
+  {level:5,word:"remainder",pos:"noun",def:"the part left over",sentence:"The remainder of the budget was allocated to marketing."},
+  {level:5,word:"trajectory",pos:"noun",def:"the path something follows",sentence:"The country's economic trajectory has been upward for a decade."},
+  {level:5,word:"stagnate",pos:"verb",def:"to stop developing",sentence:"The economy has stagnated due to political uncertainty."},
+  {level:5,word:"incremental",pos:"adj.",def:"happening in small steps",sentence:"Incremental improvements add up over time."},
+  {level:5,word:"cumulative",pos:"adj.",def:"increasing by addition",sentence:"The cumulative effect of pollution is devastating."},
+  {level:5,word:"accommodation",pos:"noun",def:"a place to live or stay",sentence:"Finding affordable accommodation is difficult in this city."},
+  {level:5,word:"cosmopolitan",pos:"adj.",def:"having diverse international culture",sentence:"London is a cosmopolitan city with people from every continent."},
+  {level:5,word:"picturesque",pos:"adj.",def:"visually charming",sentence:"The picturesque village attracts many tourists."},
+  {level:5,word:"sedentary",pos:"adj.",def:"involving little movement",sentence:"A sedentary lifestyle can lead to health problems."},
+  {level:5,word:"hectic",pos:"adj.",def:"very busy and fast",sentence:"The hectic pace of city life left her exhausted."},
+  {level:5,word:"hospitable",pos:"adj.",def:"welcoming to guests",sentence:"The locals were hospitable and helpful to visitors."},
+  {level:5,word:"conventional",pos:"adj.",def:"traditional and ordinary",sentence:"She rejected conventional teaching methods for a more creative approach."},
+  {level:5,word:"advantageous",pos:"adj.",def:"providing an advantage",sentence:"Speaking multiple languages is advantageous in the job market."},
+  {level:5,word:"counterproductive",pos:"adj.",def:"having the opposite effect",sentence:"Punishing students can be counterproductive to learning."},
+  {level:5,word:"multifaceted",pos:"adj.",def:"having many aspects",sentence:"The issue of climate change is multifaceted and complex."},
+  {level:5,word:"communal",pos:"adj.",def:"shared by a community",sentence:"The village has a communal garden where everyone grows vegetables."},
+  {level:5,word:"overdevelopment",pos:"noun",def:"excessive building",sentence:"Overdevelopment has destroyed much of the coastline's natural beauty."},
+  {level:5,word:"underemployment",pos:"noun",def:"working below one's skill level",sentence:"Many graduates face underemployment in the current job market."},
+  {level:5,word:"workaholic",pos:"noun",def:"one addicted to work",sentence:"Her workaholic habits damaged her health and relationships."},
+  {level:5,word:"telecommuting",pos:"noun",def:"working from home",sentence:"Telecommuting has become increasingly common since the pandemic."},
+  {level:5,word:"consumerist",pos:"adj.",def:"focused on buying goods",sentence:"The consumerist culture encourages spending beyond one's means."},
+  {level:5,word:"roadworthiness",pos:"noun",def:"fitness of a vehicle for roads",sentence:"Annual inspections ensure the roadworthiness of all vehicles."},
+  {level:5,word:"carpooling",pos:"noun",def:"sharing car trips",sentence:"Carpooling reduces traffic congestion and carbon emissions."},
+  {level:5,word:"greenbelt",pos:"noun",def:"a zone of open land around a city",sentence:"The greenbelt prevents urban sprawl from consuming farmland."}
 ];
 
 const INTERVALS = {10: 1, 20: 10, 30: 1440, 40: 4320, 50: 10080, 60: 43200};
@@ -2471,17 +2639,17 @@ function showFreeStudyLevelSelect() {
   for (let lvl = 1; lvl <= 4; lvl++) {
     tabsHtml += '<div class="free-level-btn" onclick="startFreeStudyLevel(' + lvl + ')" style="background:' + LEVELS[lvl].color + '"><div class="free-level-icon">📚</div><div class="free-level-name">' + LEVELS[lvl].name + '</div><div class="free-level-desc">' + LEVELS[lvl].desc + '</div><div class="free-level-count">' + LEVEL_COUNTS[String(lvl)] + ' words — all in one go</div></div>';
   }
-  // TOEFL: split into 8 parts
+  // TOEFL/IELTS: split into 10 parts
   const toeflTotal = LEVEL_COUNTS['5'];
-  const toeflPartSize = Math.ceil(toeflTotal / 8);
-  tabsHtml += '<div class="free-level-group"><div class="free-level-group-title" style="color:#9B59B6">📖 TOEFL (' + toeflTotal + ' words — split into 8 parts)</div>';
-  for (let part = 1; part <= 8; part++) {
+  const toeflPartSize = Math.ceil(toeflTotal / 10);
+  tabsHtml += '<div class="free-level-group"><div class="free-level-group-title" style="color:#9B59B6">📖 TOEFL/IELTS (' + toeflTotal + ' words — split into 10 parts)</div>';
+  for (let part = 1; part <= 10; part++) {
     const startWord = (part - 1) * toeflPartSize;
     const endWord = Math.min(part * toeflPartSize, toeflTotal);
     const count = endWord - startWord;
-    tabsHtml += '<div class="free-level-part-btn" onclick="startFreeStudyTOEFLPart(' + part + ')" style="border-color:#9B59B6"><div class="free-level-part-name">TOEFL Part ' + part + '</div><div class="free-level-part-count">' + count + ' words</div></div>';
+    tabsHtml += '<div class="free-level-part-btn" onclick="startFreeStudyTOEFLPart(' + part + ')" style="border-color:#9B59B6"><div class="free-level-part-name">TOEFL/IELTS Part ' + part + '</div><div class="free-level-part-count">' + count + ' words</div></div>';
   }
-  tabsHtml += '<div class="free-level-part-btn" onclick="startFreeStudyTOEFLAll()" style="border-color:#9B59B6;background:#9B59B6;color:white"><div class="free-level-part-name">TOEFL All</div><div class="free-level-part-count">' + toeflTotal + ' words</div></div>';
+  tabsHtml += '<div class="free-level-part-btn" onclick="startFreeStudyTOEFLAll()" style="border-color:#9B59B6;background:#9B59B6;color:white"><div class="free-level-part-name">TOEFL/IELTS All</div><div class="free-level-part-count">' + toeflTotal + ' words</div></div>';
   tabsHtml += '</div>';
   // GRE: split into 8 parts
   const greTotal = LEVEL_COUNTS['6'];
@@ -2514,13 +2682,13 @@ function startFreeStudyLevel(level) {
 
 function startFreeStudyTOEFLPart(part) {
   const toeflWords = WORDS.filter(function(w) { return w.level === 5; });
-  const partSize = Math.ceil(toeflWords.length / 8);
+  const partSize = Math.ceil(toeflWords.length / 10);
   const startIdx = (part - 1) * partSize;
   const endIdx = Math.min(part * partSize, toeflWords.length);
   studyQueue = toeflWords.slice(startIdx, endIdx).map(function(w) { return w.word; });
   studyIndex = 0;
   studyType = 'free';
-  document.getElementById('studyTitle').textContent = '🆓 TOEFL Part ' + part;
+  document.getElementById('studyTitle').textContent = '🆓 TOEFL/IELTS Part ' + part;
   renderStudyCard();
 }
 
@@ -2529,7 +2697,7 @@ function startFreeStudyTOEFLAll() {
   studyQueue = toeflWords.map(function(w) { return w.word; });
   studyIndex = 0;
   studyType = 'free';
-  document.getElementById('studyTitle').textContent = '🆓 TOEFL All';
+  document.getElementById('studyTitle').textContent = '🆓 TOEFL/IELTS All';
   renderStudyCard();
 }
 
