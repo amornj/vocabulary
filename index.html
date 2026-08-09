@@ -118,6 +118,15 @@ body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); 
 .rate-good { background:var(--green); }
 .rate-easy { background:var(--blue); }
 
+/* Rate flash animation */
+.flash-overlay { position:fixed; top:0; left:0; right:0; bottom:0; z-index:998; pointer-events:none; opacity:0; }
+.flash-overlay.show { animation:flashFade 0.4s ease forwards; }
+@keyframes flashFade { 0%{opacity:0.25;} 100%{opacity:0;} }
+.flash-red { background:#E74C3C; }
+.flash-orange { background:var(--orange); }
+.flash-green { background:var(--green); }
+.flash-blue { background:var(--blue); }
+
 .quiz-card { width:100%; max-width:500px; background:var(--bg-card); border-radius:var(--radius); box-shadow:var(--shadow-lg); padding:24px; margin-bottom:20px; }
 .quiz-prompt { text-align:center; margin-bottom:24px; }
 .quiz-prompt .label { font-size:0.85rem; color:var(--text-light); margin-bottom:8px; }
@@ -330,6 +339,7 @@ body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); 
     <p id="celebrationMsg">Amazing work!</p>
   </div>
 </div>
+<div class="flash-overlay" id="flashOverlay"></div>
 
 <div class="settings-overlay" id="settingsOverlay">
   <div class="settings-card">
@@ -2619,6 +2629,13 @@ function getWordData(word) {
   return WORDS.find(function(w) { return w.word === word; }) || null;
 }
 
+function flashScreen(color) {
+  var overlay = document.getElementById('flashOverlay');
+  overlay.className = 'flash-overlay flash-' + color;
+  overlay.classList.add('show');
+  setTimeout(function() { overlay.classList.remove('show'); }, 400);
+}
+
 function rateWord(word, rating) {
   const p = currentStudent.progress[word] || {level: 0, ease: 0, due: 0, reps: 0};
   if (rating === 1) {
@@ -2871,6 +2888,15 @@ function flipCard() {
     var srsHints = document.getElementById('srsHints');
     if (srsHints) srsHints.style.display = 'block';
   }
+}
+
+function rateCard(rating) {
+  var colors = {1:'red', 2:'orange', 3:'green', 4:'blue'};
+  flashScreen(colors[rating] || 'blue');
+  var word = studyQueue[studyIndex];
+  if (studyType !== 'free') { rateWord(word, rating); }
+  studyIndex++;
+  renderStudyCard();
 }
 
 function nextCard() {
