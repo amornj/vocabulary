@@ -182,6 +182,17 @@ body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); 
 .browse-item .def { font-size:0.9rem; color:var(--text-light); margin-top:4px; }
 .browse-item .sentence { font-size:0.85rem; color:var(--text-muted); margin-top:6px; font-style:italic; }
 
+/* Bookmark */
+.bookmark-row { width:100%; max-width:420px; display:flex; justify-content:flex-end; margin-bottom:4px; }
+.bookmark-btn { background:none; border:none; font-size:1.4rem; cursor:pointer; padding:4px 8px; transition:var(--transition); opacity:0.6; }
+.bookmark-btn:hover { opacity:1; }
+.bookmark-btn.active { opacity:1; }
+.bookmark-btn-inline { background:none; border:none; font-size:1.1rem; cursor:pointer; padding:2px 6px; transition:var(--transition); opacity:0.5; }
+.bookmark-btn-inline:hover { opacity:1; }
+.bookmark-btn-inline.active { opacity:1; }
+.browse-item-top { display:flex; align-items:center; gap:4px; }
+.browse-item-top .word { flex:1; }
+
 /* Free Study Level Select */
 .free-level-select { max-width:480px; margin:0 auto; padding:20px; }
 .free-level-title { font-size:1.4rem; font-weight:800; text-align:center; margin-bottom:8px; }
@@ -1579,13 +1590,30 @@ function loadStudent(name) {
   const key = 'vocab_' + name;
   const raw = localStorage.getItem(key);
   if (raw) return JSON.parse(raw);
-  return {name: name, xp: 0, streak: 0, lastStudy: null, dailyGoal: 10, reviewLimit: 20, dailyCount: 0, dailyDate: null, progress: {}};
+  return {name: name, xp: 0, streak: 0, lastStudy: null, dailyGoal: 10, reviewLimit: 20, dailyCount: 0, dailyDate: null, progress: {}, bookmarks: []};
 }
 function saveStudent(s) {
   localStorage.setItem('vocab_' + s.name, JSON.stringify(s));
 }
 function today() {
   return new Date().toISOString().split('T')[0];
+}
+
+// Bookmark helpers
+function isBookmarked(word) {
+  return currentStudent && currentStudent.bookmarks && currentStudent.bookmarks.indexOf(word) !== -1;
+}
+function toggleBookmark(word) {
+  if (!currentStudent.bookmarks) currentStudent.bookmarks = [];
+  const idx = currentStudent.bookmarks.indexOf(word);
+  if (idx === -1) { currentStudent.bookmarks.push(word); showToast('🔖 Bookmarked'); }
+  else { currentStudent.bookmarks.splice(idx, 1); showToast('🔖 Removed'); }
+  saveStudent(currentStudent);
+  // Update any bookmark icons on screen
+  document.querySelectorAll('[data-bm-word="' + word + '"]').forEach(function(el) {
+    el.textContent = isBookmarked(word) ? '🔖' : '🏷️';
+    el.classList.toggle('active', isBookmarked(word));
+  });
 }
 
 function renderStudentSelect() {
@@ -1750,6 +1778,9 @@ function showFreeStudyLevelSelect() {
   }
   tabsHtml += '<div class="free-level-part-btn" onclick="startFreeStudyTOEFLAll()" style="border-color:#9B59B6;background:#9B59B6;color:white"><div class="free-level-part-name">TOEFL All</div><div class="free-level-part-count">' + toeflTotal + ' words</div></div>';
   tabsHtml += '</div>';
+  // Bookmarks option
+  const bmCount = (currentStudent.bookmarks || []).length;
+  tabsHtml += '<div class="free-level-btn" onclick="startFreeStudyBookmarks()" style="background:linear-gradient(135deg,#E67E22,#D35400)"><div class="free-level-icon">🔖</div><div class="free-level-name">Bookmarked Words</div><div class="free-level-desc">Study your saved words</div><div class="free-level-count">' + bmCount + ' words</div></div>';
   // Mixed all
   tabsHtml += '<div class="free-level-btn" onclick="startFreeStudyAll()" style="background:linear-gradient(135deg,#2C3E50,#34495E)"><div class="free-level-icon">🎲</div><div class="free-level-name">Mixed All Levels</div><div class="free-level-desc">Random from everything</div><div class="free-level-count">' + TOTAL_WORDS + ' words</div></div>';
   content.innerHTML = '<div class="free-level-select"><h2 class="free-level-title">Choose a level to study</h2><p class="free-level-sub">Free study — no SRS tracking, just practice</p>' + tabsHtml + '</div>';
@@ -1790,6 +1821,16 @@ function startFreeStudyAll() {
   studyIndex = 0;
   studyType = 'free';
   document.getElementById('studyTitle').textContent = '🆓 Mixed All';
+  renderStudyCard();
+}
+
+function startFreeStudyBookmarks() {
+  const bmWords = currentStudent.bookmarks || [];
+  if (bmWords.length === 0) { showToast('No bookmarks yet! Tap 🏷️ on any word to bookmark.'); return; }
+  studyQueue = bmWords.slice();
+  studyIndex = 0;
+  studyType = 'free';
+  document.getElementById('studyTitle').textContent = '🔖 Bookmarked Words';
   renderStudyCard();
 }
 
@@ -1872,7 +1913,9 @@ function renderStudyCard() {
   document.getElementById('studyProgress').textContent = (studyIndex + 1) + '/' + total;
   document.getElementById('studyProgressBar').style.width = (studyIndex / total * 100) + '%';
   const content = document.getElementById('studyContent');
-  content.innerHTML = '<div class="flashcard-container"><div class="flashcard" id="flashcard" onclick="flipCard()"><div class="flashcard-face"><div class="word">' + wd.word + '</div><div class="pos">' + wd.pos + '</div><div class="tap-hint">Tap to reveal</div></div><div class="flashcard-back flashcard-face"><div class="word">' + wd.word + '</div><div class="pos">' + wd.pos + '</div><div class="def">' + wd.def + '</div><div class="sentence">' + wd.sentence + '</div></div></div></div><div class="rating-buttons" id="ratingButtons" style="display:none"><button class="rate-btn rate-again" onclick="rateCard(1)">Again<span class="time-hint">1m</span></button><button class="rate-btn rate-hard" onclick="rateCard(2)">Hard<span class="time-hint">10m</span></button><button class="rate-btn rate-good" onclick="rateCard(3)">Good<span class="time-hint">1d</span></button><button class="rate-btn rate-easy" onclick="rateCard(4)">Easy<span class="time-hint">4d+</span></button></div>';
+  const bmIcon = isBookmarked(word) ? '🔖' : '🏷️';
+  const bmClass = isBookmarked(word) ? 'bookmark-btn active' : 'bookmark-btn';
+  content.innerHTML = '<div class="flashcard-container"><div class="bookmark-row"><button class="' + bmClass + '" data-bm-word="' + word + '" onclick="event.stopPropagation();toggleBookmark(\'' + word + '\')">' + bmIcon + '</button></div><div class="flashcard" id="flashcard" onclick="flipCard()"><div class="flashcard-face"><div class="word">' + wd.word + '</div><div class="pos">' + wd.pos + '</div><div class="tap-hint">Tap to reveal</div></div><div class="flashcard-back flashcard-face"><div class="word">' + wd.word + '</div><div class="pos">' + wd.pos + '</div><div class="def">' + wd.def + '</div><div class="sentence">' + wd.sentence + '</div></div></div></div><div class="rating-buttons" id="ratingButtons" style="display:none"><button class="rate-btn rate-again" onclick="rateCard(1)">Again<span class="time-hint">1m</span></button><button class="rate-btn rate-hard" onclick="rateCard(2)">Hard<span class="time-hint">10m</span></button><button class="rate-btn rate-good" onclick="rateCard(3)">Good<span class="time-hint">1d</span></button><button class="rate-btn rate-easy" onclick="rateCard(4)">Easy<span class="time-hint">4d+</span></button></div>';
 }
 
 function flipCard() {
@@ -1922,9 +1965,22 @@ function closeBrowseMode() {
 function renderBrowseTabs() {
   const container = document.getElementById('browseTabs');
   container.innerHTML = '';
+  // Bookmarks tab first
+  const bmCount = (currentStudent.bookmarks || []).length;
+  const bmTab = document.createElement('div');
+  bmTab.className = 'browse-tab active';
+  bmTab.style.background = '#E67E22';
+  bmTab.style.color = 'white';
+  bmTab.textContent = '🔖 Bookmarks (' + bmCount + ')';
+  bmTab.onclick = function() {
+    document.querySelectorAll('.browse-tab').forEach(function(t) { t.classList.remove('active'); });
+    bmTab.classList.add('active');
+    renderBrowseBookmarks();
+  };
+  container.appendChild(bmTab);
   for (let lvl = 1; lvl <= 5; lvl++) {
     const tab = document.createElement('div');
-    tab.className = 'browse-tab' + (lvl === 1 ? ' active' : '');
+    tab.className = 'browse-tab';
     tab.textContent = LEVELS[lvl].name + ' (' + LEVEL_COUNTS[String(lvl)] + ')';
     tab.onclick = function() {
       document.querySelectorAll('.browse-tab').forEach(function(t) { t.classList.remove('active'); });
@@ -1934,12 +1990,29 @@ function renderBrowseTabs() {
     };
     container.appendChild(tab);
   }
+  // Show bookmarks by default
+  renderBrowseBookmarks();
+}
+function renderBrowseBookmarks() {
+  const container = document.getElementById('browseContent');
+  const bmWords = currentStudent.bookmarks || [];
+  if (bmWords.length === 0) {
+    container.innerHTML = '<div style="text-align:center;padding:40px 20px;color:var(--text-muted);">No bookmarks yet.<br>Tap 🏷️ on any word to bookmark it.</div>';
+    return;
+  }
+  container.innerHTML = bmWords.map(function(word) {
+    const w = getWordData(word);
+    if (!w) return '';
+    const bmIcon = isBookmarked(word) ? '🔖' : '🏷️';
+    return '<div class="browse-item"><div class="browse-item-top"><span class="word">' + w.word + '</span><span class="pos">' + w.pos + '</span><button class="bookmark-btn-inline active" data-bm-word="' + word + '" onclick="toggleBookmark(\'' + word + '\')">' + bmIcon + '</button></div><div class="def">' + w.def + '</div><div class="sentence">' + w.sentence + '</div></div>';
+  }).join('');
 }
 function renderBrowseList(level) {
   const container = document.getElementById('browseContent');
   const words = WORDS.filter(function(w) { return w.level === level; });
   container.innerHTML = words.map(function(w) {
-    return '<div class="browse-item"><span class="word">' + w.word + '</span><span class="pos">' + w.pos + '</span><div class="def">' + w.def + '</div><div class="sentence">' + w.sentence + '</div></div>';
+    const bmIcon = isBookmarked(w.word) ? '🔖' : '🏷️';
+    return '<div class="browse-item"><div class="browse-item-top"><span class="word">' + w.word + '</span><span class="pos">' + w.pos + '</span><button class="bookmark-btn-inline' + (isBookmarked(w.word) ? ' active' : '') + '" data-bm-word="' + w.word + '" onclick="toggleBookmark(\'' + w.word + '\')">' + bmIcon + '</button></div><div class="def">' + w.def + '</div><div class="sentence">' + w.sentence + '</div></div>';
   }).join('');
 }
 
