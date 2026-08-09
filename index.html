@@ -83,6 +83,17 @@ body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); 
 .study-header .back-btn { background:none; border:none; font-size:1.5rem; color:var(--text); cursor:pointer; padding:4px 8px; }
 .study-header .title { font-size:1rem; font-weight:600; }
 .study-header .progress { font-size:0.85rem; color:var(--text-light); }
+.study-header .timer { font-size:0.85rem; color:var(--text-light); display:flex; align-items:center; gap:2px; }
+.adaptive-info { width:100%; max-width:500px; margin-bottom:16px; }
+.adaptive-level-bar { display:flex; align-items:center; gap:6px; padding:10px 14px; background:var(--bg-card); border-radius:var(--radius); box-shadow:var(--shadow); margin-bottom:12px; }
+.adaptive-level-bar .level-dot { width:10px; height:10px; border-radius:50%; background:#DDD; transition:var(--transition); }
+.adaptive-level-bar .level-dot.active { width:14px; height:14px; }
+.adaptive-level-bar .level-label { font-size:0.85rem; font-weight:600; margin-left:auto; }
+.adaptive-stats { display:flex; gap:12px; justify-content:center; margin-bottom:8px; }
+.adaptive-stat { font-size:0.85rem; color:var(--text-light); }
+.adaptive-stat .val { font-weight:700; }
+.adaptive-stat .val.correct { color:var(--green); }
+.adaptive-stat .val.wrong { color:var(--red); }
 .progress-bar { height:3px; background:#EEE; flex-shrink:0; }
 .progress-bar .fill { height:100%; background:var(--blue); transition:width 0.3s ease; width:0%; }
 .study-content { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:20px; overflow-y:auto; }
@@ -281,6 +292,9 @@ body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); 
     <button class="action-btn" onclick="openBrowseMode()">
       <div class="icon">📚</div><div class="label">Browse Words</div><div class="sub">All levels</div>
     </button>
+    <button class="action-btn" onclick="startAdaptive()">
+      <div class="icon">🧠</div><div class="label">Adaptive</div><div class="sub">Smart difficulty</div>
+    </button>
     <button class="action-btn" onclick="startLevelQuiz()">
       <div class="icon">🏆</div><div class="label">Level Test</div><div class="sub">Mixed quiz</div>
     </button>
@@ -303,6 +317,7 @@ body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); 
     <button class="back-btn" onclick="exitStudy()">✕</button>
     <div class="title" id="studyTitle">Review</div>
     <div class="progress" id="studyProgress">0/0</div>
+    <div class="timer" id="studyTimer" style="display:none">⏱️ <span id="timerDisplay">00:00</span></div>
   </div>
   <div class="progress-bar"><div class="fill" id="studyProgressBar"></div></div>
   <div class="study-content" id="studyContent"></div>
@@ -323,6 +338,9 @@ body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); 
     <input type="number" id="dailyGoalInput" min="5" max="50" value="10">
     <label>Daily Review Limit (cards)</label>
     <input type="number" id="reviewLimitInput" min="10" max="200" value="20">
+    <label style="display:flex;align-items:center;gap:8px;cursor:pointer;">
+      <input type="checkbox" id="timerToggle" style="width:auto;" checked> Show timer in Free Study
+    </label>
     <div class="btn-row">
       <button class="btn cancel" onclick="closeSettings()">Cancel</button>
       <button class="btn primary" onclick="saveSettings()">Save</button>
@@ -2469,12 +2487,19 @@ let quizQuestions = [];
 let quizIndex = 0;
 let quizCorrect = 0;
 let browseLevel = 1;
+let timerInterval = null;
+let timerStart = 0;
+let adaptiveLevel = 1;
+let adaptiveStreak = 0;
+let adaptiveWrongStreak = 0;
+let adaptiveCorrect = 0;
+let adaptiveWrong = 0;
 
 function loadStudent(name) {
   const key = 'vocab_' + name;
   const raw = localStorage.getItem(key);
   if (raw) return JSON.parse(raw);
-  return {name: name, xp: 0, streak: 0, lastStudy: null, dailyGoal: 10, reviewLimit: 20, dailyCount: 0, dailyDate: null, progress: {}, bookmarks: []};
+  return {name: name, xp: 0, streak: 0, lastStudy: null, dailyGoal: 10, reviewLimit: 20, dailyCount: 0, dailyDate: null, progress: {}, bookmarks: [], showTimer: true};
 }
 function saveStudent(s) {
   localStorage.setItem('vocab_' + s.name, JSON.stringify(s));
@@ -2686,7 +2711,7 @@ function startFreeStudyLevel(level) {
   const pool = WORDS.filter(function(w) { return w.level === level; });
   studyQueue = pool.map(function(w) { return w.word; });
   studyIndex = 0;
-  studyType = 'free';
+  studyType = 'free'; startTimer();
   document.getElementById('studyTitle').textContent = '🆓 ' + LEVELS[level].name;
   renderStudyCard();
 }
@@ -2698,7 +2723,7 @@ function startFreeStudyTOEFLPart(part) {
   const endIdx = Math.min(part * partSize, toeflWords.length);
   studyQueue = toeflWords.slice(startIdx, endIdx).map(function(w) { return w.word; });
   studyIndex = 0;
-  studyType = 'free';
+  studyType = 'free'; startTimer();
   document.getElementById('studyTitle').textContent = '🆓 TOEFL/IELTS Part ' + part;
   renderStudyCard();
 }
@@ -2707,7 +2732,7 @@ function startFreeStudyTOEFLAll() {
   const toeflWords = WORDS.filter(function(w) { return w.level === 5; });
   studyQueue = toeflWords.map(function(w) { return w.word; });
   studyIndex = 0;
-  studyType = 'free';
+  studyType = 'free'; startTimer();
   document.getElementById('studyTitle').textContent = '🆓 TOEFL/IELTS All';
   renderStudyCard();
 }
@@ -2719,7 +2744,7 @@ function startFreeStudyGREPart(part) {
   const endIdx = Math.min(part * partSize, greWords.length);
   studyQueue = greWords.slice(startIdx, endIdx).map(function(w) { return w.word; });
   studyIndex = 0;
-  studyType = 'free';
+  studyType = 'free'; startTimer();
   document.getElementById('studyTitle').textContent = '🆓 GRE Part ' + part;
   renderStudyCard();
 }
@@ -2728,7 +2753,7 @@ function startFreeStudyGREAll() {
   const greWords = WORDS.filter(function(w) { return w.level === 6; });
   studyQueue = greWords.map(function(w) { return w.word; });
   studyIndex = 0;
-  studyType = 'free';
+  studyType = 'free'; startTimer();
   document.getElementById('studyTitle').textContent = '🆓 GRE All';
   renderStudyCard();
 }
@@ -2736,7 +2761,7 @@ function startFreeStudyGREAll() {
 function startFreeStudyAll() {
   studyQueue = WORDS.slice().map(function(w) { return w.word; });
   studyIndex = 0;
-  studyType = 'free';
+  studyType = 'free'; startTimer();
   document.getElementById('studyTitle').textContent = '🆓 Mixed All';
   renderStudyCard();
 }
@@ -2746,7 +2771,7 @@ function startFreeStudyBookmarks() {
   if (bmWords.length === 0) { showToast('No bookmarks yet! Tap 🏷️ on any word to bookmark.'); return; }
   studyQueue = bmWords.slice();
   studyIndex = 0;
-  studyType = 'free';
+  studyType = 'free'; startTimer();
   document.getElementById('studyTitle').textContent = '🔖 Bookmarked Words';
   renderStudyCard();
 }
@@ -2866,7 +2891,13 @@ function toggleCurrentBookmark() {
 function handleStudyKeydown(e) {
   if (!document.getElementById('studyView').classList.contains('active')) return;
   if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
-  if (studyType === 'free') {
+  if (studyType === 'adaptive') {
+    var opts = document.querySelectorAll('.quiz-option:not(.disabled)');
+    if (e.key === 'a' || e.key === 'A') { e.preventDefault(); if (opts[0]) answerAdaptive(opts[0]); }
+    else if (e.key === 's' || e.key === 'S') { e.preventDefault(); if (opts[1]) answerAdaptive(opts[1]); }
+    else if (e.key === 'd' || e.key === 'D') { e.preventDefault(); if (opts[2]) answerAdaptive(opts[2]); }
+    else if (e.key === 'f' || e.key === 'F') { e.preventDefault(); if (opts[3]) answerAdaptive(opts[3]); }
+  } else if (studyType === 'free') {
     if (e.key === 'Enter') { e.preventDefault(); flipCard(); }
     else if (e.key === 'ArrowRight') { e.preventDefault(); nextCard(); }
     else if (e.key === 'ArrowLeft') { e.preventDefault(); prevCard(); }
@@ -2883,6 +2914,7 @@ function handleStudyKeydown(e) {
 
 function showCompletion() {
   document.getElementById('studyView').classList.remove('active');
+  stopTimer();
   if (studyType === 'quiz') {
     const pct = Math.round(quizCorrect / quizQuestions.length * 100);
     if (pct >= 80) { showCelebration('🏆 Quiz Complete!', 'Score: ' + quizCorrect + '/' + quizQuestions.length + ' (' + pct + '%)'); }
@@ -2902,6 +2934,7 @@ function showCelebration(title, msg) {
 
 function exitStudy() {
   document.getElementById('studyView').classList.remove('active');
+  stopTimer();
   renderDashboard();
 }
 
@@ -2970,6 +3003,7 @@ function renderBrowseList(level) {
 function openSettings() {
   document.getElementById('dailyGoalInput').value = currentStudent.dailyGoal || 10;
   document.getElementById('reviewLimitInput').value = currentStudent.reviewLimit || 20;
+  document.getElementById('timerToggle').checked = currentStudent.showTimer !== false;
   document.getElementById('settingsOverlay').classList.add('active');
 }
 function closeSettings() {
@@ -2978,6 +3012,7 @@ function closeSettings() {
 function saveSettings() {
   currentStudent.dailyGoal = parseInt(document.getElementById('dailyGoalInput').value) || 10;
   currentStudent.reviewLimit = parseInt(document.getElementById('reviewLimitInput').value) || 20;
+  currentStudent.showTimer = document.getElementById('timerToggle').checked;
   saveStudent(currentStudent);
   closeSettings();
   renderDashboard();
@@ -2996,6 +3031,110 @@ function resetProgress() {
   closeConfirm();
   renderDashboard();
   showToast('Progress reset');
+}
+
+function startTimer() {
+  if (!currentStudent.showTimer) return;
+  timerStart = Date.now();
+  document.getElementById('studyTimer').style.display = 'flex';
+  if (timerInterval) clearInterval(timerInterval);
+  timerInterval = setInterval(function() {
+    var elapsed = Math.floor((Date.now() - timerStart) / 1000);
+    var m = Math.floor(elapsed / 60);
+    var s = elapsed % 60;
+    document.getElementById('timerDisplay').textContent = (m < 10 ? '0' : '') + m + ':' + (s < 10 ? '0' : '') + s;
+  }, 1000);
+}
+function stopTimer() {
+  if (timerInterval) { clearInterval(timerInterval); timerInterval = null; }
+  document.getElementById('studyTimer').style.display = 'none';
+}
+
+// Adaptive mode
+function startAdaptive() {
+  adaptiveLevel = 1;
+  adaptiveStreak = 0;
+  adaptiveWrongStreak = 0;
+  adaptiveCorrect = 0;
+  adaptiveWrong = 0;
+  studyType = 'adaptive';
+  document.getElementById('studyView').classList.add('active');
+  document.getElementById('studyTitle').textContent = '🧠 Adaptive';
+  startTimer();
+  renderAdaptiveCard();
+}
+
+function getAdaptiveWords(level, count) {
+  var pool = WORDS.filter(function(w) { return w.level === level; });
+  return pool.sort(function() { return Math.random() - 0.5; }).slice(0, count);
+}
+
+function renderAdaptiveCard() {
+  var challengeLevel = adaptiveLevel;
+  var isChallenge = false;
+  if (adaptiveStreak >= 2 && adaptiveLevel < 6 && Math.random() < 0.3) {
+    challengeLevel = adaptiveLevel + 1;
+    isChallenge = true;
+  }
+  var pool = getAdaptiveWords(challengeLevel, 1);
+  if (pool.length === 0) { challengeLevel = adaptiveLevel; pool = getAdaptiveWords(adaptiveLevel, 1); isChallenge = false; }
+  var wd = pool[0];
+  var options = [wd.def];
+  var distractors = WORDS.filter(function(w) { return w.word !== wd.word; }).sort(function() { return Math.random() - 0.5; }).slice(0, 3);
+  distractors.forEach(function(w) { options.push(w.def); });
+  options.sort(function() { return Math.random() - 0.5; });
+  var total = adaptiveCorrect + adaptiveWrong;
+  document.getElementById('studyProgress').textContent = total + ' answered';
+  document.getElementById('studyProgressBar').style.width = '100%';
+  var levelDots = '';
+  for (var l = 1; l <= 6; l++) {
+    var cls = 'level-dot' + (l === adaptiveLevel ? ' active' : '');
+    var col = l <= adaptiveLevel ? LEVELS[l].color : '';
+    levelDots += '<div class="' + cls + '" style="' + (col ? 'background:' + col : '') + '"></div>';
+  }
+  var optsHtml = '';
+  options.forEach(function(opt) {
+    optsHtml += '<div class="quiz-option" data-correct="' + (opt === wd.def) + '" onclick="answerAdaptive(this)">' + opt + '</div>';
+  });
+  var c = document.getElementById('studyContent');
+  c.innerHTML = '<div class="adaptive-info"><div class="adaptive-level-bar">' + levelDots + '<div class="level-label">' + (isChallenge ? 'Challenge: ' : '') + LEVELS[challengeLevel].name + '</div></div><div class="adaptive-stats"><div class="adaptive-stat">✅ <span class="val correct">' + adaptiveCorrect + '</span></div><div class="adaptive-stat">❌ <span class="val wrong">' + adaptiveWrong + '</span></div><div class="adaptive-stat">🔥 Streak: <span class="val">' + adaptiveStreak + '</span></div></div></div><div class="quiz-card"><div class="quiz-prompt"><div class="label">What is the definition of?</div><div class="text">' + wd.word + '</div><div class="sub">' + (wd.pos || '') + '</div></div><div class="quiz-options">' + optsHtml + '</div><div class="quiz-feedback" id="quizFeedback"></div></div><div class="nav-hints"><kbd>A</kbd> <kbd>S</kbd> <kbd>D</kbd> <kbd>F</kbd> select options</div>';
+}
+
+function answerAdaptive(el) {
+  var correct = el.dataset.correct === 'true';
+  var options = document.querySelectorAll('.quiz-option');
+  options.forEach(function(o) { o.classList.add('disabled'); });
+  var feedback = document.getElementById('quizFeedback');
+  if (correct) {
+    el.classList.add('correct');
+    feedback.className = 'quiz-feedback correct';
+    feedback.textContent = '✅ Correct!';
+    adaptiveCorrect++;
+    adaptiveStreak++;
+    adaptiveWrongStreak = 0;
+    currentStudent.xp = (currentStudent.xp || 0) + 5;
+    saveStudent(currentStudent);
+    if (adaptiveStreak >= 3 && adaptiveLevel < 6) {
+      adaptiveLevel++;
+      adaptiveStreak = 0;
+      setTimeout(function() { showCelebration('⬆️ Level Up!', 'Now studying ' + LEVELS[adaptiveLevel].name); }, 800);
+    }
+  } else {
+    el.classList.add('wrong');
+    feedback.className = 'quiz-feedback wrong';
+    var correctDef = '';
+    options.forEach(function(o) { if (o.dataset.correct === 'true') { o.classList.add('correct'); correctDef = o.textContent; } });
+    feedback.textContent = '❌ ' + correctDef;
+    adaptiveWrong++;
+    adaptiveWrongStreak++;
+    adaptiveStreak = 0;
+    if (adaptiveWrongStreak >= 2 && adaptiveLevel > 1) {
+      adaptiveLevel--;
+      adaptiveWrongStreak = 0;
+      setTimeout(function() { showToast('⬇️ Dropped to ' + LEVELS[adaptiveLevel].name); }, 800);
+    }
+  }
+  setTimeout(renderAdaptiveCard, 1800);
 }
 
 function showToast(msg) {
