@@ -5377,7 +5377,7 @@ function openStoryList() {
       '<div class="sc-info">' +
       '<div class="sc-title">' + s.title + '</div>' +
       '<div class="sc-genre">' + s.genre + '</div>' +
-      '<div class="sc-words">' + (function(){var wc=0;for(var p=0;p<s.paragraphs.length;p++){wc+=s.paragraphs[p].split(/\s+/).length}return '~'+wc+' words · '+s.wordCount+' GRE vocab';})() + '</div>' +
+      '<div class="sc-words">' + (function(){var wc=0;for(var p=0;p<s.paragraphs.length;p++){wc+=s.paragraphs[p].split(/\s+/).length}var bm=0;if(currentStudent&&currentStudent.bookmarks){for(var v=0;v<s.vocab.length;v++){if(currentStudent.bookmarks.indexOf(s.vocab[v].word)!==-1){bm++}}}return '~'+wc+' words · '+s.wordCount+' GRE vocab · 🔖 '+bm+'/'+s.wordCount;})() + '</div>' +
       '</div><div class="sc-arrow">\u203a</div></div>';
   }
   body.innerHTML = h;
@@ -5394,7 +5394,13 @@ function openReader(idx) {
   document.getElementById('readerTitle').textContent = story.title;
   var proseWC = 0;
   for (var p = 0; p < story.paragraphs.length; p++) { proseWC += story.paragraphs[p].split(/\s+/).length; }
-  document.getElementById('readerGenre').textContent = story.genre + ' · ~' + proseWC + ' words · ' + story.wordCount + ' GRE vocab';
+  var bmCount = 0;
+  if (currentStudent && currentStudent.bookmarks) {
+    for (var v = 0; v < story.vocab.length; v++) {
+      if (currentStudent.bookmarks.indexOf(story.vocab[v].word) !== -1) bmCount++;
+    }
+  }
+  document.getElementById('readerGenre').textContent = story.genre + ' · ~' + proseWC + ' words · ' + story.wordCount + ' GRE vocab · 🔖 ' + bmCount + '/' + story.wordCount;
   var body = document.getElementById('readerBody');
   var h = '';
   for (var p = 0; p < story.paragraphs.length; p++) {
@@ -5565,6 +5571,19 @@ function bookmarkFromPopup() {
   document.getElementById('wpBookmark').textContent = isBm ? '🔖' : '🏷️';
   document.getElementById('wpBookmark').classList.toggle('active', isBm);
   showToast(isBm ? '🔖 Bookmarked' : '🔖 Removed');
+  // Update reader header bookmark counter
+  if (currentStoryIdx >= 0) {
+    var st = GRE_STORIES[currentStoryIdx];
+    var bm = 0;
+    if (currentStudent && currentStudent.bookmarks) {
+      for (var v = 0; v < st.vocab.length; v++) {
+        if (currentStudent.bookmarks.indexOf(st.vocab[v].word) !== -1) bm++;
+      }
+    }
+    var wc = 0;
+    for (var p = 0; p < st.paragraphs.length; p++) { wc += st.paragraphs[p].split(/\s+/).length; }
+    document.getElementById('readerGenre').textContent = st.genre + ' · ~' + wc + ' words · ' + st.wordCount + ' GRE vocab · 🔖 ' + bm + '/' + st.wordCount;
+  }
 }
 
 // Event delegation for gre-word clicks
