@@ -718,7 +718,8 @@ body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); 
 <div class="reading-mode" id="readingMode">
   <div class="reading-header">
     <button class="reading-close" onclick="closeReader()">✕</button>
-    <button class="reading-close" id="ttsBtn" onclick="toggleTTS()" style="margin-left:auto">🔊</button>
+    <button class="reading-close" id="pdfBtn" onclick="exportStoryPDF()" style="margin-left:auto" title="Export to PDF">📄</button>
+    <button class="reading-close" id="ttsBtn" onclick="toggleTTS()">🔊</button>
     <div class="reading-title-bar">
       <div class="rt-title" id="readerTitle"></div>
       <div class="rt-genre" id="readerGenre"></div>
@@ -5387,6 +5388,7 @@ function closeStoryList() {
 }
 
 function openReader(idx) {
+  currentStoryIdx = idx;
   var story = GRE_STORIES[idx];
   document.getElementById('readerTitle').textContent = story.title;
   document.getElementById('readerGenre').textContent = story.genre;
@@ -5468,6 +5470,43 @@ function stopTTS() {
   ttsParas.forEach(function(p) { p.classList.remove('tts-active'); });
 }
 
+var currentStoryIdx = -1;
+function exportStoryPDF() {
+  if (currentStoryIdx < 0) return;
+  var story = GRE_STORIES[currentStoryIdx];
+  var w = window.open('', '_blank');
+  var proseHtml = '';
+  for (var p = 0; p < story.paragraphs.length; p++) {
+    var para = story.paragraphs[p].replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    para = para.replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
+    proseHtml += '<p>' + para + '</p>';
+  }
+  var vocabHtml = '';
+  for (var v = 0; v < story.vocab.length; v++) {
+    var vw = story.vocab[v];
+    vocabHtml += '<li><b>' + vw.word + '</b> — ' + vw.def + '</li>';
+  }
+  w.document.write('<!DOCTYPE html><html><head><meta charset="utf-8"><title>' + story.title + '</title><style>' +
+    '@page{margin:2cm}' +
+    'body{font-family:Georgia,serif;font-size:12pt;line-height:1.6;color:#222;max-width:680px;margin:0 auto;padding:20px}' +
+    'h1{font-size:20pt;margin-bottom:2px}' +
+    '.genre{font-size:11pt;color:#666;font-style:italic;margin-bottom:24px}' +
+    'p{margin:0 0 12px;text-align:justify}' +
+    'b{font-weight:bold}' +
+    'h2{font-size:14pt;border-bottom:1px solid #ccc;padding-bottom:4px;margin-top:32px}' +
+    'ul{list-style:none;padding-left:0}' +
+    'li{margin-bottom:6px;font-size:11pt;line-height:1.5}' +
+    'li b{font-size:11pt}' +
+    '</style></head><body>' +
+    '<h1>' + story.title + '</h1>' +
+    '<div class="genre">' + story.genre + ' · ' + story.wordCount + ' GRE vocabulary words</div>' +
+    proseHtml +
+    '<h2>GRE Vocabulary</h2><ul>' + vocabHtml + '</ul>' +
+    '</body></html>');
+  w.document.close();
+  w.focus();
+  setTimeout(function(){ w.print(); }, 300);
+}
 function closeReader() {
   stopTTS();
   document.getElementById('readingMode').classList.remove('active');
