@@ -5490,20 +5490,21 @@ function exportStoryPDF() {
   }
   w.document.write('<!DOCTYPE html><html><head><meta charset="utf-8"><title>' + story.title + '</title><style>' +
     '@page{margin:2cm}' +
-    'body{font-family:Georgia,serif;font-size:12pt;line-height:1.6;color:#222;max-width:680px;margin:0 auto;padding:20px}' +
-    'h1{font-size:20pt;margin-bottom:2px}' +
-    '.genre{font-size:11pt;color:#666;font-style:italic;margin-bottom:24px}' +
-    'p{margin:0 0 12px;text-align:justify}' +
+    'body{font-family:Georgia,serif;font-size:10pt;line-height:1.35;color:#222;max-width:720px;margin:0 auto;padding:16px}' +
+    'h1{font-size:16pt;margin-bottom:2px}' +
+    '.genre{font-size:9pt;color:#666;font-style:italic;margin-bottom:16px}' +
+    'p{margin:0 0 7px;text-align:justify}' +
     'b{font-weight:bold}' +
-    'h2{font-size:14pt;border-bottom:1px solid #ccc;padding-bottom:4px;margin-top:32px}' +
-    'ul{list-style:none;padding-left:0}' +
-    'li{margin-bottom:6px;font-size:11pt;line-height:1.5}' +
-    'li b{font-size:11pt}' +
+    'h2{font-size:12pt;border-bottom:1px solid #ccc;padding-bottom:3px;margin-top:20px}' +
+    '.vocab-grid{column-count:2;column-gap:24px}' +
+    'ul{list-style:none;padding-left:0;margin:0}' +
+    'li{margin-bottom:4px;font-size:9pt;line-height:1.3;break-inside:avoid}' +
+    'li b{font-size:9pt}' +
     '</style></head><body>' +
     '<h1>' + story.title + '</h1>' +
     '<div class="genre">' + story.genre + ' · ' + story.wordCount + ' GRE vocabulary words</div>' +
     proseHtml +
-    '<h2>GRE Vocabulary</h2><ul>' + vocabHtml + '</ul>' +
+    '<h2>GRE Vocabulary</h2><div class="vocab-grid"><ul>' + vocabHtml + '</ul></div>' +
     '</body></html>');
   w.document.close();
   w.focus();
