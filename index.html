@@ -5376,7 +5376,7 @@ function openStoryList() {
       '<div class="sc-info">' +
       '<div class="sc-title">' + s.title + '</div>' +
       '<div class="sc-genre">' + s.genre + '</div>' +
-      '<div class="sc-words">' + s.wordCount + ' GRE words</div>' +
+      '<div class="sc-words">' + (function(){var wc=0;for(var p=0;p<s.paragraphs.length;p++){wc+=s.paragraphs[p].split(/\s+/).length}return '~'+wc+' words · '+s.wordCount+' GRE vocab';})() + '</div>' +
       '</div><div class="sc-arrow">\u203a</div></div>';
   }
   body.innerHTML = h;
@@ -5391,7 +5391,9 @@ function openReader(idx) {
   currentStoryIdx = idx;
   var story = GRE_STORIES[idx];
   document.getElementById('readerTitle').textContent = story.title;
-  document.getElementById('readerGenre').textContent = story.genre;
+  var proseWC = 0;
+  for (var p = 0; p < story.paragraphs.length; p++) { proseWC += story.paragraphs[p].split(/\s+/).length; }
+  document.getElementById('readerGenre').textContent = story.genre + ' · ~' + proseWC + ' words · ' + story.wordCount + ' GRE vocab';
   var body = document.getElementById('readerBody');
   var h = '';
   for (var p = 0; p < story.paragraphs.length; p++) {
