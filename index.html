@@ -488,7 +488,8 @@ body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); 
 .wp-word{font-size:1.3rem;font-weight:700;color:var(--blue);margin-bottom:8px}
 .wp-def{font-size:0.9rem;line-height:1.5;margin-bottom:12px}
 .wp-actions{display:flex;flex-direction:column;gap:8px;position:absolute;top:50%;right:12px;transform:translateY(-50%)}
-.wp-btn{border:0;border-radius:8px;cursor:pointer;font-size:0.9rem;padding:8px 12px;min-width:36px;min-height:36px;display:flex;align-items:center;justify-content:center}
+.wp-btn{border:0;border-radius:8px;cursor:pointer;font-size:1.1rem;padding:6px 8px;min-width:36px;min-height:36px;display:flex;align-items:center;justify-content:center;opacity:0.6}
+.wp-btn.active{opacity:1}
 
 </style>
 </head>
@@ -5537,7 +5538,8 @@ function showWordPopup(word, storyIdx) {
   document.getElementById('wpDef').textContent = entry.def;
   // Check bookmark status using currentStudent
   var isBm = currentStudent && currentStudent.bookmarks && currentStudent.bookmarks.indexOf(word) !== -1;
-  document.getElementById('wpBookmark').textContent = isBm ? '✓' : '🔖';
+  document.getElementById('wpBookmark').textContent = isBm ? '🔖' : '🏷️';
+  document.getElementById('wpBookmark').classList.toggle('active', !!isBm);
   document.getElementById('wordPopupOverlay').classList.add('active');
   document.getElementById('wordPopup').classList.add('active');
 }
@@ -5560,7 +5562,8 @@ function bookmarkFromPopup() {
   }
   saveStudent(currentStudent);
   var isBm = idx === -1;
-  document.getElementById('wpBookmark').textContent = isBm ? '✓' : '🔖';
+  document.getElementById('wpBookmark').textContent = isBm ? '🔖' : '🏷️';
+  document.getElementById('wpBookmark').classList.toggle('active', isBm);
   showToast(isBm ? '🔖 Bookmarked' : '🔖 Removed');
 }
 
