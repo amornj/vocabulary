@@ -491,6 +491,27 @@ body { font-family:'Inter',sans-serif; background:var(--bg); color:var(--text); 
 .wp-btn{border:0;border-radius:8px;cursor:pointer;font-size:1.1rem;padding:6px 8px;min-width:36px;min-height:36px;display:flex;align-items:center;justify-content:center;opacity:0.6}
 .wp-btn.active{opacity:1}
 
+/* GRE Reader Button on flashcards */
+.gre-reader-btn{position:absolute;bottom:8px;right:8px;background:none;border:none;font-size:1.1rem;cursor:pointer;opacity:0.6;padding:4px;border-radius:6px;z-index:5}
+.gre-reader-btn:hover{opacity:1}
+.flashcard-face{position:relative}
+
+/* GRE Reader Slide-in Pane */
+.gre-reader-pane{position:fixed;top:0;right:0;bottom:0;width:50%;max-width:600px;min-width:320px;background:var(--bg);z-index:300;transform:translateX(100%);transition:transform 0.3s ease;overflow-y:auto;box-shadow:-4px 0 20px rgba(0,0,0,0.15)}
+.gre-reader-pane.active{transform:translateX(0)}
+@media(max-width:768px){.gre-reader-pane{width:100%;max-width:none}}
+.gre-reader-close{position:sticky;top:0;right:0;float:right;margin:8px;background:var(--bg-card);border:none;border-radius:50%;width:36px;height:36px;font-size:1.2rem;cursor:pointer;z-index:10}
+.gre-reader-content{padding:16px 20px}
+.gre-reader-title{font-size:1.4rem;font-weight:700;margin-bottom:4px}
+.gre-reader-genre{font-size:0.9rem;color:var(--text-light);margin-bottom:16px;font-style:italic}
+.gre-reader-content p{line-height:1.7;margin-bottom:12px}
+.gre-highlight{background:#FFEB3B;font-weight:bold;padding:1px 3px;border-radius:3px}
+
+/* GRE No Match Toast */
+.gre-no-match{position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:#333;color:white;padding:16px 24px;border-radius:12px;z-index:400;font-size:0.95rem;display:none;text-align:center}
+.gre-no-match.active{display:block}
+.gre-no-match-close{margin-left:12px;color:#aaa;cursor:pointer;background:none;border:none;font-size:1rem}
+
 </style>
 </head>
 <body>
@@ -4398,20 +4419,21 @@ function renderStudyCard() {
   const content = document.getElementById('studyContent');
   const bmIcon = isBookmarked(word) ? '🔖' : '🏷️';
   const bmClass = isBookmarked(word) ? 'bookmark-btn active' : 'bookmark-btn';
+  var greBtn = getGreReaderBtn(word);
   if (studyType === 'free') {
     var customWd = getCustomWordData(word);
     if (customWd) {
-      content.innerHTML = '<div class="flashcard-container"><div class="bookmark-row" style="justify-content:space-between"><button class="' + bmClass + '" data-bm-word="' + word + '" onclick="event.stopPropagation();toggleBookmark(\'' + word + '\')">' + bmIcon + '</button><button class="bookmark-btn" onclick="event.stopPropagation();deleteCurrentCustomWord()" style="opacity:0.6;font-size:1.1rem" title="Delete this custom word">🗑️</button></div><div class="flashcard" id="flashcard" onclick="flipCard()"><div class="flashcard-face"><div class="word" contenteditable="true" ondblclick="event.stopPropagation()" onblur="editCustomWord(\'' + word + '\',\'word\',this.textContent)" onkeydown="if(event.key===\'Enter\'){event.preventDefault();this.blur();}">' + wd.word + '</div><div class="pos">custom</div><div class="tap-hint">Double-click to edit · Tap or press Space to reveal</div></div><div class="flashcard-back flashcard-face"><div class="word" contenteditable="true" ondblclick="event.stopPropagation()" onblur="editCustomWord(\'' + word + '\',\'word\',this.textContent)" onkeydown="if(event.key===\'Enter\'){event.preventDefault();this.blur();}">' + wd.word + '</div><div class="pos">custom</div><div class="def" contenteditable="true" ondblclick="event.stopPropagation()" onblur="editCustomWord(\'' + word + '\',\'def\',this.textContent)" onkeydown="if(event.key===\'Enter\'){event.preventDefault();this.blur();}">' + wd.def + '</div></div></div></div>' + getFlashNavigationHtml() + '<div class="nav-hints"><kbd>←</kbd> prev · <kbd>→</kbd> next · <kbd>B</kbd> bookmark · Double-click to edit · 🗑️ Delete</div>';
+      content.innerHTML = '<div class="flashcard-container"><div class="bookmark-row" style="justify-content:space-between"><button class="' + bmClass + '" data-bm-word="' + word + '" onclick="event.stopPropagation();toggleBookmark(\'' + word + '\')">' + bmIcon + '</button><button class="bookmark-btn" onclick="event.stopPropagation();deleteCurrentCustomWord()" style="opacity:0.6;font-size:1.1rem" title="Delete this custom word">🗑️</button></div><div class="flashcard" id="flashcard" onclick="flipCard()"><div class="flashcard-face"><div class="word" contenteditable="true" ondblclick="event.stopPropagation()" onblur="editCustomWord(\'' + word + '\',\'word\',this.textContent)" onkeydown="if(event.key===\'Enter\'){event.preventDefault();this.blur();}">' + wd.word + '</div><div class="pos">custom</div><div class="tap-hint">Double-click to edit · Tap or press Space to reveal</div>' + greBtn + '</div><div class="flashcard-back flashcard-face"><div class="word" contenteditable="true" ondblclick="event.stopPropagation()" onblur="editCustomWord(\'' + word + '\',\'word\',this.textContent)" onkeydown="if(event.key===\'Enter\'){event.preventDefault();this.blur();}">' + wd.word + '</div><div class="pos">custom</div><div class="def" contenteditable="true" ondblclick="event.stopPropagation()" onblur="editCustomWord(\'' + word + '\',\'def\',this.textContent)" onkeydown="if(event.key===\'Enter\'){event.preventDefault();this.blur();}">' + wd.def + '</div>' + greBtn + '</div></div></div>' + getFlashNavigationHtml() + '<div class="nav-hints"><kbd>←</kbd> prev · <kbd>→</kbd> next · <kbd>B</kbd> bookmark · Double-click to edit · 🗑️ Delete</div>';
     } else {
-      content.innerHTML = '<div class="flashcard-container"><div class="bookmark-row"><button class="' + bmClass + '" data-bm-word="' + word + '" onclick="event.stopPropagation();toggleBookmark(\'' + word + '\')">' + bmIcon + '</button></div><div class="flashcard" id="flashcard" onclick="flipCard()"><div class="flashcard-face"><div class="word">' + wd.word + '</div><div class="pos">' + wd.pos + '</div><div class="tap-hint">Tap or press Space to reveal</div></div><div class="flashcard-back flashcard-face"><div class="word">' + wd.word + '</div><div class="pos">' + wd.pos + '</div><div class="def">' + wd.def + '</div><div class="sentence">' + wd.sentence + '</div></div></div></div>' + getFlashNavigationHtml() + '<div class="nav-hints"><kbd>Space</kbd> flip · <kbd>←</kbd> prev · <kbd>→</kbd> next · <kbd>B</kbd> bookmark</div>';
+      content.innerHTML = '<div class="flashcard-container"><div class="bookmark-row"><button class="' + bmClass + '" data-bm-word="' + word + '" onclick="event.stopPropagation();toggleBookmark(\'' + word + '\')">' + bmIcon + '</button></div><div class="flashcard" id="flashcard" onclick="flipCard()"><div class="flashcard-face"><div class="word">' + wd.word + '</div><div class="pos">' + wd.pos + '</div><div class="tap-hint">Tap or press Space to reveal</div>' + greBtn + '</div><div class="flashcard-back flashcard-face"><div class="word">' + wd.word + '</div><div class="pos">' + wd.pos + '</div><div class="def">' + wd.def + '</div><div class="sentence">' + wd.sentence + '</div>' + greBtn + '</div></div></div>' + getFlashNavigationHtml() + '<div class="nav-hints"><kbd>Space</kbd> flip · <kbd>←</kbd> prev · <kbd>→</kbd> next · <kbd>B</kbd> bookmark</div>';
     }
   } else if (studyType === 'srs') {
     // SRS mode — same as old review/learn but unified
     var isNew = !currentStudent.progress[word];
-    content.innerHTML = '<div class="flashcard-container"><div class="bookmark-row"><button class="' + bmClass + '" data-bm-word="' + word + '" onclick="event.stopPropagation();toggleBookmark(\'' + word + '\')">' + bmIcon + '</button></div><div class="flashcard" id="flashcard" onclick="flipCard()"><div class="flashcard-face"><div class="word">' + wd.word + '</div><div class="pos">' + wd.pos + '</div><div class="tap-hint">Tap or press Space to reveal</div></div><div class="flashcard-back flashcard-face"><div class="word">' + wd.word + '</div><div class="pos">' + wd.pos + '</div><div class="def">' + wd.def + '</div><div class="sentence">' + wd.sentence + '</div></div></div></div><div class="rating-buttons" id="ratingButtons" style="display:none"><button class="rate-btn rate-again" onclick="rateCard(1)">Again<span class="time-hint">1m</span></button><button class="rate-btn rate-hard" onclick="rateCard(2)">Hard<span class="time-hint">10m</span></button><button class="rate-btn rate-good" onclick="rateCard(3)">Good<span class="time-hint">1d</span></button><button class="rate-btn rate-easy" onclick="rateCard(4)">Easy<span class="time-hint">4d+</span></button></div><div class="nav-hints" id="srsHints" style="display:none">' + (isNew ? '✨ New word · ' : '') + '<kbd>Space</kbd> flip · <kbd>A</kbd> again · <kbd>S</kbd> hard · <kbd>D</kbd> good · <kbd>F</kbd> easy · <kbd>B</kbd> bookmark</div>';
+    content.innerHTML = '<div class="flashcard-container"><div class="bookmark-row"><button class="' + bmClass + '" data-bm-word="' + word + '" onclick="event.stopPropagation();toggleBookmark(\'' + word + '\')">' + bmIcon + '</button></div><div class="flashcard" id="flashcard" onclick="flipCard()"><div class="flashcard-face"><div class="word">' + wd.word + '</div><div class="pos">' + wd.pos + '</div><div class="tap-hint">Tap or press Space to reveal</div>' + greBtn + '</div><div class="flashcard-back flashcard-face"><div class="word">' + wd.word + '</div><div class="pos">' + wd.pos + '</div><div class="def">' + wd.def + '</div><div class="sentence">' + wd.sentence + '</div>' + greBtn + '</div></div></div><div class="rating-buttons" id="ratingButtons" style="display:none"><button class="rate-btn rate-again" onclick="rateCard(1)">Again<span class="time-hint">1m</span></button><button class="rate-btn rate-hard" onclick="rateCard(2)">Hard<span class="time-hint">10m</span></button><button class="rate-btn rate-good" onclick="rateCard(3)">Good<span class="time-hint">1d</span></button><button class="rate-btn rate-easy" onclick="rateCard(4)">Easy<span class="time-hint">4d+</span></button></div><div class="nav-hints" id="srsHints" style="display:none">' + (isNew ? '✨ New word · ' : '') + '<kbd>Space</kbd> flip · <kbd>A</kbd> again · <kbd>S</kbd> hard · <kbd>D</kbd> good · <kbd>F</kbd> easy · <kbd>B</kbd> bookmark</div>';
   } else {
     // Old review/learn modes (fallback)
-    content.innerHTML = '<div class="flashcard-container"><div class="bookmark-row"><button class="' + bmClass + '" data-bm-word="' + word + '" onclick="event.stopPropagation();toggleBookmark(\'' + word + '\')">' + bmIcon + '</button></div><div class="flashcard" id="flashcard" onclick="flipCard()"><div class="flashcard-face"><div class="word">' + wd.word + '</div><div class="pos">' + wd.pos + '</div><div class="tap-hint">Tap or press Space to reveal</div></div><div class="flashcard-back flashcard-face"><div class="word">' + wd.word + '</div><div class="pos">' + wd.pos + '</div><div class="def">' + wd.def + '</div><div class="sentence">' + wd.sentence + '</div></div></div></div><div class="rating-buttons" id="ratingButtons" style="display:none"><button class="rate-btn rate-again" onclick="rateCard(1)">Again<span class="time-hint">1m</span></button><button class="rate-btn rate-hard" onclick="rateCard(2)">Hard<span class="time-hint">10m</span></button><button class="rate-btn rate-good" onclick="rateCard(3)">Good<span class="time-hint">1d</span></button><button class="rate-btn rate-easy" onclick="rateCard(4)">Easy<span class="time-hint">4d+</span></button></div><div class="nav-hints" id="srsHints" style="display:none"><kbd>Space</kbd> flip · <kbd>A</kbd> again · <kbd>S</kbd> hard · <kbd>D</kbd> good · <kbd>F</kbd> easy · <kbd>B</kbd> bookmark</div>';
+    content.innerHTML = '<div class="flashcard-container"><div class="bookmark-row"><button class="' + bmClass + '" data-bm-word="' + word + '" onclick="event.stopPropagation();toggleBookmark(\'' + word + '\')">' + bmIcon + '</button></div><div class="flashcard" id="flashcard" onclick="flipCard()"><div class="flashcard-face"><div class="word">' + wd.word + '</div><div class="pos">' + wd.pos + '</div><div class="tap-hint">Tap or press Space to reveal</div>' + greBtn + '</div><div class="flashcard-back flashcard-face"><div class="word">' + wd.word + '</div><div class="pos">' + wd.pos + '</div><div class="def">' + wd.def + '</div><div class="sentence">' + wd.sentence + '</div>' + greBtn + '</div></div></div><div class="rating-buttons" id="ratingButtons" style="display:none"><button class="rate-btn rate-again" onclick="rateCard(1)">Again<span class="time-hint">1m</span></button><button class="rate-btn rate-hard" onclick="rateCard(2)">Hard<span class="time-hint">10m</span></button><button class="rate-btn rate-good" onclick="rateCard(3)">Good<span class="time-hint">1d</span></button><button class="rate-btn rate-easy" onclick="rateCard(4)">Easy<span class="time-hint">4d+</span></button></div><div class="nav-hints" id="srsHints" style="display:none"><kbd>Space</kbd> flip · <kbd>A</kbd> again · <kbd>S</kbd> hard · <kbd>D</kbd> good · <kbd>F</kbd> easy · <kbd>B</kbd> bookmark</div>';
   }
 }
 
@@ -5416,6 +5438,7 @@ function openReader(idx) {
   body.innerHTML = h;
   body.style.display = 'block';
   document.getElementById('readingMode').classList.add('active');
+  recordStudyActivity();
 }
 
 
@@ -5586,6 +5609,70 @@ function bookmarkFromPopup() {
   }
 }
 
+// ============ GRE READER PANE ============
+function isGreDeck() {
+  if (!selectedDeck) return false;
+  if (selectedDeck.subtype === 'gre_part' || selectedDeck.subtype === 'gre_all') return true;
+  var name = getDeckName(selectedDeck);
+  return name && name.indexOf('GRE') !== -1;
+}
+
+function getGreReaderBtn(word) {
+  if (!isGreDeck()) return '';
+  return '<button class="gre-reader-btn" onclick="event.stopPropagation();openGreReaderPane(\'' + word.replace(/'/g, "\\'") + '\')" title="Read in story">📖</button>';
+}
+
+function openGreReaderPane(word) {
+  var pane = document.getElementById('greReaderPane');
+  var content = document.getElementById('greReaderContent');
+  var found = null;
+  var targetWord = word.toLowerCase();
+  for (var i = 0; i < GRE_STORIES.length; i++) {
+    var story = GRE_STORIES[i];
+    for (var j = 0; j < story.vocab.length; j++) {
+      if (story.vocab[j].word.toLowerCase() === targetWord) {
+        found = story;
+        break;
+      }
+    }
+    if (found) break;
+  }
+  if (!found) {
+    showGreNoMatch();
+    return;
+  }
+  var h = '<div class="gre-reader-title">' + found.title + '</div>';
+  h += '<div class="gre-reader-genre">' + found.genre + '</div>';
+  for (var p = 0; p < found.paragraphs.length; p++) {
+    var para = found.paragraphs[p];
+    para = para.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+    para = para.replace(/\*\*(.+?)\*\*/g, function(match, w) {
+      if (w.toLowerCase() === targetWord) {
+        return '<span class="gre-highlight">' + w + '</span>';
+      } else {
+        return '<strong>' + w + '</strong>';
+      }
+    });
+    h += '<p>' + para + '</p>';
+  }
+  content.innerHTML = h;
+  pane.classList.add('active');
+}
+
+function closeGreReaderPane() {
+  document.getElementById('greReaderPane').classList.remove('active');
+}
+
+function showGreNoMatch() {
+  var toast = document.getElementById('greNoMatch');
+  toast.classList.add('active');
+  setTimeout(function() { closeGreNoMatch(); }, 2500);
+}
+
+function closeGreNoMatch() {
+  document.getElementById('greNoMatch').classList.remove('active');
+}
+
 // Event delegation for gre-word clicks
 document.addEventListener('click', function(e) {
   if (e.target.classList && e.target.classList.contains('gre-word')) {
@@ -5597,5 +5684,18 @@ document.addEventListener('click', function(e) {
 });
 
 </script>
+
+<!-- GRE Reader Pane -->
+<div class="gre-reader-pane" id="greReaderPane">
+  <button class="gre-reader-close" onclick="closeGreReaderPane()">✕</button>
+  <div class="gre-reader-content" id="greReaderContent"></div>
+</div>
+
+<!-- GRE No Match Toast -->
+<div class="gre-no-match" id="greNoMatch">
+  No match in reading mode
+  <button class="gre-no-match-close" onclick="closeGreNoMatch()">✕</button>
+</div>
+
 </body>
 </html>
