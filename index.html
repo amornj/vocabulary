@@ -4282,7 +4282,7 @@ function renderDeckSections() {
   var d = getCustomDecks()[0];
   var cd = {type:'custom', id:d.id};
   var cdWords = getDeckWordIndices(cd);
-  var customHtml = '<div class="deck-card custom" role="button" style="cursor:pointer" onclick=\'selectDeck(' + JSON.stringify(cd) + ')\'><div class="deck-icon">📝</div><div class="deck-info"><div class="deck-name">' + d.name + bookmarkBadgeHtml(cdWords) + '</div><div class="deck-meta">' + d.wordIndices.length + ' words</div>' + roundCounterHtml('custom_' + d.id) + '</div><div class="deck-arrow">›</div></div>';
+  var customHtml = '<div class="deck-card custom" role="button" style="cursor:pointer" onclick=\'selectDeck(' + JSON.stringify(cd) + ')\'><div class="deck-icon">📝</div><div class="deck-info"><div class="deck-name">' + d.name + bookmarkBadgeHtml(cdWords) + '</div><div class="deck-meta">' + cdWords.length + ' words</div>' + roundCounterHtml('custom_' + d.id) + '</div><div class="deck-arrow">›</div></div>';
   document.getElementById('customDecks').innerHTML = customHtml;
 }
 
