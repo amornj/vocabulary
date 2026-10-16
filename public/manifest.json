@@ -1,0 +1,17 @@
+{
+  "name": "English Vocabulary - SRS Learning",
+  "short_name": "Vocab",
+  "description": "SRS Vocabulary Builder · Grades 9–12 + TOEFL/IELTS + GRE",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F8F9FA",
+  "theme_color": "#2C3E50",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "1254x1254",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}
