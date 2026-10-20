@@ -18266,5 +18266,1009 @@ export const GRE_STORIES: Story[] = [
       "width": 1536,
       "height": 1024
     }
+  },
+  {
+    "id": 50,
+    "title": "The Floodline",
+    "genre": "YA dystopian survival thriller",
+    "styleInspiration": "James Dashner",
+    "wordCount": 40,
+    "paragraphs": [
+      "The water reached the platform before the evacuation bell rang.",
+      "Mara noticed because her boots were leaking. At seventeen, she could repair flood sensors but could not vote on where the floodwalls went. Beneath Platform Nine, water rose around her ankles.",
+      "Above her, a speaker clicked. “Lower District residents: proceed to your assigned shelter. The Upper Council protects every citizen.”",
+      "Tavi pulled her up through the inspection hatch. He had an evacuation map folded inside his jacket. Ivo stood beside him, gripping the lamp with both hands.",
+      "“Pump failure?” Tavi asked.",
+      "Mara watched a paper cup drift against the current. Water was entering from the city side, where the emergency gates stood. “Someone opened the spillway.”",
+      "Ivo looked at the water. “I told them.”",
+      "Nobody answered. Last spring, he had reported a cracked wall. The inspectors found nothing, and his false alarm cost their maintenance crew a month's wages. Mara had stopped eating lunch beside him after that. It was easier than defending him.",
+      "Tavi unfolded the map. Three blue arrows led toward Mercy Shelter, beneath the transit station. “We follow this. That's the order.”",
+      "His mother cleaned the Council offices. Since his father disappeared, following orders had kept them in their apartment. The **autocratic** Council rewarded silence.",
+      "Mara took the lamp. Its beam found the red line marking the district's flood limit.",
+      "The water was already above it.",
+      "They ran toward the stairs. Beyond the locked street entrance, residents were gathering beneath an **ominous** sky. Rain struck the pavement so hard it bounced. A woman carried a saucepan over her baby's head. The shelter signs glowed blue through the downpour.",
+      "Mara shoved at the entrance gate. It moved an inch, caught on a bent hinge, and stopped. The bars were too close together to squeeze through. Their maintenance key turned uselessly in the lock.",
+      "Behind them, water began pouring down the escalator shaft.",
+      "“Service tunnel,” Mara said. “We can reach the shelter from below.”",
+      "In **inclement** weather, pumps usually cleared this tunnel. Tonight their motors were silent. The teenagers tested each step with a pipe.",
+      "Tavi kept his map dry beneath his jacket. Ivo carried the tool bag. Its weight would **encumber** him if they had to swim, but he refused to leave it.",
+      "They found the first shelter door under a meter of water.",
+      "Mara shone the lamp through its round window. Chairs stood in rows inside. Blankets waited on shelves. The room was empty, and water was bubbling up through its floor drains.",
+      "Tavi checked the number twice. “Mercy Shelter. This is right.”",
+      "Ivo shook his head. “It's below the spillway.”",
+      "“The map says it's safe.”",
+      "Mara climbed a maintenance ladder. From that **precarious** perch she could see the level gauge, its needle jammed against its stop. This was no small **anomaly** in the drainage system. Every low chamber connected to the spillway was filling.",
+      "She asked Tavi to show her the other shelters. He pointed to three squares. Ivo, always **astute** about levels and gradients, recognized their elevations from repair jobs. All were below street level. All would flood before the upper city lost a single dry staircase.",
+      "“They sent everyone down,” she said.",
+      "Tavi held out the paper, as if she could repair its meaning. “Why would they?”",
+      "A terminal beside the shelter door still had battery power. Mara opened its maintenance menu. The evacuation screen vanished, revealing a gate command issued eleven minutes before the first alarm.",
+      "DIVERT SURGE TO LOWER RESIDENTIAL BASIN. PRESERVE UPPER TRANSIT.",
+      "Below it, another instruction: RESCUE ACCESS VIA NORTH RIDGE ONLY. LOWER SHELTER SEARCH SUSPENDED.",
+      "Mara photographed both commands on her wrist unit. She checked the timestamps against the gauge log to **corroborate** what she was seeing. The Council had known which rooms would drown. Its rescue teams had been told to stay above them.",
+      "The **duplicity** made her colder than the water. Somebody had stocked those blankets and painted the arrows the woman with the baby was following.",
+      "“We have to get back to the street,” she said.",
+      "A crash rolled down the tunnel. The escalator shaft had emptied into their route. Water slammed against Mara's waist and knocked the map from Tavi's hand. He lunged after it.",
+      "Ivo caught his collar before the current could take him.",
+      "Tavi stared after the paper, then pushed Ivo away. “You knew this would happen?”",
+      "“I knew the wall was cracked.”",
+      "“You said it was a false alarm.”",
+      "“They made me sign that.”",
+      "The lamp shook in Mara's hand. She remembered Ivo waiting outside the supervisor's office, then returning with his face blank. A **cryptic** note on his report had said VOLUNTARY CORRECTION. She had mistaken **coercion** for a confession.",
+      "“I'm sorry,” she said.",
+      "He looked past her. “You can say it upstairs.”",
+      "Ivo pointed toward a **derelict** signal booth suspended above the tracks. Behind it was a cable duct climbing toward the old ridge station. He had used it during the wall inspection.",
+      "“It reaches the rescue route?” Mara asked.",
+      "“It used to.”",
+      "Tavi looked toward Mercy Shelter. Mara understood his **apprehension**: his mother would have been sent to another room like this. Her own grandmother was on the second floor of a building beside the spillway.",
+      "“We need a broadcast terminal,” she said. “The ridge station has one.”",
+      "Their **surreptitious** escape through the booth meant staying below its windows. Getting there was **arduous**. The current dragged at their knees, then their hips. Mara hooked her belt around a rail while Ivo climbed onto her shoulders. Tavi braced her against the wall. When Ivo reached the booth, he lowered the tool bag's strap and hauled them up one at a time.",
+      "Inside, rainwater drummed on the roof. A faded slogan praised the Council's **hegemony** over the river. Beneath it, someone had scratched a tally of neighborhoods lost to earlier floods.",
+      "Mara had repaired pumps in those neighborhoods. She had called it bad luck that the same families kept losing their homes. Now the **inequity** had a gate number and an official signature.",
+      "The duct entrance lay behind a cabinet. Ivo opened it with a screwdriver, revealing a shaft barely wide enough for their shoulders. They crawled upward in darkness while water tapped at the metal below their feet.",
+      "Halfway up, Tavi stopped.",
+      "“Keep moving,” Mara whispered.",
+      "“There's a grille.”",
+      "Through its slats she saw the ridge platform, clean and brightly lit. Rescue officers stood beside an empty transport. Their commander was speaking into a radio.",
+      "“No lower access. The diversion remains authorized.”",
+      "Mara recognized that **dictatorial** voice from school announcements. Now it was discussing their neighborhood as an inconvenient leak. Her first **audacious** thought was to kick out the grille and force the officers to listen.",
+      "Then she saw their weapons.",
+      "Ivo touched her ankle and pointed farther up the shaft. A **furtive** movement beyond the platform would be enough to bring the officers running. They had to **elude** the patrol until they reached the signal room.",
+      "Tavi did not move. “They have boats.”",
+      "“They also have orders,” Mara said.",
+      "“My mother's down there.”",
+      "His voice was frighteningly **guileless**, stripped of every careful thing he usually said. Mara pressed her wrist unit into his palm and showed him the photographs.",
+      "“Help me make them send the boats.”",
+      "He crawled on.",
+      "The signal room opened onto the shaft's upper landing. A desk lamp illuminated an empty chair. Through the window, floodwater covered the lower streets. Roofs broke the surface like stepping stones. A bus drifted sideways between two apartment blocks.",
+      "Mara could not find her grandmother's building.",
+      "She sat at the broadcast console. Its emergency channel required a Council access card. Ivo searched the desk while Tavi watched the door.",
+      "“Could we **circumvent** it?” Ivo asked.",
+      "Mara lifted the console panel. Two circuits ran beneath it: one for announcements, one for track warnings. The second could interrupt every station speaker without approval. It was designed to stop trains before collisions.",
+      "Getting a voice onto that circuit demanded **ingenuity** and something small enough to bridge two contacts. Ivo offered his screwdriver. Too thick. Tavi took the pin from his maintenance badge and bent it straight.",
+      "Footsteps sounded outside.",
+      "Tavi dragged a cabinet across the door. The barrier would only **impede** the officers for a minute. Mara connected the contacts. Sparks bit her thumb.",
+      "The console woke.",
+      "“Lower District,” she began, and heard her own voice come back from the flooded city. “Leave the blue shelters. Climb above street level. Help anyone who cannot climb.”",
+      "She read the gate order aloud, including the time and the commander's authorization code. An accusation alone would be easy to dismiss; she needed a **cogent** reason for people to abandon the instructions they had been given.",
+      "Someone struck the door. “Open immediately!”",
+      "Mara sent the photographs to every station terminal. That might **vindicate** Ivo someday. Right now she wanted the people holding boat keys to see them.",
+      "The console warned of an **impending** remote shutdown.",
+      "Tavi tore out its network cable. The warning froze. The local microphone stayed alive.",
+      "Ivo looked at him.",
+      "“I fix these too,” Tavi said.",
+      "The officers hit the door again. The cabinet slid. Mara kept speaking, repeating the safe elevations from memory. Her mouth was dry. Cold and fear had begun to **enervate** her; she had to grip the desk to keep her legs still.",
+      "Outside the window, a white light blinked from a rooftop. Another answered farther away. People were using their lamps.",
+      "The door opened six inches. The commander pushed his arm through.",
+      "“You are interfering with rescue operations.”",
+      "“Then start some,” Tavi said.",
+      "The commander threatened prison. He threatened their families' housing. Ivo remained **obdurate**, his back pressed against the cabinet, while Mara described the submerged shelter doors over the microphone.",
+      "“You cannot save the basin,” the commander said.",
+      "Mara felt **ambivalent** about holding the door. Other officers might help, but letting the commander in would put him within reach of the microphone switch. She kept pushing.",
+      "“We can save people,” she said.",
+      "An officer outside spoke. “Sir. My sister lives on Canal Street.”",
+      "“Return to your post.”",
+      "“She's hearing this.”",
+      "For three seconds, nobody pushed.",
+      "Then the officer's radio crackled. Other stations were asking about the photographs. A boat crew wanted clearance to enter the basin. The commander ordered them to wait.",
+      "The crew replied that they were already moving.",
+      "Mara looked at Tavi. He was crying without making a sound.",
+      "The cabinet lurched. All three stumbled backward as the commander forced his way in. He grabbed Mara's wrist. Ivo caught the microphone before it hit the floor.",
+      "“He's stopping the warning,” Ivo told the city.",
+      "The officer from Canal Street stepped between Mara and the commander. His hands trembled. “Let her finish.”",
+      "Through the window came the sound of engines.",
+      "Rescue lights turned into the lower streets. The climb to every occupied roof would be **daunting**, and the boats were too few. Mara called out the blinking lamps one by one while Tavi wrote their locations on the window with a grease pencil.",
+      "Ivo passed the microphone back to her. His **perseverance** had brought them here; Mara wished it had not taken a flood for her to trust him.",
+      "By dawn, the water had stopped rising.",
+      "They found Tavi's mother in the third boat. She had climbed a drainpipe with a neighbor holding her feet. Mara's grandmother arrived later, wrapped in a curtain. She had lost her slippers, her apartment, and the tin where she kept their family photographs.",
+      "Others waited **bereft** on the ridge, watching each boat unload and finding nobody they knew.",
+      "Mara sat beside a boy who would not give his name. She tried to be **empathetic**, but every comforting sentence felt too large. She offered half her blanket. He moved closer.",
+      "Below them, the river continued to **inundate** the rooms where they had slept. The Council's tower remained dry. Its chairman would deny being a **despot** before the week was over. There would be missing records and officers who denied hearing orders.",
+      "Tavi watched the commander being led toward the upper station. “Will anything change?”",
+      "Mara almost said yes. Then she looked at the waiting families.",
+      "“We keep the photographs,” she said. “We learn their names.”",
+      "Ivo was already helping unload another boat. His **altruism** looked ordinary from here: a hand beneath someone's elbow, a dry place found for a child. Mara got up to join him.",
+      "Once, her grandmother had called her too **obstinate** for her own good. Perhaps she was. But the thought that nothing could be done had seemed so convincing yesterday, and tonight they had done something.",
+      "Down by the water, the boy from the blanket was calling a name. A woman in the next boat lifted her head.",
+      "Mara had thought calling into all that darkness would be **futile**.",
+      "She helped him call again."
+    ],
+    "vocab": [
+      {
+        "word": "autocratic",
+        "def": "ruling with absolute power"
+      },
+      {
+        "word": "ominous",
+        "def": "suggesting that something bad is likely to happen"
+      },
+      {
+        "word": "inclement",
+        "def": "unpleasantly cold, wet, or stormy"
+      },
+      {
+        "word": "encumber",
+        "def": "to burden or weigh down, making movement difficult"
+      },
+      {
+        "word": "precarious",
+        "def": "unstable or dangerously insecure"
+      },
+      {
+        "word": "anomaly",
+        "def": "something that differs from what is normal or expected"
+      },
+      {
+        "word": "astute",
+        "def": "quick to notice and understand things accurately"
+      },
+      {
+        "word": "corroborate",
+        "def": "to confirm a statement with supporting evidence"
+      },
+      {
+        "word": "duplicity",
+        "def": "deliberate deceit, especially by saying one thing and doing another"
+      },
+      {
+        "word": "cryptic",
+        "def": "mysterious or difficult to understand"
+      },
+      {
+        "word": "coercion",
+        "def": "the use of threats or force to make someone do something"
+      },
+      {
+        "word": "derelict",
+        "def": "abandoned and in poor condition"
+      },
+      {
+        "word": "apprehension",
+        "def": "anxiety about something that may happen"
+      },
+      {
+        "word": "surreptitious",
+        "def": "done secretly to avoid being noticed"
+      },
+      {
+        "word": "arduous",
+        "def": "requiring great effort or endurance"
+      },
+      {
+        "word": "hegemony",
+        "def": "dominance or control over others"
+      },
+      {
+        "word": "inequity",
+        "def": "unfairness or unequal treatment"
+      },
+      {
+        "word": "dictatorial",
+        "def": "giving orders in an absolute and controlling manner"
+      },
+      {
+        "word": "audacious",
+        "def": "bold and willing to take great risks"
+      },
+      {
+        "word": "furtive",
+        "def": "secretive and intended to escape notice"
+      },
+      {
+        "word": "elude",
+        "def": "to escape from or avoid being caught by"
+      },
+      {
+        "word": "guileless",
+        "def": "honest and without cunning or deceit"
+      },
+      {
+        "word": "circumvent",
+        "def": "to find a way around an obstacle or restriction"
+      },
+      {
+        "word": "ingenuity",
+        "def": "skill at inventing clever solutions"
+      },
+      {
+        "word": "impede",
+        "def": "to delay or obstruct progress"
+      },
+      {
+        "word": "cogent",
+        "def": "clear, logical, and convincing"
+      },
+      {
+        "word": "vindicate",
+        "def": "to clear someone of blame or show that they were right"
+      },
+      {
+        "word": "impending",
+        "def": "about to happen"
+      },
+      {
+        "word": "enervate",
+        "def": "to weaken or drain of energy"
+      },
+      {
+        "word": "obdurate",
+        "def": "stubbornly refusing to change a decision or position"
+      },
+      {
+        "word": "ambivalent",
+        "def": "having mixed or conflicting feelings about something"
+      },
+      {
+        "word": "daunting",
+        "def": "seeming difficult or frightening to undertake"
+      },
+      {
+        "word": "perseverance",
+        "def": "continued effort despite difficulties or setbacks"
+      },
+      {
+        "word": "bereft",
+        "def": "deeply saddened by the loss of someone or something"
+      },
+      {
+        "word": "empathetic",
+        "def": "able to understand and share another person's feelings"
+      },
+      {
+        "word": "inundate",
+        "def": "to cover with floodwater"
+      },
+      {
+        "word": "despot",
+        "def": "a ruler who exercises absolute power cruelly"
+      },
+      {
+        "word": "altruism",
+        "def": "unselfish concern for the welfare of others"
+      },
+      {
+        "word": "obstinate",
+        "def": "stubbornly refusing to change one's mind or course"
+      },
+      {
+        "word": "futile",
+        "def": "incapable of producing a useful result"
+      }
+    ],
+    "illustration": {
+      "src": "/stories/story-50-floodline.png",
+      "alt": "Black-and-white aquatint of three teenage maintenance workers struggling through a flooded transit tunnel toward a ladder and a raised signal booth.",
+      "width": 1536,
+      "height": 1024
+    }
+  },
+  {
+    "id": 51,
+    "title": "The Last Breath Quota",
+    "genre": "YA dystopian survival thriller",
+    "styleInspiration": "Suzanne Collins",
+    "wordCount": 40,
+    "paragraphs": [
+      "At six in the morning, Nia's brother stopped earning the right to breathe.",
+      "His wristband changed from green to gray while he was tying his shoes. He tapped it twice, then held it under the kitchen lamp, hoping the color was a trick of the light.",
+      "“It's broken,” he said.",
+      "Nia checked the wall meter. Her own allowance had renewed. Her mother's account remained in **abeyance**, six months after the factory accident that had killed her. Under Eli's name, a message blinked: WORK CERTIFICATION EXPIRED.",
+      "He was twelve. Yesterday, a supervisor had sent him home from the sorting floor because he could no longer lift the scrap baskets.",
+      "Nia called the allocation office. A woman with a **dispassionate** voice explained that all supplemental air was **contingent** on productive employment.",
+      "“He's a child.”",
+      "“Then a guardian may transfer credits.”",
+      "Nia had already transferred everything above her own minimum. She cleaned intake filters for ten hours a day. Sometimes she imagined another filter growing where her lungs should be.",
+      "The woman asked whether she wanted to file an appeal. Processing would take nine days.",
+      "“How much air does he have?” Nia asked.",
+      "“Until noon.”",
+      "Outside the city's sealed shell, the atmosphere could no longer support them. Outside their window, advertisements for the **affluent** Crown District showed children running through indoor gardens. None wore wristbands. Nia had assumed green lights spoiled the photographs.",
+      "Eli was watching her.",
+      "“School's canceled,” she told him. “You're coming with me.”",
+      "He nodded with a **docile** obedience she hated more than an argument. He had learned that asking for things made her face change.",
+      "She packed his coat, two bread heels, and the blue bottle their mother had kept for evacuation drills. Its gauge hovered above empty.",
+      "The factory gates stood beneath a banner: EVERY BREATH A CONTRIBUTION.",
+      "Nia walked past the guard with Eli pressed against her side. Children sometimes waited in the workers' room. Nobody asked why his lips were pale.",
+      "Her friend Sera met them at the lockers. She was eighteen and had a shaved patch above one ear where a machine had caught her hair.",
+      "“Quota?” she whispered.",
+      "Nia nodded.",
+      "Sera glanced at Eli's **anemic** face. “I can ask around.”",
+      "“They'll all say they need their credits.”",
+      "“They do.”",
+      "It was **candid**. Nia hated her briefly, then handed her the bread. “Make him eat.”",
+      "At nine, Nia entered the supply cage to collect replacement filters. Behind the wire partition stood an emergency cylinder, waist high and painted yellow. Enough compressed breathing air to keep Eli alive until they found somewhere to hide.",
+      "The inventory terminal listed it as empty.",
+      "Its pressure needle disagreed.",
+      "Nia inspected the cylinder's serial number. It appeared on last week's disposal sheet. Three more were supposedly empty; all were full.",
+      "This was no clerical mistake. Every gauge bore a fresh inspection seal.",
+      "She opened the maintenance ledger. Beneath the routine entries lay a **conspicuous** blank where the district's reserve totals should have been. Someone had removed the summary but left the individual delivery receipts.",
+      "Her job had taught her to **extrapolate** airflow from filter readings. The receipts were easier. If these shipments were accurate, the factory held enough reserve air to **augment** every household's allowance for months.",
+      "Meanwhile, people were losing their quotas for missing shifts.",
+      "She copied the ledger onto the terminal's small paper printer. It produced a strip that curled around her boots. Then she photographed the gauges beside their serial numbers.",
+      "The supervisor found her winding the paper around her wrist.",
+      "“An audit?” he asked.",
+      "His smile was almost friendly. Nia recognized the **artifice**: he used that expression before docking wages.",
+      "“One of the gauges is faulty.”",
+      "“They all are.”",
+      "“Someone should replace them.”",
+      "He stepped between her and the door. “You mustn't **conflate** a safety reserve with available supply.”",
+      "Nia remembered the disposal sheets. A reserve could be protected openly. These cylinders had been erased.",
+      "“Why label them empty?”",
+      "His smile disappeared.",
+      "She drove the filter trolley into his knees.",
+      "The cylinder was **cumbersome**, but its rack had wheels. Nia dragged it through the cage door while the supervisor shouted for security. The rack struck the doorframe. She pulled harder. Metal scraped metal, and suddenly she was running behind it.",
+      "Sera heard the alarm and came out with Eli.",
+      "“South stairs,” Nia said.",
+      "Sera looked at the cylinder, then at the guards appearing behind them. She shoved a laundry bin across the corridor and ran after Nia.",
+      "They reached the disused ventilation district through a hatch behind the washroom. Nia connected Eli's mask to the stolen cylinder. Its hiss filled the darkness.",
+      "For the first time, his shoulders relaxed.",
+      "Nia sat against the wall and shook. Her shaking would not **abate**. She laughed once, a sharp, ugly sound.",
+      "Sera crouched in front of her. “You stole a cylinder.”",
+      "“I noticed.”",
+      "“What else?”",
+      "Nia unrolled the ledger.",
+      "The emergency lights flickered. Overhead, the fans slowed until their separate blades became visible.",
+      "A speaker announced a temporary conservation adjustment.",
+      "“Adjustment,” Sera repeated. The **euphemism** landed between them. Somewhere above, thousands of people were feeling the air grow thin.",
+      "Nia's wristband lit with a security notice. A photograph of the yellow cylinder appeared beneath her name. Its inspection seal contained a tracking tag.",
+      "Sera peeled it off. Too late. Doors clanged shut in the passage behind them.",
+      "“They're cutting the district,” Nia said.",
+      "She had seen the isolation controls during training. Security could close local ducts while leaving the Crown's supply untouched. The officials' claim that everyone shared one shortage was **disingenuous**; the separate pipes had been there all along.",
+      "Sera looked at Eli's hose. “We could give it back.”",
+      "The thought had already occurred to Nia. She could return the records too. Say she had misunderstood. Ask politely for a transfer.",
+      "Then she remembered the nine days.",
+      "“They knew his deadline.”",
+      "“I know.”",
+      "“They still sent me an appeal form.”",
+      "Sera shut her eyes. “I know.”",
+      "Eli held out the little blue bottle. “This one can get us upstairs.”",
+      "He was right. The old ventilation tower stood directly above them. Before wristbands, its emergency transmitter had reached every receiver in the city.",
+      "Nia had cleaned its intake once. A sign on the wall explained that compressed air could run its backup generator when the electrical grid failed.",
+      "They had a cylinder.",
+      "They also had a boy attached to it.",
+      "The climb followed a narrow metal stairway inside a dead exhaust shaft. Sera pushed the rack from below while Nia pulled. Eli climbed between them, trailing his hose.",
+      "Sera tried her wrist terminal. No signal. Factory messages were blocked too. The tower's independent broadcast was their only way to **disseminate** the records before security recovered them.",
+      "“People won't believe us,” she said.",
+      "“They can look at their own gauges.”",
+      "“They'll believe we're thieves.”",
+      "Nia understood. In school, a film had shown masked men stealing air from a nursery. It played every year before quota renewal. The story had acquired **credence** through repetition; none of them had ever asked where the nursery was.",
+      "She pulled the cylinder up another step.",
+      "On the next landing, Eli asked to rest. Nia started to **admonish** him for sitting on the cold floor, then stopped. She rubbed his hands instead.",
+      "“Tell me what you're doing,” he said.",
+      "She explained the transmitter.",
+      "“Will the factories open their tanks?”",
+      "“If enough workers see the records.”",
+      "He looked at her for a long time. “Does mine go in the machine?”",
+      "Nia could have lied. She had lied about school, breakfast, their mother's death. This time, she nodded.",
+      "“Only for a little while.”",
+      "Sera turned away.",
+      "At the top, they found the generator behind a locked grille. Nia broke the lock with the trolley handle. The force jarred her wrist. She felt something give, then a hot pain spread into her palm.",
+      "The generator required a steady flow until its flywheel reached operating speed. Eli's tiny bottle could not provide it. The yellow cylinder could. Its single outlet was the **constraint**: it could serve either the machine or his mask.",
+      "There was no spare coupling. Nia searched every drawer anyway.",
+      "“We need to **contrive** a splitter,” she said.",
+      "Sera held up a cracked fitting. “With this?”",
+      "“Find another.”",
+      "“Nia.”",
+      "She threw the fitting against the wall.",
+      "Below them, a security officer called her name through a loudspeaker. He offered to **exonerate** her if she surrendered the stolen property immediately.",
+      "He said nothing about Eli's allowance.",
+      "Nia dragged a desk across the stairwell door. Sera used a beam to **bolster** it. The officer began counting down.",
+      "Eli watched the tiny bottle in his lap. Its needle trembled near the red.",
+      "“How long does the radio need?”",
+      "“I don't know.”",
+      "“How long do I have?”",
+      "She could not make herself answer.",
+      "From the tower window, they could see factory roofs and the Crown's white dome beyond them. A garden sprinkler cast a glittering arc inside the glass. Nia had always thought the garden was a reward for important work. She could finally **disabuse** herself of that comforting idea.",
+      "The people who assigned the work also assigned the air.",
+      "Sera checked the cylinder. “We could stay here until someone comes.”",
+      "“They'll come,” Nia said.",
+      "She did not mean rescuers.",
+      "The officer stopped counting. A tool began chewing through the door.",
+      "To **capitulate** now would mean handing him the only thing keeping Eli alive. Broadcasting meant taking it away herself.",
+      "Nia knelt beside her brother. The hose lay across his knees. She had promised their mother she would look after him, and the promise had never before required her to explain what she was about to do.",
+      "“I need your air.”",
+      "Eli's eyes filled. He pressed the mask harder against his face.",
+      "She waited. She could not call this a fair choice. He was frightened, and she was the person he trusted to keep frightening things away.",
+      "“Will you stay?” he asked.",
+      "She nodded.",
+      "Sera took the cylinder hose. Nia connected the little bottle to Eli's mask, then sat behind him with his back against her chest.",
+      "The generator coughed. Stopped. Caught.",
+      "Its vibration traveled through the floor.",
+      "Sera fed the printed ledger beneath the transmitter's document lens. The tower could send pictures as well as sound. Nia read the serial numbers aloud while the yellow cylinder's needle fell.",
+      "The supervisor's warning returned to her: safety reserves. It was a **fallacious** explanation for deliveries officially recorded as waste. She showed the receipts beside the inspection photographs so anyone listening could compare them.",
+      "“These tanks are full,” she said. “The shortage is being enforced.”",
+      "Nobody answered.",
+      "The panel's signal indicator was **erratic**. Rain had damaged the antenna cable. Sera pressed the loose connector into place and held it there with both hands.",
+      "The tool at the door stopped. Someone ordered them to disconnect the transmitter.",
+      "Nia gave the factory's storage locations. She asked workers to open the cages and keep the valves accessible. She named the supervisor who had altered the inventories.",
+      "Eli's breathing changed.",
+      "She looked down. The little bottle was empty.",
+      "“Switch it back,” she said.",
+      "Sera reached for the hose.",
+      "A voice burst from the receiver. “Tower, repeat the delivery dates. This is East Glassworks.”",
+      "Nia froze.",
+      "Sera's hands stopped above the coupling.",
+      "The microphone stood inches from Nia's face. She read the dates. Eli gripped her sleeve. Each number cost time she could hear in his breathing.",
+      "“Our disposal sheets match,” the voice said.",
+      "Another receiver joined. Then another. Nia heard suspicion begin to **dissipate** as workers compared their separate records. Their complaints could **coalesce** around something they could prove.",
+      "The doorframe split.",
+      "“Enough,” Nia said.",
+      "Sera disconnected the generator and returned the yellow cylinder to Eli. The transmitter died before they heard whether anyone had opened a valve.",
+      "Nia held the mask against his face. He stared past her. For a moment she could not feel his hands.",
+      "The officer came through the doorway with his weapon raised.",
+      "Sera stood in front of them, her palms open. Nia could not rise. Her brother's weight pinned her to the floor.",
+      "“Please,” she said.",
+      "The officer saw the ledger beneath the document lens.",
+      "“Who received it?”",
+      "Nia shook her head.",
+      "He pulled Sera aside. “Who?”",
+      "“Everyone with a receiver,” Sera said.",
+      "His radio crackled. He listened, then asked a question Nia could not hear. Outside, factory sirens sounded in different streets, overlapping until their separate warnings became one long note.",
+      "The officer ordered a crew to **countermand** an unauthorized release at East Glassworks. Nobody acknowledged him.",
+      "Air struck the tower's old vent hard enough to lift the papers.",
+      "Nia cried out. Eli blinked.",
+      "Below them, the silent fan began turning.",
+      "By evening, workers had opened eleven reserve stations. There had been **copious** supplies behind some doors, barely anything behind others. Several managers had lied to their own staff about where the deliveries went.",
+      "One crew's **brazen** refusal to surrender its keys had given another crew time to open a second cage. Some had acted with **alacrity**. Others waited until their neighbors dragged them outside to see the gauges.",
+      "Nia heard all this in the clinic, beside Eli's bed.",
+      "The Council called the release a **benign** misunderstanding. Its investigators asked whether she had made her statements under **duress**. They offered a document that would restore her employment if she signed.",
+      "She tore it once, down the middle.",
+      "Sera laughed, then covered her mouth. Neither of them was used to refusing things without immediately looking toward a door.",
+      "Outside, people demanded that the Council **abrogate** the rule linking air to work. Nia could hear arguments through the clinic windows. Some still defended the quotas. Familiar explanations held on even when the figures beneath them had changed.",
+      "She had once mistaken their exhaustion for **apathy**. Tonight, after everything, she could barely lift a cup.",
+      "Eli slept for most of two days. When he woke, he asked why her hand was bandaged.",
+      "“Bad lock.”",
+      "“Did we win?”",
+      "Nia watched the public meter outside. Its needle had risen, but the old quota notices remained. Enough air was still a different thing from permission to use it.",
+      "“We opened some doors.”",
+      "He looked at his wristband. It was green again.",
+      "“Are you going back to the filters?”",
+      "She had been **adamant** that she would never return. Then she remembered the workers still there, clearing dust while everyone else argued about the future.",
+      "“Maybe. If they let us see the accounts.”",
+      "Eli turned toward the window. “I don't want to go back to sorting.”",
+      "“You won't.”",
+      "She said it too quickly. He heard.",
+      "“You can't promise everything.”",
+      "“I know.”",
+      "Nia sat beside him until visiting hours ended. She wanted to **avert** her eyes from the bruise his mask had left, but made herself look. Rest would **attenuate** the marks. She would remember the pause beside the microphone long after they faded.",
+      "When he reached for her good hand, she held his gently. For once, there was no clock on the wall telling them when to let go."
+    ],
+    "vocab": [
+      {
+        "word": "abeyance",
+        "def": "a state of temporary suspension or inactivity"
+      },
+      {
+        "word": "dispassionate",
+        "def": "unaffected by strong emotion; calm and impartial"
+      },
+      {
+        "word": "contingent",
+        "def": "dependent on a condition being met"
+      },
+      {
+        "word": "affluent",
+        "def": "wealthy or having abundant material resources"
+      },
+      {
+        "word": "docile",
+        "def": "easy to control and willing to obey"
+      },
+      {
+        "word": "anemic",
+        "def": "pale and lacking strength or vitality"
+      },
+      {
+        "word": "candid",
+        "def": "honest and direct, even about uncomfortable matters"
+      },
+      {
+        "word": "conspicuous",
+        "def": "easy to notice; attracting attention"
+      },
+      {
+        "word": "extrapolate",
+        "def": "to estimate something beyond known information using existing data"
+      },
+      {
+        "word": "augment",
+        "def": "to increase the size, amount, or strength of something"
+      },
+      {
+        "word": "artifice",
+        "def": "a clever trick or device used to deceive"
+      },
+      {
+        "word": "conflate",
+        "def": "to combine different things as if they were the same"
+      },
+      {
+        "word": "cumbersome",
+        "def": "large, heavy, or awkward to move or use"
+      },
+      {
+        "word": "abate",
+        "def": "to become less intense or severe"
+      },
+      {
+        "word": "euphemism",
+        "def": "a mild expression substituted for something harsh or unpleasant"
+      },
+      {
+        "word": "disingenuous",
+        "def": "pretending to be honest while hiding the truth"
+      },
+      {
+        "word": "disseminate",
+        "def": "to spread information widely"
+      },
+      {
+        "word": "credence",
+        "def": "belief in or acceptance of something as true"
+      },
+      {
+        "word": "admonish",
+        "def": "to warn or scold someone firmly"
+      },
+      {
+        "word": "constraint",
+        "def": "a restriction or limitation"
+      },
+      {
+        "word": "contrive",
+        "def": "to invent or devise a way of doing something"
+      },
+      {
+        "word": "exonerate",
+        "def": "to officially clear someone of blame or wrongdoing"
+      },
+      {
+        "word": "bolster",
+        "def": "to support or strengthen"
+      },
+      {
+        "word": "disabuse",
+        "def": "to free someone from a mistaken belief"
+      },
+      {
+        "word": "capitulate",
+        "def": "to surrender or give in to demands"
+      },
+      {
+        "word": "fallacious",
+        "def": "based on mistaken reasoning or a false belief"
+      },
+      {
+        "word": "erratic",
+        "def": "irregular and unpredictable"
+      },
+      {
+        "word": "dissipate",
+        "def": "to gradually disappear or become less strong"
+      },
+      {
+        "word": "coalesce",
+        "def": "to come together and form a unified whole"
+      },
+      {
+        "word": "countermand",
+        "def": "to cancel or reverse an order or instruction"
+      },
+      {
+        "word": "copious",
+        "def": "abundant; present in large quantities"
+      },
+      {
+        "word": "brazen",
+        "def": "bold and unashamed, especially in defying expectations or authority"
+      },
+      {
+        "word": "alacrity",
+        "def": "eager and cheerful readiness"
+      },
+      {
+        "word": "benign",
+        "def": "harmless or not intended to cause harm"
+      },
+      {
+        "word": "duress",
+        "def": "threats or pressure used to force someone to act"
+      },
+      {
+        "word": "abrogate",
+        "def": "to formally abolish a law, rule, or agreement"
+      },
+      {
+        "word": "apathy",
+        "def": "a lack of interest, concern, or enthusiasm"
+      },
+      {
+        "word": "adamant",
+        "def": "firmly refusing to change an opinion or decision"
+      },
+      {
+        "word": "avert",
+        "def": "to turn away or prevent something from happening"
+      },
+      {
+        "word": "attenuate",
+        "def": "to reduce the strength, force, or intensity of something"
+      }
+    ],
+    "illustration": {
+      "src": "/stories/story-51-last-breath-quota.png",
+      "alt": "Black-and-white aquatint of Nia holding her younger brother beside an air cylinder while Sera operates an emergency transmitter above a domed industrial city.",
+      "width": 1536,
+      "height": 1024
+    }
+  },
+  {
+    "id": 52,
+    "title": "The Winter Seed",
+    "genre": "YA dystopian survival mystery",
+    "styleInspiration": "Jeanne DuPrau",
+    "wordCount": 40,
+    "paragraphs": [
+      "The order to burn the seeds arrived with the breakfast fuel.",
+      "Anja found it tied to the handle of her coal bucket. She was seventeen, the youngest greenhouse apprentice in a city that had not harvested anything in eleven years. Mostly, her apprenticeship involved scraping ice from pipes and pretending the title still meant something.",
+      "The notice required her to deliver seventeen crates to Furnace Four before midnight.",
+      "She read the signature twice. Then she went upstairs to tell her father.",
+      "He was sitting beside the cold radiator, repairing a neighbor's coat. On the windowsill, frost had formed a miniature forest. The view beyond it was **bleak**: identical roofs disappearing into manufactured cloud, chimneys breathing against a sky nobody in her class remembered seeing blue.",
+      "“All seventeen?” he asked.",
+      "She nodded.",
+      "“The oilseeds might give us four hours.”",
+      "He did not say whether four hours was worth it. His fingers were swollen, and he had sewn the same button on twice.",
+      "Their room was **spartan** even by winter standards. Two beds, a table, the coat he was mending. Everything wooden that they could spare had already gone downstairs in the fuel bucket.",
+      "Anja folded the notice. “I'll ask Master Oren.”",
+      "“Ask before you argue.”",
+      "He sounded tired enough that she promised.",
+      "The seed vault lay beneath the old municipal greenhouse. Oren met her at the door with his keys already in his hand. A **taciturn** man, he usually greeted her by pointing at whatever needed fixing.",
+      "Today he said, “I tried.”",
+      "The city had imposed **stringent** restrictions after the ration convoy failed to arrive. Lighting went first, then hot water. Now the Council was dismantling the parts of the city that could not keep people warm tonight.",
+      "Anja touched the nearest crate. Her grandmother had helped pack it before the greenhouse closed.",
+      "“They're alive.”",
+      "“Some of them.”",
+      "“Then this is different from furniture.”",
+      "Oren gave her the keys. “Inventory before transport. Make sure the seals match.”",
+      "He was unusually **reticent** about where he would be during the inventory. Anja watched him climb the stairs, his empty left sleeve tucked into his belt. He had lost that arm repairing the roof shutters during the first winter.",
+      "She began with the beans.",
+      "Her grandmother's records were **meticulous**. Every packet carried a harvest date, a drying temperature, and a note about the plant. Good in poor soil. Ripens early. Save from the strongest vine.",
+      "Anja read them as if they were instructions from someone standing beside her.",
+      "Behind the seventeenth crate, she found a pipe that was warm.",
+      "She took off her glove to be certain. The other pipes had been cold for years. This one disappeared through a hole in the wall, behind a shelf of broken pots.",
+      "She moved the shelf.",
+      "The door behind it had no handle. Only a square socket, the kind used on the old roof controls. Anja tried the last key on Oren's ring.",
+      "It turned.",
+      "Warm air touched her face.",
+      "Inside was a room no larger than her classroom. Water trickled through shallow beds. A lamp hung above leaves so dark they looked black until her eyes adjusted. Along the far wall, a narrow shaft carried a column of daylight down from the roof.",
+      "Daylight. Not the gray reflection from the city's streets.",
+      "She put her hand beneath it.",
+      "Oren found her there an hour later, holding a small tomato as if it might escape.",
+      "“You could have told me.”",
+      "“You tell your father everything.”",
+      "“Usually people think that's good.”",
+      "He closed the door carefully.",
+      "The chamber was an old testing nursery, heated by a little power diverted from the council building. Oren had kept it running since the harvests failed. His experiments were **rudimentary** at first, he said. Trays on shelves. Water carried in buckets. He had learned which seeds still grew by planting them.",
+      "“And nobody knows?”",
+      "“The people who matter know.”",
+      "Anja looked at the tomato in her hand.",
+      "Oren saw her understand.",
+      "“They eat these?”",
+      "“I was allowed to preserve the stock.”",
+      "He had been **diligent** about that. The nursery contained peas, beans, cabbage, and twelve varieties of grain. In its **fecund** soil, even the oldest packets had produced a few living plants.",
+      "Upstairs, people traded a week's coal for one tin of vegetables.",
+      "“Did my grandmother know?”",
+      "He looked away.",
+      "The tomato broke under Anja's thumb.",
+      "She set it down and asked about the daylight.",
+      "The answer was in a cabinet full of **arcane** maintenance diagrams. The greenhouse roof had shutters to protect its glass from ash storms. They had been closed when the winter began and never fully reopened.",
+      "Oren spread out the drawings to **elucidate** the system. The same power line served the shutter motors, circulation pumps, and Furnace Four. At full capacity, the greenhouse could draw enough current to stop the furnace.",
+      "“Then open the shutters a little.”",
+      "“They're frozen. Getting them moving takes everything.”",
+      "Afterward, sunlight could supply most of the heat. The nursery's narrow inspection shaft had already proved that the upper air was clearing.",
+      "“How long without the furnace?”",
+      "“Until morning. Perhaps longer.”",
+      "Anja thought of her father's fingers.",
+      "It was a **conundrum** she could not solve by being angry. Burn the seeds and warm the apartments for four hours. Keep them, cut the heat, and gamble on a greenhouse that had not worked in eleven years.",
+      "“You could have tried in summer.”",
+      "“There isn't a summer anymore.”",
+      "“You know what I mean.”",
+      "His answer was **evasive**. There had always been another emergency, another inspector, another reason that opening the roof was unsafe. Eventually, keeping this little room alive had become the whole of his work.",
+      "Anja asked for the test records. Oren hesitated, then unlocked a drawer.",
+      "There were years of them.",
+      "The figures about sunlight were **incontrovertible**. Even the winter before last had offered several bright weeks above the cloud machines. Those machines kept the streets cold while removing industrial exhaust. Their settings had never been adjusted when production fell.",
+      "“Can we change those too?”",
+      "“With the Council's permission.”",
+      "“Have you asked?”",
+      "He did not answer.",
+      "Anja copied the readings. Their **veracity** would be questioned, so she took a working light meter as well.",
+      "At the furnace hall, the Council's fuel officer listened while weighing someone's broken chair. He refused to **concede** that her discovery changed the evening's fuel order.",
+      "“A few plants are not a harvest.”",
+      "That was true, and it mattered. Anja made herself stay quiet long enough to hear the rest.",
+      "“People need heat now. Your greenhouse might feed them in months.”",
+      "“Then let them decide.”",
+      "He put the chair on the conveyor.",
+      "“They already elected us.”",
+      "Anja returned to her building carrying the tomato seeds on a scrap of paper.",
+      "Her father listened without interrupting. When she finished, he asked whether the greenhouse beds could support a **robust** crop or only a handful of demonstration plants.",
+      "She admitted she did not know.",
+      "“And if the motors break?”",
+      "“We stop and reconnect the furnace.”",
+      "“How quickly?”",
+      "She did not know that either.",
+      "He reached for his coat.",
+      "“Where are you going?”",
+      "“To look.”",
+      "They brought Mrs. Venn from upstairs because she had repaired electric lifts. She brought her nephew because he could read the newer wiring labels. By supper, nineteen people had crowded into the nursery.",
+      "Mrs. Venn called the proposed startup **foolhardy**. Then she borrowed a pencil and began checking the circuits.",
+      "The others argued. Several were **disaffected** factory workers who distrusted any plan with a Council seal on it. A woman with two small children wanted the four hours of heat. Nobody called her selfish.",
+      "Anja's father asked Oren to show everyone the test records.",
+      "He could no longer **dissemble** behind a promise to protect the plants. The visitors had seen the fresh vegetables, and they knew whose kitchens received them.",
+      "“I thought a little was better than nothing,” he said.",
+      "“It was,” Anja answered. “For the people getting it.”",
+      "He looked smaller beside the growing beds. His apology was **contrite**, but Mrs. Venn asked him to hold the lamp. There was work to do.",
+      "The group grew **fractious** as the room warmed and the arguments repeated. Anja opened the door for cooler air, then noticed how much heat escaped into the vault.",
+      "“We could stay here.”",
+      "Everyone stopped.",
+      "There would be room among the empty greenhouse beds if they brought their blankets. During startup, the nursery would remain warm on its separate council circuit. The most vulnerable people could shelter there.",
+      "The timing was **fortuitous**: a coal wagon had delivered heavy canvas that afternoon. They could use it to divide the larger room into smaller spaces and keep everyone away from the machinery.",
+      "“You're moving a whole building,” said her father.",
+      "“Three buildings, if we fit.”",
+      "Mrs. Venn wanted to **demur**, but looked again at the nursery. “Bring mattresses before people. And clear every exit.”",
+      "The plan began to **burgeon** beyond Anja's list. Someone fetched a handcart. Someone knew where there were spare lamps. The woman with the children offered to organize sleeping places.",
+      "Anja had never seen neighbors use so many different skills in the same room.",
+      "By ten, the **nascent** shelter had fifty beds marked on its floor. Their spacing, Mrs. Venn reminded everyone, was **germane** to the plan: bodies crowded against the hot pipes would create another emergency.",
+      "They tested the furnace switch and timed its return. The heat stopped for ninety seconds, then resumed. Everyone watched the radiator nearest the door until it warmed again.",
+      "Before anyone moved, Anja went door to door with her father. They explained the risk without promising a warm morning. Two families refused. Mrs. Venn arranged for them to stay with relatives on another heating line. An elderly man wanted to bring his canary; someone found a place for its cage. By the last staircase, Anja understood why asking took longer than issuing an order. Every person had something different to lose, and she could not answer for them all.",
+      "At half past ten, the fuel officer arrived with two guards.",
+      "The seed crates were still beside the vault door.",
+      "“Load them,” he said.",
+      "Anja stood in front of the first one.",
+      "Her father came to stand beside her. Then Mrs. Venn, still holding the borrowed pencil.",
+      "The officer looked past them at the rows of mattresses.",
+      "“Who authorized this?”",
+      "“We did,” said the woman with the children.",
+      "He told a guard to take their names. Anja watched the guard count the people, then glance at the bed where his grandfather was sitting.",
+      "The officer threatened to **expunge** their heating credits. The guard set down his notebook.",
+      "“They're sleeping here,” he said. “What would that do?”",
+      "At eleven, Mrs. Venn announced that the wiring was ready.",
+      "Oren put his hand on the motor switch and kept it there. Anja understood his fear now. If nothing changed, he could preserve the nursery for another year. This night could destroy even that.",
+      "“Do you think it will work?” she asked.",
+      "“I think it might.”",
+      "It was enough to try, with everyone here having heard the answer.",
+      "He pulled the switch.",
+      "The building shuddered.",
+      "Furnace Four fell silent. Somewhere overhead, an old motor began dragging against ice. Its noise rose until the glass trembled. Mrs. Venn watched her gauges, allowing herself only **judicious** increases in current.",
+      "Nothing opened.",
+      "Anja felt the room's confidence **wane**. People pulled blankets higher. A baby started crying behind the canvas.",
+      "The fuel officer looked at his watch.",
+      "“Enough.”",
+      "Mrs. Venn shook her head.",
+      "The motor stopped.",
+      "In the silence, Anja heard water dripping.",
+      "Oren raised his lamp. Along the roof, a narrow seam gleamed wetly. The shutter had moved a finger's width.",
+      "“Again,” he said.",
+      "The second attempt blew a fuse.",
+      "Mrs. Venn swore. She had a replacement, but reconnecting it required shutting down the pumps. Oren explained that the nursery could survive the brief interruption. He seemed **solicitous** about every tray as he covered it against the cold.",
+      "Anja helped him. Some seedlings were already leaning.",
+      "The third attempt opened the seam far enough for snow to tumble through.",
+      "The children cheered. Their parents did not.",
+      "“That's outside,” someone said.",
+      "Mrs. Venn had expected this. They lowered the greenhouse's inner glass screen, separating the roof machinery from the sleeping area. It was **prudent** to keep the screen down until the roof panes had been inspected.",
+      "By three, the shutters stood open.",
+      "Nobody celebrated yet. There was only darkness above the glass, and the power meter showed how much warmth they had borrowed from tomorrow.",
+      "Anja's father wrapped his coat around her shoulders. His support had been **tacit** all night: carrying mattresses, filling cups, sitting beside anyone who wanted to leave.",
+      "“You should sleep,” he said.",
+      "She shook her head.",
+      "The fuel officer had gone. Neither guard had followed him.",
+      "At dawn, the glass turned white.",
+      "Anja thought it was frost until a long rectangle of light reached the floor. A child put both feet inside it. Then every face in the room turned upward.",
+      "Above the drifting exhaust cloud, the sky was clear.",
+      "The warmth came slowly. Sunlight alone did not repair broken pipes or fill empty stomachs. But the greenhouse's heat collectors began charging their tanks. By noon, the pumps drew less current than Furnace Four had used before breakfast.",
+      "Mrs. Venn called the result **efficacious**, then laughed at herself for sounding like an inspector.",
+      "Oren called it an **auspicious** beginning.",
+      "Anja's father asked where they should put the first bed of beans.",
+      "There was no immediate **prodigious** harvest, despite the stories that later circulated. Some seeds failed. The first cabbage crop was small. The radiator valves froze twice during that first week.",
+      "But people returned each evening to work.",
+      "The nursery became a **catalyst** for other changes. Neighbors demanded access to the cloud controls. Apprentices copied the growing records so nobody could hide them again. Those who had grown **complacent** about Council deliveries learned how little they knew about producing a meal.",
+      "Anja was among them.",
+      "She learned to plant shallowly, water carefully, and leave a young root alone. Hope did not make her good at any of these things. Practice did.",
+      "The first warmth had been **transitory**. There would still be cold nights. Sometimes she wondered whether the shutters might have opened years earlier if someone had asked a harder question, and the thought made her furious.",
+      "Then a tray needed moving, or her father called her to supper.",
+      "He had become almost **zealous** about saving kitchen scraps for soil. Anja teased him until he pointed out that she checked the bean shoots before checking on him.",
+      "On the day they picked the first pods, she took one to the furnace hall.",
+      "The fuel officer was still there, weighing coal. She placed the pod on his desk. He opened it with a thumbnail and counted the beans.",
+      "“Not many,” he said.",
+      "“Keep one.”",
+      "“For eating?”",
+      "Anja thought of her grandmother's labels, and the seventeen crates still waiting safely downstairs.",
+      "“For next time.”"
+    ],
+    "vocab": [
+      {
+        "word": "bleak",
+        "def": "cold, bare, and uninviting; offering little comfort"
+      },
+      {
+        "word": "spartan",
+        "def": "plain and simple, with few comforts"
+      },
+      {
+        "word": "taciturn",
+        "def": "habitually saying very little"
+      },
+      {
+        "word": "stringent",
+        "def": "strict and demanding"
+      },
+      {
+        "word": "reticent",
+        "def": "unwilling to speak freely or reveal information"
+      },
+      {
+        "word": "meticulous",
+        "def": "extremely careful and attentive to detail"
+      },
+      {
+        "word": "rudimentary",
+        "def": "basic and not fully developed"
+      },
+      {
+        "word": "diligent",
+        "def": "showing steady care and effort in a task"
+      },
+      {
+        "word": "fecund",
+        "def": "fertile and capable of producing abundant growth"
+      },
+      {
+        "word": "arcane",
+        "def": "understood by few people; obscure or specialized"
+      },
+      {
+        "word": "elucidate",
+        "def": "to make something clear by explaining it"
+      },
+      {
+        "word": "conundrum",
+        "def": "a difficult problem or dilemma"
+      },
+      {
+        "word": "evasive",
+        "def": "avoiding a direct answer or commitment"
+      },
+      {
+        "word": "incontrovertible",
+        "def": "impossible to dispute or deny"
+      },
+      {
+        "word": "veracity",
+        "def": "truthfulness or accuracy"
+      },
+      {
+        "word": "concede",
+        "def": "to admit that something is true, often reluctantly"
+      },
+      {
+        "word": "robust",
+        "def": "strong, healthy, and able to withstand difficulty"
+      },
+      {
+        "word": "foolhardy",
+        "def": "recklessly bold without enough regard for danger"
+      },
+      {
+        "word": "disaffected",
+        "def": "dissatisfied with and no longer loyal to an authority"
+      },
+      {
+        "word": "dissemble",
+        "def": "to hide one's real feelings, motives, or the truth"
+      },
+      {
+        "word": "contrite",
+        "def": "feeling or expressing sincere regret for wrongdoing"
+      },
+      {
+        "word": "fractious",
+        "def": "irritable and inclined to argue or resist control"
+      },
+      {
+        "word": "fortuitous",
+        "def": "happening by chance, especially with a favorable result"
+      },
+      {
+        "word": "demur",
+        "def": "to express an objection or hesitation"
+      },
+      {
+        "word": "burgeon",
+        "def": "to grow or develop rapidly"
+      },
+      {
+        "word": "nascent",
+        "def": "just beginning to exist or develop"
+      },
+      {
+        "word": "germane",
+        "def": "directly relevant to the matter being considered"
+      },
+      {
+        "word": "expunge",
+        "def": "to erase or remove completely"
+      },
+      {
+        "word": "judicious",
+        "def": "showing careful thought and good judgment"
+      },
+      {
+        "word": "wane",
+        "def": "to gradually decrease in strength or intensity"
+      },
+      {
+        "word": "solicitous",
+        "def": "showing concern and attentive care"
+      },
+      {
+        "word": "prudent",
+        "def": "careful and sensible about possible risks"
+      },
+      {
+        "word": "tacit",
+        "def": "understood or expressed without being stated openly"
+      },
+      {
+        "word": "efficacious",
+        "def": "effective in producing the intended result"
+      },
+      {
+        "word": "auspicious",
+        "def": "suggesting that success or good fortune is likely"
+      },
+      {
+        "word": "prodigious",
+        "def": "remarkably great in size, amount, or extent"
+      },
+      {
+        "word": "catalyst",
+        "def": "something that causes or speeds up change"
+      },
+      {
+        "word": "complacent",
+        "def": "too satisfied with the current situation to notice problems"
+      },
+      {
+        "word": "transitory",
+        "def": "lasting only a short time; temporary"
+      },
+      {
+        "word": "zealous",
+        "def": "showing great enthusiasm and dedication"
+      }
+    ],
+    "illustration": {
+      "src": "/stories/story-52-winter-seed.png",
+      "alt": "Black-and-white aquatint of Anja examining a seed beside young bean plants as neighbors shelter in a greenhouse beneath the first dawn light.",
+      "width": 1536,
+      "height": 1024
+    }
   }
 ];
