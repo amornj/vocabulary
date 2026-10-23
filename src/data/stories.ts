@@ -1,4 +1,4 @@
-export interface Story { id: number; title: string; genre: string; styleInspiration: string; wordCount: number; paragraphs: string[]; illustration?: { src: string; alt: string; width: number; height: number }; vocab: { word: string; def: string }[]; }
+export interface Story { id: number; title: string; genre: string; styleInspiration: string; wordCount: number; proseWordCount?: number; paragraphs: string[]; logHeadings?: string[]; illustration?: { src: string; alt: string; width: number; height: number; monochrome?: boolean }; vocab: { word: string; def: string }[]; }
 
 export const GRE_STORIES: Story[] = [
   {
@@ -19270,5 +19270,2829 @@ export const GRE_STORIES: Story[] = [
       "width": 1536,
       "height": 1024
     }
+  },
+  {
+    "id": 53,
+    "title": "Seven Minutes of Gravity",
+    "genre": "YA hard science fiction / orbital survival",
+    "styleInspiration": "Andy Weir",
+    "wordCount": 40,
+    "paragraphs": [
+      "The first thing Tala lost was her sandwich.",
+      "It rose from the workbench, shedding crumbs, while a wrench turned slowly beside her ear. Then the floor stopped pressing against her boots.",
+      "Across the freight gallery, her father said, “That isn't scheduled.”",
+      "The impact came a moment later through the frame: a metallic crack that she felt in her teeth. Something struck the far window without breaking it. Beyond the glass, Earth began moving in the wrong direction.",
+      "Tala caught the bench before she could **flounder** into a rack of tools. She was seventeen and nine months into her apprenticeship. Yesterday, her father had given her an **acerbic** assessment of her cable work. Today, she would have welcomed another lecture about untidy knots.",
+      "“Dad?”",
+      "He was hanging beneath a bent support, one boot caught between two bars.",
+      "“Still attached,” he said. “More than I'd like.”",
+      "The radio sounded.",
+      "Captain Imani's usually **affable** voice had gone flat. “Debris strike. The emergency brake coupled the habitat ring to its counterwheel. Their spins canceled. Attitude control isn't responding.”",
+      "Mica Station was a small experimental wheel, built to test whether a little artificial gravity made long missions easier. Most of its crew had already boarded the visiting ferry. Tala and her father were the last maintenance workers aboard.",
+      "Without the ring's rotation, there was no familiar down. Worse, the impact had left the whole assembly wobbling.",
+      "“Can you collect us?” Tala asked.",
+      "The ferry pilot answered. “I can match a steady roll. I can't dock with that changing axis. I've got seven minutes before my maneuvering reserve reaches the abort limit.”",
+      "A countdown appeared on the gallery screen.",
+      "Tala looked at her father.",
+      "He pointed toward the control chair. “Strap in before you think.”",
+      "She obeyed. The straps were the first **tangible** thing she could trust.",
+      "Imani sent a diagram showing the motion they needed. The surviving thrusters could not produce it. One propellant line had ruptured; the others were isolated until someone could inspect the damage.",
+      "Tala's father studied the screen from his awkward position.",
+      "“Freight launcher,” he said.",
+      "The launcher stood outside the window, following a short curved track along the rim. Normally it sent ore samples toward a collector drone. Pushing freight one way pushed the station the other. At the right angle, the reaction also changed its rotation.",
+      "Tala pictured it as **analogous** to pushing away from a wall while sitting on a wheeled stool, except that the stool was their home and the wall had to be thrown into space.",
+      "“How much mass?” she asked.",
+      "Imani opened the engineering model.",
+      "“More than the sample lockers hold.”",
+      "“All of them?”",
+      "“All of them.”",
+      "The shortage was **blatant** on the screen. They needed one heavy load, launched along a precisely calculated direction. Small packets would empty the track without providing enough correction.",
+      "Outside, clamped to the service cradle, stood their return capsule.",
+      "Tala did not look at it for a moment.",
+      "Her father did.",
+      "They had bought the old shell together. No engine, no current flight certificate, a window scratched by generations of cleaning. Its refurbishment slot was booked on the ferry's next visit. After three years of saving, it was supposed to become their way back to Earth.",
+      "“It's not working transport,” he said.",
+      "“It was going to be.”",
+      "“Yes.”",
+      "The countdown passed six minutes.",
+      "Tala asked Imani to run the capsule's mass through the model.",
+      "Her father shifted and stopped with a sharp breath. She started out of the chair.",
+      "“Stay,” he said.",
+      "“Your foot.”",
+      "“Needs a less intimate relationship with this bracket. Later.”",
+      "She could hear the **asperity** in his voice. It wasn't anger. He was trying not to tell her how much it hurt.",
+      "Imani's answer arrived. The capsule could supply the required impulse. The launcher could handle its mass, barely. Its direction controls would have to compensate for the wobble, and the ferry would need an updated approach because the launch would also change the station's path.",
+      "“That's three problems,” Tala said.",
+      "“Three **discrete** problems,” Imani replied. “Keep them separate.”",
+      "Imani explained that they did not need the old gravity setting. They needed enough controlled rotation to bring the docking axis within the ferry's limits. The launcher could provide the missing turn, but its direction mattered as much as its force. Tala asked the pilot to **buttress** the model with his own tracking measurements. His camera saw the station from outside; their sensors described it from within. Neither view was sufficient alone.",
+      "Tala called up the cradle controls. The capsule rested sideways across the service mount, beyond the launch carriage's reach.",
+      "She could rotate the mount. She could extend the carriage. She could not do both simultaneously without risking a collision.",
+      "Her first attempt to **reconcile** the two movement diagrams produced an ugly red overlap.",
+      "“Slow your hands,” her father said.",
+      "She had been treating this like the simulator, where a mistaken command bought a stern message and another attempt. Here, an **impetuous** movement could smash the only useful projectile against the window.",
+      "She canceled the sequence.",
+      "The computer kept trying to **circumscribe** the carriage's movement around a maintenance barrier that no longer existed. Her father had removed it yesterday. The physical work was finished; the inspection record was not.",
+      "“Can you confirm the barrier is clear?” Imani asked.",
+      "Tala turned the exterior camera. A dangling panel blocked its view.",
+      "“Not from here.”",
+      "Her father pointed at the observation strip beneath the control desk.",
+      "Tala unclipped, attached her short safety line, and pulled herself down beside it. A screwdriver floated across the glass. Behind it, the carriage's full route was empty.",
+      "She read the painted position marks aloud. Her father checked them against the drawing.",
+      "“Clear,” he said.",
+      "Imani recorded the inspection and released the correct travel limits.",
+      "Tala had expected to be told to bypass something. Instead, they had spent precious seconds proving what was true. She had been too **callow** to understand why the difference mattered.",
+      "The carriage slid beneath the capsule.",
+      "Four minutes and thirty seconds.",
+      "The model requested a live test of the launcher. Its last calibration had been performed before the station changed its freight configuration. Imani needed **empirical** measurements, not yesterday's assumptions.",
+      "“We haven't time,” Tala said.",
+      "“Then make a small test.”",
+      "A little container of discarded bearing parts sat in the loading chamber. Tala had been meaning to empty it all week.",
+      "She had never expected procrastination to become an **extenuating** circumstance.",
+      "Her father suggested sending it down the empty track before mounting the capsule. The change in the station's movement would be tiny, but the instruments could measure it.",
+      "Tala checked the disposal corridor with the ferry pilot.",
+      "“Clear,” he said. “Send.”",
+      "The container vanished along the track. There was no sound from outside, only a tremor through her chair.",
+      "The observed change did not match the model.",
+      "For two seconds, nobody spoke.",
+      "Tala's father said, “That's useful.”",
+      "“That's terrible.”",
+      "“Useful can be terrible.”",
+      "Imani combined the new readings with the impact data. Tala watched three **disparate** estimates become one correction. A damaged sensor had made the sideways motion look smaller than it was.",
+      "The test had caught it.",
+      "Tala let herself breathe.",
+      "“Updated launch direction,” Imani said.",
+      "The capsule's cradle began turning.",
+      "Then the camera feed broke into **intermittent** stripes.",
+      "Tala grabbed the control. The cradle stopped.",
+      "“Electrical?” she asked.",
+      "“Could be the cable,” her father said. “Under your left knee.”",
+      "She found the connector hanging loose. Its locking tab had broken during the impact. She pressed it home, but the picture failed whenever she moved.",
+      "Her father reached across the gap and trapped the cable against the chair with his belt. It was an **adroit** solution to an ordinary problem, and she loved him for finding something ordinary.",
+      "The picture returned.",
+      "They moved the capsule onto the carriage.",
+      "Its little window caught the sunlight. Years earlier, Tala had taped a paper ocean to the inside because she had never seen a real one. She could still identify the pale rectangle behind the glass.",
+      "“We could recover it,” she said.",
+      "Imani did not answer immediately.",
+      "Tala waited for someone to **refute** the thought with a better calculation. Instead, the captain was **forthright**.",
+      "“Not from the disposal path we need. I'm sorry.”",
+      "Her father's face remained **stoic**. Only his hands moved, rubbing his bare ring finger as they did whenever money was discussed.",
+      "They had sold her mother's ring for the capsule's first payment.",
+      "Her father had drawn their first savings chart on the kitchen wall. Each square represented a month, and each completed row meant another part they could afford. Tala remembered being impatient with those tiny advances. Now she wanted all of them back: the waiting, the arguments over paint, the evenings when returning home had seemed a difficult but ordinary plan rather than a question of staying alive.",
+      "Tala looked back at the controls.",
+      "“I understand.”",
+      "She did understand. That did not make her ready.",
+      "The countdown reached three minutes.",
+      "The launch carriage reported an unsecured load.",
+      "“It's clamped,” Tala said.",
+      "The camera showed the capsule resting inside both grips. The warning remained.",
+      "Her father asked her to **retract** the forward grip and close it again. The status light flickered once, then went dark.",
+      "Outside, the grip had not moved.",
+      "“A broken position sensor,” Tala said.",
+      "“Maybe.”",
+      "“It's obvious.”",
+      "“Obvious isn't enough.”",
+      "His insistence began to **elicit** an anger she knew was unfair. He was trapped, she was frightened, and the screen was asking for certainty they did not have.",
+      "Imani asked for a view of the mechanical witness pin.",
+      "Tala shifted the camera. Its damaged cable allowed only **sporadic** frames at this angle. In each one, the pin disappeared behind the same housing.",
+      "The proof remained **elusive**.",
+      "Tala closed her eyes for one breath. Her father had taught her to **eschew** force when a fitting resisted: first find out what was stopping it.",
+      "She opened the maintenance drawing.",
+      "There was another indicator, visible through the capsule's empty engine bay. She could see it from the observation strip.",
+      "She unclipped again.",
+      "The safety line tangled around her chair. She pulled, harder than she should have, and nearly struck her face on the desk.",
+      "Her father caught her shoulder.",
+      "“Here.”",
+      "His **deft** fingers freed the loop. She moved past him, careful of his trapped leg.",
+      "The indicator showed the rear grip locked. The forward grip was resting against the capsule's curved skin rather than its mounting lug.",
+      "She reported it.",
+      "“Good catch,” Imani said.",
+      "It did not feel good. A loose capsule could leave the carriage early, sending their correction in the wrong direction. The malfunction was real; their guessed explanation had been wrong.",
+      "Tala began to **flag**. Her arms trembled whenever she held a rail. The little tasks were becoming harder to arrange in order.",
+      "“Two minutes,” the pilot said.",
+      "She had been **deferential** to every experienced voice aboard this station. Now she needed to tell them something none of them could see.",
+      "“The carriage can't grip this hull where it is. We need to move it backward.”",
+      "“There's no travel left,” Imani said.",
+      "“The service saddle has travel.”",
+      "Her father turned toward the window.",
+      "Tala saw him understand.",
+      "The saddle had been left beneath the capsule when the carriage lifted it. Lowering the load back onto it would allow a short sideways adjustment, bringing the lug into reach.",
+      "It looked **implausible** on the damaged camera. The drawing showed enough space.",
+      "“I can **substantiate** the clearance from the observation marks,” she said.",
+      "She read them. Her father checked. Imani approved the move.",
+      "The capsule lowered.",
+      "The saddle shifted.",
+      "The carriage lifted it again.",
+      "This time, the grip closed around metal made to carry a launch load. The witness pin slid home.",
+      "The warning cleared.",
+      "Tala strapped herself in with a care that would have seemed **superfluous** seven minutes earlier. Her father tightened his line around the support. The fabric was **resilient**, but he checked its stitching before trusting it.",
+      "“No one moves during launch,” Imani said.",
+      "Tala told her where the two of them were secured. Their positions went into the mass model. Moving around now could **frustrate** the correction they had worked so hard to prepare.",
+      "The pilot confirmed the new approach.",
+      "One minute.",
+      "Tala's display showed a launch permission box.",
+      "She had never noticed how large the button was.",
+      "Her father asked whether she wanted him to do it.",
+      "She shook her head, then remembered the radio.",
+      "“No.”",
+      "She pressed.",
+      "The launcher refused.",
+      "An old training lock remained active on her apprentice account.",
+      "For a moment, the absurdity threatened to **confound** her completely. She could inspect the load, move it, prepare its trajectory, and save the station. She could not authorize its departure.",
+      "“Captain,” she said.",
+      "Imani's reply was **terse**. “Transferring authority.”",
+      "The permission box changed.",
+      "Tala read the trajectory confirmation aloud. The captain's authorization was **unequivocal**.",
+      "She pressed again.",
+      "The capsule shot along the track. The gallery gave a deep, brief shudder.",
+      "Earth swung across the window.",
+      "Tala's stomach disagreed with everything her eyes reported. The first movement was **turbulent**, a sideways lurch followed by a slow settling. The model updated. The pilot counted measurements under his breath.",
+      "“Hold,” he said.",
+      "Her sandwich touched the floor.",
+      "Not hard. Not where it would have landed before. But it stayed there.",
+      "“I've got a docking solution.”",
+      "The countdown froze at eleven seconds.",
+      "Tala watched the place where their capsule had been. There was nothing there now but the empty saddle, its paint pale against the track.",
+      "They had managed to **surmount** the problem. She had expected success to feel less like losing something.",
+      "Her father reached across and touched her wrist.",
+      "“That was ours,” she said.",
+      "“It was.”",
+      "He did not say it was only a machine.",
+      "When the ferry's clamps closed, she started crying with an anger that surprised her.",
+      "The pilot gave them time. Imani stayed on the radio while the rescue crew freed her father's boot. A medic checked him, then asked Tala to unclench her hands.",
+      "She could not remember making fists.",
+      "An hour later, she sat beside him in the ferry's passenger cabin. He had a splint, a blanket, and an opinion about the quality of the coffee.",
+      "“You should complain,” she said.",
+      "“I'm considering a strongly worded silence.”",
+      "She laughed, then felt disloyal to the capsule.",
+      "Her father seemed to know.",
+      "“We can miss it and still be glad.”",
+      "The captain brought them the launch record. There would be an investigation, repair claims, and questions about why their apprentice had needed emergency authority. There was no promise of another capsule.",
+      "Tala asked for a copy of the trajectory plot.",
+      "“For your logbook?”",
+      "“Yes.”",
+      "It was more than that. The line showed where their future had gone, and what its departure had made possible.",
+      "Outside the window, Earth turned slowly beneath them.",
+      "Her father's hand found hers. His grip was **tenacious**, warm, and entirely real.",
+      "“Still want to see the ocean?” he asked.",
+      "“Yes.”",
+      "“Then that's what we save for.”"
+    ],
+    "vocab": [
+      {
+        "word": "flounder",
+        "def": "to move or struggle awkwardly without control"
+      },
+      {
+        "word": "acerbic",
+        "def": "sharp, bitter, or cutting in tone"
+      },
+      {
+        "word": "affable",
+        "def": "friendly and easy to talk to"
+      },
+      {
+        "word": "tangible",
+        "def": "real and perceptible by touch; concrete"
+      },
+      {
+        "word": "analogous",
+        "def": "similar in a way that allows a useful comparison"
+      },
+      {
+        "word": "blatant",
+        "def": "very obvious and impossible to overlook"
+      },
+      {
+        "word": "asperity",
+        "def": "harshness or sharpness of tone or manner"
+      },
+      {
+        "word": "discrete",
+        "def": "separate and distinct"
+      },
+      {
+        "word": "buttress",
+        "def": "to support or strengthen with additional evidence or assistance"
+      },
+      {
+        "word": "reconcile",
+        "def": "to make different ideas or requirements consistent with one another"
+      },
+      {
+        "word": "impetuous",
+        "def": "acting hastily without enough thought"
+      },
+      {
+        "word": "circumscribe",
+        "def": "to restrict something within limits or boundaries"
+      },
+      {
+        "word": "callow",
+        "def": "young and inexperienced"
+      },
+      {
+        "word": "empirical",
+        "def": "based on observation or experiment rather than theory alone"
+      },
+      {
+        "word": "extenuating",
+        "def": "making a fault or offense seem less serious or blameworthy"
+      },
+      {
+        "word": "disparate",
+        "def": "different in kind or character; not readily comparable"
+      },
+      {
+        "word": "intermittent",
+        "def": "stopping and starting at intervals"
+      },
+      {
+        "word": "adroit",
+        "def": "skillful and resourceful in handling a situation"
+      },
+      {
+        "word": "refute",
+        "def": "to prove that a statement or idea is false"
+      },
+      {
+        "word": "forthright",
+        "def": "direct and honest"
+      },
+      {
+        "word": "stoic",
+        "def": "enduring pain or difficulty without showing emotion or complaint"
+      },
+      {
+        "word": "retract",
+        "def": "to draw or pull back"
+      },
+      {
+        "word": "elicit",
+        "def": "to draw out or bring about a response or feeling"
+      },
+      {
+        "word": "sporadic",
+        "def": "occurring irregularly or occasionally"
+      },
+      {
+        "word": "elusive",
+        "def": "difficult to find, grasp, or achieve"
+      },
+      {
+        "word": "eschew",
+        "def": "to deliberately avoid or refrain from"
+      },
+      {
+        "word": "deft",
+        "def": "quick, neat, and skillful in movement"
+      },
+      {
+        "word": "flag",
+        "def": "to become weak or lose energy"
+      },
+      {
+        "word": "deferential",
+        "def": "showing respectful acceptance of another person's authority or judgment"
+      },
+      {
+        "word": "implausible",
+        "def": "seeming unlikely or difficult to believe"
+      },
+      {
+        "word": "substantiate",
+        "def": "to support a claim with evidence"
+      },
+      {
+        "word": "superfluous",
+        "def": "more than is needed; unnecessary"
+      },
+      {
+        "word": "resilient",
+        "def": "able to withstand strain and recover its shape or strength"
+      },
+      {
+        "word": "frustrate",
+        "def": "to prevent a plan or effort from succeeding"
+      },
+      {
+        "word": "confound",
+        "def": "to confuse or puzzle completely"
+      },
+      {
+        "word": "terse",
+        "def": "brief and direct in expression"
+      },
+      {
+        "word": "unequivocal",
+        "def": "clear and leaving no room for doubt"
+      },
+      {
+        "word": "turbulent",
+        "def": "marked by violent or unsteady movement"
+      },
+      {
+        "word": "surmount",
+        "def": "to overcome a difficulty or obstacle"
+      },
+      {
+        "word": "tenacious",
+        "def": "holding firmly and refusing to let go"
+      }
+    ],
+    "illustration": {
+      "src": "/stories/story-53-seven-minutes-gravity.png",
+      "alt": "Black-and-white aquatint of Tala, a tethered teenage mechanic, reaching for a freight-launch control while her father braces behind her and their old return capsule rests outside above Earth.",
+      "width": 1536,
+      "height": 1024
+    }
+  },
+  {
+    "id": 54,
+    "title": "Two Voices, One Body",
+    "genre": "YA science fiction / identity and consent",
+    "styleInspiration": "Ted Chiang",
+    "wordCount": 40,
+    "paragraphs": [
+      "Ilen learned that she was not alone when her left hand refused the cup.",
+      "She wanted water. The hand wanted to turn the cup over and inspect the maker's stamp. For a moment the two intentions pulled against each other, and the cup dropped between her knees.",
+      "Tern, the rehabilitation technician, caught it before it reached the floor.",
+      "“We need to talk,” she said.",
+      "Ilen had heard that sentence before the accident, usually from teachers. She had never heard it while sitting in a body whose fingertips could feel a scratch too small to see.",
+      "“About the hand?”",
+      "“About both of you.”",
+      "Tern placed a switch on the table. It had two positions and no middle.",
+      "The explanation was initially **ambiguous**. A recovery system had restored Ilen's mind after the shuttle fire. Two restoration teams, separated by a communications failure, had worked from the same surviving record. Both processes succeeded. Both copies were already conscious when the connection returned.",
+      "Only one artificial body was available.",
+      "“Which one am I?” Ilen asked.",
+      "Tern did not pretend the answer was **axiomatic**. Both remembered the same childhood, the same unfinished argument with their mother, the same last sight of smoke inside the shuttle.",
+      "“You're the one speaking now.”",
+      "“And the other?”",
+      "“Waiting.”",
+      "Ilen looked at her hands. They were smooth and slightly cool. The **corporeal** facts seemed straightforward: one chest, two arms, one pair of eyes. The rest was not.",
+      "Tern explained the switch. Whoever controlled the body could offer the next turn. The waiting mind could listen through a shared channel, but private memories remained private unless deliberately exchanged.",
+      "“May I hear her?”",
+      "Tern opened the channel.",
+      "The voice that emerged from the little speaker sounded like Ilen trying not to cry.",
+      "“I was going to ask the same thing.”",
+      "That evening, they agreed to take turns of twenty minutes. It seemed **rational**, the sort of arrangement Ilen would have devised for sharing a school laboratory.",
+      "The first exchange frightened her more than she admitted. The room disappeared. Then it returned, and the cup had moved. Her body was still sitting upright, but someone had folded a paper bird beside the switch.",
+      "A note read: I wanted you to know I used the time.",
+      "Ilen laughed. It was exactly what she would have done.",
+      "For the first day, this resemblance was comforting. Their answers formed a **cohesive** account of who they were. They both disliked the room's artificial birdsong. They both wanted to apologize to their mother. Neither could remember whether they had fed the neighbor's cat before leaving home.",
+      "Their mother, Oda, arrived the next morning.",
+      "She embraced the body before she asked who was using it. Ilen felt the pressure through a thousand small sensors and wished she could stop noticing how the sensation worked.",
+      "Then Oda greeted the speaker.",
+      "“Hello, love.”",
+      "Nobody had told her to do that.",
+      "The second Ilen asked for the body. The first offered the switch. Their mother waited while the eyes closed and opened again.",
+      "She hugged her daughter a second time.",
+      "Oda's ship would leave for Earth in three days. Ilen's passage was booked. The restoration center proposed a merger before departure, combining the two minds into a single occupant.",
+      "The brochure promised continuity.",
+      "Tern was less **equivocal** when Ilen asked what that word meant.",
+      "“It means we can preserve information. It doesn't prove what either of you will experience.”",
+      "“Would we disappear?”",
+      "“I don't know.”",
+      "Ilen wanted someone to be more certain. She did not want certainty made up for her benefit.",
+      "The other mind wanted to read the research.",
+      "That was their first disagreement.",
+      "By the second day, their interests had become visibly **divergent**. One spent her turns watching recordings of home. The other borrowed a book about the station's navigation lights and asked Tern how to repair a pressure gauge.",
+      "They could **differentiate** their new memories easily. The difficulty was deciding whether those differences mattered.",
+      "“You were always curious,” the first Ilen said through the speaker.",
+      "“So were you.”",
+      "“Then we're still the same.”",
+      "“Are we?”",
+      "The question had no accusation in it. That made it harder.",
+      "They began keeping separate notebooks. The one who wanted Earth chose blue covers. The one who wanted to stay chose a book with a damaged spine because its pages lay flat on the workbench.",
+      "Tern helped them **ascertain** which symptoms came from the shared hardware. A flickering hand was a motor problem. A dislike of the lunch menu was a preference. Their arguments were not automatically faults to be repaired.",
+      "“Don't **misconstrue** difference as damage,” she said.",
+      "The Earth-bound Ilen disliked how relieved the other sounded.",
+      "That night, they tried exchanging a memory.",
+      "It was a small one: Tern showing the station-bound Ilen how to adjust a hinge. The first could access the scene, examine the angles, and hear the conversation. The pleasure attached to it felt distant, like someone else's holiday photograph.",
+      "Their old memories did not feel like that.",
+      "“It's **vicarious**,” she said.",
+      "“Yes.”",
+      "They could **juxtapose** the two versions of their morning, but putting them side by side did not make them one morning.",
+      "The merger brochure suddenly seemed less **lucid** than the little drawings they had made of their turn schedule.",
+      "Oda came with clean clothes and a bag of sweets the body could not digest. She had bought them without thinking.",
+      "Ilen loved her for the mistake.",
+      "While her mother adjusted a sleeve, she asked whether the ship could carry both minds separately.",
+      "The answer was practical. Their passage included one certified body. An independent processor could travel as equipment, but it would have to remain inactive during the journey. They could preserve the second mind, not offer her a life aboard.",
+      "“She'd wake on Earth,” Oda said.",
+      "“If someone builds another body.”",
+      "“We'd find a way.”",
+      "Ilen heard the **implicit** promise beneath the words: her mother would sell what she owned, work longer, ask people she disliked for help.",
+      "She did not know whether gratitude entitled her to accept it.",
+      "The other Ilen listened. Later, she asked for a separate name.",
+      "“So when they say Ilen, we don't both have to wait.”",
+      "Choosing felt **irrevocable**, though Tern said names could change. They tried several. Most sounded like a performance.",
+      "The station-bound mind chose Rill after the thin water channel outside their childhood kitchen. They both remembered floating leaves along it. It was shared ground, not a claim that she had begun yesterday.",
+      "“Then I'm Ilen,” the first said.",
+      "“If you want.”",
+      "She did.",
+      "A name made Rill's existence **manifest** to the staff. Requests that had previously been addressed to “the patient” began arriving for two people. Some nurses adapted immediately. Others needed reminding.",
+      "There was no **precedent** in the center's ordinary discharge forms. Tern wrote an additional page rather than forcing them into a single signature box.",
+      "The arrangement was **provisional**. That word mattered. It left room for lives the forms had not anticipated.",
+      "They tested it outside the workshop that evening. Tern took them to a public garden, where trees grew beneath lamps arranged to suggest a changing sky. Ilen used the body for the outward walk. Rill would bring them back.",
+      "At a crossing, a maintenance cart blocked the path. Its driver asked Ilen whether the speaker on her shoulder needed adjusting.",
+      "“I'm not an accessory,” Rill said.",
+      "The driver looked embarrassed. He moved the cart and apologized to her directly.",
+      "It was a small **nuance** in the direction of his eyes, but Ilen noticed. She had spent the morning answering questions about Rill as if the other woman were absent. She had not meant to. Intentions, she was learning, did not settle the effect of a habit.",
+      "They sat beside a shallow pool. Ilen wanted to call their mother. Rill asked whether they could first watch the gardeners changing a lamp.",
+      "“You can do that on your turn.”",
+      "“I can. I wondered whether you'd enjoy it too.”",
+      "Ilen almost said no simply because it was Rill's idea. Instead, she watched. A gardener raised an ordinary ladder, rested a hand against the trunk of an artificial tree, and began talking to the person holding its feet. The work looked like something people did everywhere. Ilen felt briefly less far from home.",
+      "On the return journey, she listened through the shared channel while Rill walked. It was stranger than the first exchange. Now she could recognize decisions she would not have made: a slower route, a pause beside a shop, an unnecessary second look at a star map.",
+      "She wanted to interrupt. She could interrupt. Rill had promised to offer the switch whenever asked.",
+      "That promise was her only **recourse** if something felt wrong, and she understood how much trust it required from both sides. A right could exist on paper while being exhausting to use.",
+      "Back in the room, she asked whether they should agree on emergencies in advance. Rill added a second request: ordinary disagreements should not automatically count as emergencies.",
+      "They wrote the two rules together. Neither rule solved their future, but that night's argument ended without one of them disappearing into silence.",
+      "On the final morning, the body overheated.",
+      "Ilen was trying on travel boots when her fingers locked. A warning sounded from the processor housing at the back of her neck.",
+      "Tern disconnected the motor supply and brought a cooling unit.",
+      "Rill spoke through the table speaker. “Did I cause it?”",
+      "“No. Running two active minds exceeds this body's continuous cooling capacity. We knew we'd need another arrangement.”",
+      "“You could have told us sooner,” Ilen said.",
+      "Tern accepted the criticism.",
+      "She had hoped the merger decision would be made before the limit became urgent. It was not a plan she was proud of now.",
+      "The proposed solution looked **incongruous** beside the emergency tools: a cheerful appointment card for integration at noon.",
+      "Ilen stared at it. A single mind would fit. The body would work. Her mother would stop standing outside the door with a bag of impossible sweets.",
+      "For the first time, she wanted to agree simply to end the **quandary**.",
+      "Rill was silent.",
+      "Ilen could not construe that silence as consent.",
+      "She asked Tern to leave them alone.",
+      "“I want to go home,” she told the speaker.",
+      "“I know.”",
+      "“You don't.”",
+      "“I remember wanting it. Now I want something else too.”",
+      "Ilen tried to **articulate** her fear. If Rill stayed alive, their future became more expensive, more difficult, and less certain. If Rill disappeared, Ilen might spend the rest of her life wondering whose wishes had won.",
+      "Rill had a **qualm** of her own.",
+      "“I keep thinking that if I loved Mum enough, I'd want what you want.”",
+      "The thought hurt Ilen because she recognized it.",
+      "They had made a false **dichotomy** out of a machine's limits: either be one daughter or stop being daughters at all.",
+      "Neither wanted to **renounce** their mother. Neither wanted the other to become a **simulacrum** preserved in a file and politely consulted on birthdays.",
+      "“Could we wait?” Ilen asked.",
+      "There was a repair depot on the station. Rill had read its employment notices. It used old mobile inspection units with independent processors. One was being retired because its wheels needed replacing.",
+      "It wasn't a human body.",
+      "It was somewhere to begin.",
+      "Tern checked the idea. The processor was compatible. The depot would lend it under supervision, and Rill could help restore the wheels in exchange. She would have a camera, a speaker, and two small tool arms.",
+      "Ilen's first reaction was disappointment on her behalf.",
+      "Rill's was interest.",
+      "The difference was **subtle**, but it settled something.",
+      "An experience did not have to resemble Ilen's ideal to be valuable to Rill. Their common past was not the whole of either person. There might be something **intrinsic** in each new pattern of attention that a merger would flatten.",
+      "They did not have to prove that to deserve more time.",
+      "Ilen asked whether they could both remain on the station for six months.",
+      "Tern helped them examine the costs. Housing was available through the depot. Their return ticket could be deferred, with a fee. Ilen could study remotely and help in the workshop. None of it was easy. None required someone to vanish by noon.",
+      "Oda listened to their proposal.",
+      "For several minutes, she said nothing.",
+      "Ilen had expected permission or refusal. Instead, her mother asked how she would learn to speak to them separately without making one feel less loved.",
+      "Nobody had a finished answer.",
+      "“Start with the names,” Rill said.",
+      "Oda nodded.",
+      "The transfer happened that afternoon. It was not **paradoxical** that Ilen was more frightened when the technicians separated them than when they had proposed combining them. Separation was real now. It could go wrong in particular ways.",
+      "She watched Tern's hands and tried not to **vacillate** each time a monitor changed.",
+      "Then the inspection unit's camera turned.",
+      "“You're taller from here,” Rill said.",
+      "Ilen laughed with her whole, singular mouth.",
+      "The laughter did not **subsume** the grief that followed. Their mother left the next day. Ilen stood beside Rill's wheeled frame at the departure window and watched Oda's ship pull away.",
+      "There was a measurable **variance** between what each of them felt. Ilen wanted to run after it. Rill wanted to learn its navigation pattern. Both missed the woman inside.",
+      "Afterward, they made tea.",
+      "Rill could not drink it. She adjusted the lamp so Ilen could see her textbook, then asked her to describe the taste. Ilen tried. Her account was **subjective**, incomplete, and apparently interesting enough for three follow-up questions.",
+      "They had not found a way to **transcend** every limit. Nor had they learned to **transmute** loss into an uncomplicated new beginning.",
+      "They had simply refused to **repudiate** one life for the convenience of another.",
+      "On the workshop wall, Tern pinned their old schedule beside the new one. Twenty-minute turns had become separate columns with shared meal breaks.",
+      "The human mind was **malleable**, the brochures had said. Ilen was beginning to think that institutions could be too, if someone stayed long enough to insist.",
+      "Rill rolled toward the window, then stopped at a loose floor strip. Ilen moved it aside.",
+      "Neither mistook the gesture for a solution to everything.",
+      "There was still a great deal to **disentangle**. But as Rill crossed the threshold under her own control, their arrangement finally had more than the **semblance** of a future."
+    ],
+    "vocab": [
+      {
+        "word": "ambiguous",
+        "def": "open to more than one interpretation"
+      },
+      {
+        "word": "axiomatic",
+        "def": "self-evident and universally true"
+      },
+      {
+        "word": "corporeal",
+        "def": "Material; tangible; physical."
+      },
+      {
+        "word": "rational",
+        "def": "based on reason"
+      },
+      {
+        "word": "cohesive",
+        "def": "well integrated, forming a united whole"
+      },
+      {
+        "word": "equivocal",
+        "def": "confusing or ambiguous"
+      },
+      {
+        "word": "divergent",
+        "def": "Growing further apart; diverging."
+      },
+      {
+        "word": "differentiate",
+        "def": "to recognize or distinguish the differences between things"
+      },
+      {
+        "word": "ascertain",
+        "def": "To find out definitely; to discover or establish."
+      },
+      {
+        "word": "misconstrue",
+        "def": "interpret in the wrong way"
+      },
+      {
+        "word": "vicarious",
+        "def": "experienced through another person rather than directly"
+      },
+      {
+        "word": "juxtapose",
+        "def": "to place close for contrast"
+      },
+      {
+        "word": "lucid",
+        "def": "clear and easy to understand"
+      },
+      {
+        "word": "implicit",
+        "def": "implied but not stated"
+      },
+      {
+        "word": "irrevocable",
+        "def": "incapable of being retracted or revoked"
+      },
+      {
+        "word": "manifest",
+        "def": "clearly apparent or evident"
+      },
+      {
+        "word": "precedent",
+        "def": "an example that is used to justify similar occurrences at a later time"
+      },
+      {
+        "word": "provisional",
+        "def": "under terms not final or fully worked out or agreed upon"
+      },
+      {
+        "word": "nuance",
+        "def": "a subtle difference in meaning or opinion or attitude"
+      },
+      {
+        "word": "recourse",
+        "def": "The use of as a source of help in a difficult situation."
+      },
+      {
+        "word": "incongruous",
+        "def": "lacking in harmony or compatibility or appropriateness"
+      },
+      {
+        "word": "quandary",
+        "def": "state of uncertainty or perplexity especially as requiring a choice between equally unfavorable options"
+      },
+      {
+        "word": "articulate",
+        "def": "to express thoughts or feelings clearly in words"
+      },
+      {
+        "word": "qualm",
+        "def": "a feeling of doubt"
+      },
+      {
+        "word": "dichotomy",
+        "def": "a division into two contrasts"
+      },
+      {
+        "word": "renounce",
+        "def": "to give up formally"
+      },
+      {
+        "word": "simulacrum",
+        "def": "an image, likeness, or imitation of something or someone"
+      },
+      {
+        "word": "subtle",
+        "def": "so delicate it's not obvious"
+      },
+      {
+        "word": "intrinsic",
+        "def": "belonging by nature"
+      },
+      {
+        "word": "paradoxical",
+        "def": "seemingly contradictory but nonetheless possibly true"
+      },
+      {
+        "word": "vacillate",
+        "def": "to waver between choices"
+      },
+      {
+        "word": "subsume",
+        "def": "to absorb or include something within a larger whole"
+      },
+      {
+        "word": "variance",
+        "def": "a difference or degree of difference between things"
+      },
+      {
+        "word": "subjective",
+        "def": "Formed, as in opinions, based upon a person's feelings or intuition, rather than upon observation or purely logical reasoning; coming more from within the observer than from observations of the external environment."
+      },
+      {
+        "word": "transcend",
+        "def": "To pass beyond the limits of something."
+      },
+      {
+        "word": "transmute",
+        "def": "change or alter in form, appearance, or nature"
+      },
+      {
+        "word": "repudiate",
+        "def": "to reject or refuse to accept or acknowledge"
+      },
+      {
+        "word": "malleable",
+        "def": "easily shaped"
+      },
+      {
+        "word": "disentangle",
+        "def": "To free something from entanglement; to extricate or unknot."
+      },
+      {
+        "word": "semblance",
+        "def": "an outward appearance or impression of something"
+      }
+    ],
+    "illustration": {
+      "src": "/stories/story-54-two-voices-one-body.png",
+      "alt": "Black-and-white aquatint of Ilen in an android body and technician Tern at a rehabilitation workbench, with a departing spacecraft beyond the window.",
+      "width": 1536,
+      "height": 1024,
+      "monochrome": true
+    }
+  },
+  {
+    "id": 55,
+    "title": "The Planet That Had No Owners",
+    "genre": "YA science fiction / first contact",
+    "styleInspiration": "Ursula K. Le Guin",
+    "wordCount": 40,
+    "paragraphs": [
+      "Esme translated the agreement correctly and understood it wrong.",
+      "She would remember that distinction whenever anyone called her fluent.",
+      "At seventeen, she was the youngest interpreter aboard the survey ship Meridian. Her supervisors described her as unusually **amenable** to unfamiliar ways of thinking. Esme liked the phrase until she discovered how easily it could mean agreeable.",
+      "The people of the floodplain called themselves the Arel. They moved on six slender limbs, using the front pair for tools and the others for walking or resting. Their settlements curved around water channels that changed direction with the seasons.",
+      "Esme's guide, Tal, had an **amiable** habit of greeting every new object before examining it. He greeted the human measuring instruments, their folding chairs, and once, to Esme's delight, a stubborn boot.",
+      "Her father, the expedition's geologist, called the custom charming.",
+      "“It's not a performance for us,” Esme reminded him.",
+      "“I know.”",
+      "She was not sure he did.",
+      "The humans wanted a landing road across the plain and permission to drill beneath a ridge. The Arel wanted to learn how the humans traveled between stars. Both parties hoped for an **amicable** exchange.",
+      "The first meetings went well. Esme learned how to **denote** past and future obligations with small changes in hand position. Tal learned the human words for sample, shelter, and return.",
+      "The difficult word was own.",
+      "There was no exact equivalent. An Arel could describe using a tool, caring for it, carrying it, or having received it from another person. None of those descriptions meant what the ship's contracts meant by permanent exclusive possession.",
+      "“Perhaps it's **archaic** here,” said the expedition director. “A stage they never needed.”",
+      "Esme disliked the ease with which he placed another society behind his own.",
+      "The Arel did have rules. Some channels were **inviolable** during breeding season. Certain rooms could not be entered without invitation. A person who borrowed a cutting tool was expected to return it sharp.",
+      "Their absence of land titles did not mean an absence of boundaries.",
+      "The agreement took five days. Esme worked with Tal to **delineate** the road, the drill area, and the routes the survey vehicles would use. Human engineers supplied maps. Arel water keepers supplied knotted cords whose positions recorded drainage and seasonal flows.",
+      "To **correlate** the two systems, they laid the cords directly over the projected human map.",
+      "Esme thought the result beautiful.",
+      "The director thought it took too long.",
+      "At the final meeting, Tal asked who would remain with the road.",
+      "“The settlement team,” Esme answered.",
+      "“And after?”",
+      "“Their successors.”",
+      "Tal touched the agreement stones in sequence. Esme copied the gesture. His colleagues did the same, and a quiet expression of **comity** passed around the gathering.",
+      "No one signed away the plain. There was nothing to **cede** in that sense. Instead, Esme recorded that the humans were welcomed into its continuing use.",
+      "The first bulldozer arrived two mornings later.",
+      "By afternoon, Tal was standing in front of it.",
+      "He did not threaten the driver. He simply planted his rear limbs in the mud and refused to move. Behind him, a dozen Arel stood across the unfinished road.",
+      "Esme ran down from the survey cabin.",
+      "“What's wrong?”",
+      "Tal pointed to the bank the machine had flattened. Water was spreading into a shallow depression beyond it.",
+      "“You have left the little rooms without a roof.”",
+      "Esme looked for houses.",
+      "There were none.",
+      "The director arrived with a copy of the agreement. “We mapped this. We asked. We received permission.”",
+      "Tal listened to Esme's translation, then looked at her with an expression she could not name.",
+      "“Yes,” he said. “You agreed to stay.”",
+      "That evening, she read the recording until the sentences lost their familiar sound.",
+      "The human legal adviser said their interpretation was reasonable. The Arel had agreed to a road. Construction necessarily changed the ground. They had discussed its width in detail.",
+      "“They can't **rescind** permission whenever they dislike a machine.”",
+      "“They haven't asked us to leave.”",
+      "“Then what do they want?”",
+      "Esme did not know.",
+      "She wanted to **mediate**, but first she had to understand what she had helped promise.",
+      "Tal took her onto the plain before dawn. They walked beside one of the channels marked on the cords. The soil around it rose and fell in soft, rounded patches.",
+      "He lifted a woven reed cover.",
+      "Underneath lay a cluster of tiny translucent creatures, their bodies pulsing in shallow water. They were not young Arel. They belonged to another species that filtered the channels during the dry months.",
+      "The bank the bulldozer flattened had sheltered an older colony.",
+      "“We thought it was mud,” Esme said.",
+      "“It was mud.”",
+      "Tal replaced the cover.",
+      "She understood the correction. Mud was not the opposite of a home.",
+      "The Arel maintained an entire system beneath the surface: chambers, shaded pools, and passages that gave small organisms room to survive the changing water. No individual had created it. No single settlement could abandon it without affecting the others.",
+      "“Who decides?” she asked.",
+      "Tal spread four limbs toward the surrounding terraces.",
+      "“The ones who will have to answer.”",
+      "They spent hours discussing that phrase. Esme had translated it as successors. It was more specific. The next people must be named, taught, and willing. A departing group could not simply declare its obligations transferred.",
+      "She had mistaken a relationship for a vague future intention.",
+      "Tal had mistaken the humans' confidence for understanding.",
+      "Neither error was harmless.",
+      "At breakfast, Esme asked the director to stop construction until they could **amend** the agreement.",
+      "He refused.",
+      "Their arrival window was short. The ship's investors expected the mineral survey before departure. Delay could end the project and the education grant funding her apprenticeship.",
+      "“Our work will **comply** with the written dimensions,” he said. “We cannot allow an unwritten interpretation to **contravene** a negotiated contract.”",
+      "Esme looked at the document. The measurements were exact. The responsibilities were not.",
+      "“We made the written version.”",
+      "“You made the translation.”",
+      "She had been waiting for someone to say it.",
+      "Her father took her outside before she answered. He was angry with the director, but also frightened of losing years of work.",
+      "“We can repair a ditch,” he said.",
+      "“We need to find out what repair means.”",
+      "He sighed. “Then find out quickly.”",
+      "The demand was understandable. It was also part of the problem.",
+      "Esme asked to **apprise** the Arel gathering of the humans' deadline. She would not hide it behind ceremonial language. Tal agreed, provided the engineers attended too.",
+      "At the gathering, she resisted the **conventional** introduction that praised cooperation without describing its failure. Instead, she explained the construction schedule, the grant, and the ship's need to leave before the seasonal storms.",
+      "One elder asked why any of those facts made the damaged chambers less important.",
+      "Esme said they did not.",
+      "The director called her answer an unnecessary admission. She translated his objection too.",
+      "Tal shifted beside her but did not interrupt.",
+      "For the first time, she understood how much an interpreter could alter by deciding what another party did not need to hear.",
+      "The discussions were uncomfortable. Arel settlements did not always reach **consensus**. Water keepers disagreed with builders. An elder defended the original welcome; another questioned the **propriety** of making promises to people who might vanish beyond the sky.",
+      "Esme had been too **parochial** to notice their politics while admiring their lack of property deeds.",
+      "They were not a single wise voice.",
+      "Nor were the humans uniformly careless. The road driver asked Tal to show her where the small chambers had been. The survey engineer wanted a list of water requirements. Her father asked for a soil sample and then stopped himself.",
+      "“May I take one?”",
+      "Tal asked where he would return what he learned.",
+      "The question delayed them for twenty minutes. Eventually her father described the report he would leave and the local people he would train to read its instruments.",
+      "Then Tal agreed.",
+      "Esme began to see **appropriate** questions that the first negotiations had omitted.",
+      "Who could stop a machine? Who checked damage? What happened if a human employee refused a repair order? Which obligations followed the expedition home?",
+      "These were **pertinent** matters, not decorative additions to the important business of minerals.",
+      "The legal adviser proposed compensation: metal tools, stored food, and a water pump. He hoped to **conciliate** the angry settlements.",
+      "Some Arel wanted the tools. Others pointed out that a pump would not reconstruct the lost chambers by itself.",
+      "“Let them tell us what **redress** would do,” Esme said.",
+      "She had once considered herself **cosmopolitan** because she could greet people in seven languages. Now she recognized how little that said about listening when a greeting stopped being enough.",
+      "By the second evening, there was a plan.",
+      "The road would curve around the oldest underground beds. Where a crossing was unavoidable, the humans would build raised spans with channels beneath them. The damaged chambers would be rebuilt under Arel supervision before drilling resumed.",
+      "Before presenting the design, they built a small model beside the channel. The engineer poured water through it while Tal moved stones to show the seasonal changes. Esme had assumed the **indigenous** builders would agree about every part of their own landscape. They did not.",
+      "A young water keeper challenged Tal's account of one dry-season passage. His family had used it for generations, but her settlement had begun maintaining it after a landslip. The old cord no longer described the work accurately.",
+      "Tal checked her measurements. Then he changed the cord.",
+      "Esme found the exchange more reassuring than a display of perfect knowledge. Their records could admit mistakes. Their responsibilities could be argued over without becoming meaningless.",
+      "The organisms below were also **heterogeneous**. Some chambers needed moving water. Others needed still pools. A single straight drain, however generously sized, would have served one group and harmed another.",
+      "“So a bigger pipe isn't enough,” the engineer said.",
+      "The water keeper touched the model in agreement.",
+      "Esme wrote the conversation into their working record. The director might call it a minor construction detail. For the beings whose whole lives passed beneath that crossing, it was the main subject.",
+      "She also corrected a thought she had been carrying since the first meeting. The choice was not between enlightened travelers and an **insular** local society, nor between wise inhabitants and destructive newcomers. Those descriptions made excellent speeches and poor plans. They left too many actual people out.",
+      "When the engineer returned the model's water to the channel, she did it slowly, checking first where it would flow.",
+      "The design was technically possible. The cost exceeded the director's road budget.",
+      "He could fund it by reducing the survey area.",
+      "He did not want to.",
+      "Esme did not want to lose her scholarship either. She admitted that aloud when Tal asked why her hands were shaking.",
+      "“Then you have a place in the question,” he said.",
+      "She had wanted to be the disinterested voice between the parties. That was not her position. She had a father, a contract, an education, and a name on the recording.",
+      "She could be honest about those things without pretending they were the only things that mattered.",
+      "The next morning, she delivered a new translation of the original exchange. She included the uncertainty she had previously hidden and the obligations implied by the words about staying.",
+      "The legal adviser challenged her.",
+      "Her evidence was not **conclusive** enough to settle every possible interpretation. She said so. But it was enough to make the claim of uncomplicated permission **untenable**.",
+      "The driver parked the bulldozer.",
+      "The engineer closed the drill schedule.",
+      "Esme's father said he would work on the revised crossing.",
+      "The director looked at the three of them, then at the people waiting beyond the cabin. He could dismiss individuals. He could not complete the survey alone.",
+      "He approved the smaller plan.",
+      "The agreement did not make everyone happy. Two investors withdrew their support. Esme's grant would end with the expedition. Some Arel remained deeply suspicious of humans, and one called for them never to return.",
+      "Tal translated the statement without softening it.",
+      "Esme tried not to mistake caution for a **xenophobic** refusal to see her as a person. History, even a history of three weeks, gave people reasons to distrust.",
+      "The work took a month.",
+      "Esme stayed after the ship departed, living in an Arel guest room beside the repaired channel. It was her decision, though not an inexpensive one. Her father left with the survey samples and a promise to return with replacement parts before the wet season.",
+      "He had learned not to leave the identity of his successor blank.",
+      "The Arel council gave Esme **latitude** to study their records. She helped build a shared glossary in return. They marked disputed meanings instead of erasing them.",
+      "Sometimes she had to be **discreet** about another family's private difficulties. Sometimes silence protected a powerful person from criticism, and she had to **dissent**. The distinction was rarely comfortable.",
+      "Tal disagreed with her often enough to become a friend.",
+      "Together they learned not to **ascribe** every misunderstanding to language. Pride needed no translation. Neither did impatience, once you knew the shape it took in another body.",
+      "Esme also learned not to **misattribute** their agreements to kindness alone. The Arel wanted reliable bridges and access to human knowledge. Reciprocity could include affection without depending on it.",
+      "At the first storm, they watched water pass beneath the new crossing. Nothing flooded. The little chambers remained wet and sheltered.",
+      "Her father received the test record aboard ship. His reply took time to return, and she read it twice when it arrived.",
+      "Tal asked whether she was homesick.",
+      "“Yes.”",
+      "“Will you leave?”",
+      "“Eventually.”",
+      "They sat beside the crossing, where a new interpreter was learning the cord patterns. Esme would teach her before departing. Wanting to go did not require her to **relinquish** the responsibilities she had accepted.",
+      "She had once thought **deference** was the safest form of respect. Now she asked harder questions, including of people she had learned to **venerate**.",
+      "The difference was no longer merely **overt** politeness. It was the work they allowed each other to question.",
+      "“Do we own the bridge?” she asked Tal one afternoon.",
+      "He considered the human word before answering.",
+      "“What would that let you stop doing?”",
+      "Esme laughed, then thought about it seriously.",
+      "Across the plain, a vehicle approached slowly, following the road they had finally learned to share."
+    ],
+    "vocab": [
+      {
+        "word": "amenable",
+        "def": "open to suggestion"
+      },
+      {
+        "word": "amiable",
+        "def": "friendly and pleasant"
+      },
+      {
+        "word": "amicable",
+        "def": "Showing friendliness or goodwill."
+      },
+      {
+        "word": "denote",
+        "def": "to indicate or mean"
+      },
+      {
+        "word": "archaic",
+        "def": "old-fashioned and no longer used"
+      },
+      {
+        "word": "inviolable",
+        "def": "not capable of being violated or infringed"
+      },
+      {
+        "word": "delineate",
+        "def": "to outline precisely"
+      },
+      {
+        "word": "correlate",
+        "def": "to establish a relationship or correspondence between things"
+      },
+      {
+        "word": "comity",
+        "def": "Courtesy and considerate behaviour towards others; social harmony."
+      },
+      {
+        "word": "cede",
+        "def": "relinquish possession or control over"
+      },
+      {
+        "word": "rescind",
+        "def": "to formally cancel or revoke an agreement or decision"
+      },
+      {
+        "word": "mediate",
+        "def": "to resolve a dispute between parties"
+      },
+      {
+        "word": "amend",
+        "def": "To make better; improve."
+      },
+      {
+        "word": "comply",
+        "def": "to act according to rules"
+      },
+      {
+        "word": "contravene",
+        "def": "To act contrary to an order; to fail to conform to a regulation or obligation."
+      },
+      {
+        "word": "apprise",
+        "def": "to inform or notify"
+      },
+      {
+        "word": "conventional",
+        "def": "traditional and ordinary"
+      },
+      {
+        "word": "consensus",
+        "def": "general agreement"
+      },
+      {
+        "word": "propriety",
+        "def": "correct behavior"
+      },
+      {
+        "word": "parochial",
+        "def": "narrowly restricted in scope or outlook"
+      },
+      {
+        "word": "appropriate",
+        "def": "suitable or right for a particular situation"
+      },
+      {
+        "word": "pertinent",
+        "def": "having precise or logical relevance to the matter at hand"
+      },
+      {
+        "word": "conciliate",
+        "def": "to win over or restore friendly relations with someone"
+      },
+      {
+        "word": "redress",
+        "def": "act of correcting an error or a fault or an evil"
+      },
+      {
+        "word": "cosmopolitan",
+        "def": "having diverse international culture"
+      },
+      {
+        "word": "indigenous",
+        "def": "native to a region"
+      },
+      {
+        "word": "heterogeneous",
+        "def": "Diverse in kind or nature; composed of diverse parts."
+      },
+      {
+        "word": "insular",
+        "def": "Separate or isolated from the surroundings; having little regard for others opinions or prejudices; provincial."
+      },
+      {
+        "word": "conclusive",
+        "def": "Providing an end to something; decisive."
+      },
+      {
+        "word": "untenable",
+        "def": "cannot be defended"
+      },
+      {
+        "word": "xenophobic",
+        "def": "Exhibiting or characterised by xenophobia, a fear or hatred of strangers, foreigners, or extraterrestial life."
+      },
+      {
+        "word": "latitude",
+        "def": "freedom to act or make decisions within a range of choices"
+      },
+      {
+        "word": "discreet",
+        "def": "careful and tactful, especially in protecting private information"
+      },
+      {
+        "word": "dissent",
+        "def": "To disagree; to withhold assent. Construed with from ."
+      },
+      {
+        "word": "ascribe",
+        "def": "attribute or credit to"
+      },
+      {
+        "word": "misattribute",
+        "def": "To erroneously attribute; to falsely ascribe; used especially of authorship"
+      },
+      {
+        "word": "relinquish",
+        "def": "to give up voluntarily"
+      },
+      {
+        "word": "deference",
+        "def": "respectful submission"
+      },
+      {
+        "word": "venerate",
+        "def": "to treat with deep respect"
+      },
+      {
+        "word": "overt",
+        "def": "Open and not concealed or secret."
+      }
+    ],
+    "illustration": {
+      "src": "/stories/story-55-planet-no-owners.png",
+      "alt": "Black-and-white aquatint of Esme and six-limbed Arel guide Tal examine water channels and living chambers beside a paused survey rig.",
+      "width": 1536,
+      "height": 1024,
+      "monochrome": true
+    }
+  },
+  {
+    "id": 56,
+    "title": "The Skin That Hears",
+    "genre": "YA science fiction / biological adaptation",
+    "styleInspiration": "Octavia E. Butler",
+    "wordCount": 40,
+    "paragraphs": [
+      "Rhea heard the soil before she heard her brother.",
+      "The first sensation was not a voice. It was a low pressure behind her teeth, followed by a bright, branching pattern that seemed to pass through the bones of her hands.",
+      "She lifted her palm from the greenhouse bed.",
+      "The pattern stopped.",
+      "Across the path, Niko was calling her name. When she turned, he repeated it with his hands, the way he always had.",
+      "She understood the signs immediately. The sound arrived as something new.",
+      "“Again,” she signed.",
+      "He said it again, more slowly, as if her name were a fragile object he had been trusted to carry.",
+      "Rhea was eighteen. She had chosen the hearing treatment six months earlier, after reading every explanation the colony clinic could provide. The method was experimental: a carefully modified local microorganism formed connections with an implanted interface.",
+      "Its **affinity** for human nerve tissue had surprised the researchers. That did not make every possible effect desirable.",
+      "Rhea knew she was part of a trial. She had not known the trial included listening to the ground.",
+      "Dr. Sen came to the greenhouse with a portable recorder. She asked Rhea to describe the sensation without deciding what caused it.",
+      "“Branches,” Rhea said. Her spoken words were still slow. “And something like pulling.”",
+      "“Any pain?”",
+      "“No.”",
+      "“Any loss of control?”",
+      "“Also no.”",
+      "The doctor made a note. “An **anomalous** sensory response. We'll investigate.”",
+      "Niko looked disappointed by the smallness of the phrase. Rhea was grateful. A smaller phrase left her room to be a person having an experience rather than a discovery everyone else could own.",
+      "They returned to the clinic. The interface was functioning within its limits. Her temperature was normal. Fine branching marks had appeared beneath the skin of her wrist, but the sample showed no uncontrolled spread.",
+      "“We should not call them **aberrant** simply because they're unfamiliar,” Sen said. “We should find out whether they're harmful.”",
+      "The distinction mattered to Rhea.",
+      "In the **convalescent** wing, a child asked whether the marks would make her turn into a tree. Rhea said she hoped not, because the beds were too short for roots.",
+      "Niko laughed. Sen did not, until she saw that Rhea was laughing too.",
+      "The colony's crops were failing in three sectors. At first, the farmers blamed a defective nutrient shipment. Then they found pale threads spreading through the planting beds.",
+      "The agricultural team feared an **invasive** local organism. A broad sterilization program was scheduled before the next shipment of seed arrived.",
+      "Rhea heard the same branching sensation whenever she touched soil from those beds.",
+      "She asked whether the organism in her treatment and the organism in the greenhouse were related.",
+      "They were.",
+      "The news frightened her more than the marks.",
+      "She had wanted to hear Niko speak. She had not volunteered to become the colony's connection to something that might destroy its food.",
+      "Sen explained that related strains could behave differently. One might be helpful in a controlled setting and **detrimental** in another. A shared ancestry was not a verdict.",
+      "“Can mine leave my body?”",
+      "“Not by ordinary contact. We designed it to need the interface's support. We'll test that again.”",
+      "The doctor answered every question she could. Where the evidence was missing, she did not cover the gap with reassurance.",
+      "Rhea asked to **collaborate** with the agricultural team.",
+      "The farm director, Hadi, agreed on conditions: small samples, sealed equipment, and a worker beside her whenever she entered an affected sector.",
+      "He was not treating her as a danger. The rules applied to everyone working with unknown organisms.",
+      "She read them before signing.",
+      "The first tests were frustrating. The sensation would **diffuse** into an indistinct hum when several samples were placed too close together. A fresh sample could be loud one hour and **quiescent** the next.",
+      "Hadi wanted a useful measurement. Rhea could offer descriptions that changed as she learned how to notice them.",
+      "“Perhaps it isn't information,” he said.",
+      "She felt herself preparing to argue, then stopped. It was possible.",
+      "They asked a technician to conceal the sample labels. Sen monitored Rhea's interface. Niko recorded the descriptions, using both written notes and video of her signing.",
+      "They discovered that dry soil produced a faint tightening sensation. Recently watered soil produced a spreading pattern. The difference was **discernible** often enough to test again.",
+      "It did not establish intelligence. It established a relationship they could study.",
+      "Rhea found that less disappointing than Niko expected.",
+      "“Everything doesn't have to be a message,” she signed.",
+      "“But something is happening.”",
+      "“Yes.”",
+      "They began to **distill** her accounts into a small set of repeatable observations. The private detail of the sensations remained hers. The measurements belonged in the research record.",
+      "This division was new, and everyone had to learn it.",
+      "Hadi once asked whether she could sense a sample while eating lunch. She said no. He apologized and asked when the next session would be.",
+      "At home, Rhea discovered that gaining a sense did not replace the ways she already knew people. Niko's voice was interesting, but his hands were still the quickest route to a complicated thought. Their father spoke loudly until she reminded him that volume was not clarity.",
+      "There was nothing **inborn** about understanding a machine's new stream of signals. She practiced, grew tired, and sometimes wanted the room quiet.",
+      "The treatment's benefits could **invigorate** her without making the work effortless.",
+      "Then Sector Six began to die.",
+      "Leaves curled. Roots darkened. The pale threads became dense around the failing plants. Hadi feared the organism was becoming **virulent**.",
+      "The proposal to **eradicate** it was no longer a distant policy question. He could lose the colony's largest vegetable crop within days.",
+      "Sen asked Rhea to suspend the soil sessions until the strain was identified.",
+      "“Will the treatment have to stop too?”",
+      "“Possibly. If there are signs it's changing in ways we can't contain.”",
+      "Rhea understood the need for caution. She also understood that understanding it did not make her consent automatic.",
+      "She spent that evening sitting beside Niko while he repaired a window blind. Neither tried to cheer the other up.",
+      "Eventually he asked whether she regretted joining the trial.",
+      "“No,” she signed. “I'm frightened of what happens next. That isn't the same.”",
+      "The organism's behavior was **protean**. Under different conditions, its threads took different forms. Some helped roots draw minerals from the soil. Some consumed damaged tissue. A growing web around a dying plant could be cause, consequence, or both.",
+      "Sen said their first task was to separate the **concomitant** events.",
+      "Rhea had described a tightening pattern before visible root damage appeared. The timing deserved investigation. It did not prove a warning.",
+      "Hadi allowed one small comparison trial to continue in sealed beds. The main planting sectors would remain isolated. He also prepared the sterilization equipment, because an experiment could fail.",
+      "Rhea appreciated that he told her both things.",
+      "They used an **impermeable** barrier between the trial plots. Water, air, and samples were handled separately. A local botanist checked the controls so the human researchers would not assume that Earth habits explained an unfamiliar soil.",
+      "The first result seemed to support Hadi. Plants exposed to the threads declined faster.",
+      "Rhea's sensation changed from branching to a hard, narrow pressure.",
+      "Then Sen noticed that the trial's water sensor was reading incorrectly.",
+      "The faulty system had been delivering less water to the affected bed. A blocked pipe in Sector Six might have done the same thing.",
+      "They checked the pipe.",
+      "It was blocked.",
+      "Nobody announced victory. They cleared the obstruction and repeated the trial.",
+      "This time, the threads spread toward the wetter ground before the roots did. The plants followed more slowly. Their recovery was incomplete, but measurable.",
+      "The organism appeared to **propagate** along moisture gradients and help some roots do the same. When water failed, the pattern reached Rhea's interface before the leaves showed stress.",
+      "“It's not calling for help,” Hadi said.",
+      "“I didn't say it was.”",
+      "Rhea had wanted to say it once. She was glad she had waited.",
+      "The ability to detect an unfamiliar process was useful without being a conversation with a planet.",
+      "But the treatment strain had changed too. Its activity at her wrist could **impair** the hearing interface when the soil signal became too strong. The laboratory recorded periods when she could sense pressure patterns but could not separate human speech.",
+      "Sen offered to **sever** the additional connection while preserving as much of the hearing function as possible. She could not guarantee the result.",
+      "Alternatively, they could test a temporary filter. It might **inhibit** the soil input without removing the organism, but it would take time.",
+      "“What does the farm want?” Rhea asked.",
+      "“The farm doesn't make this decision.”",
+      "She looked at the doctor.",
+      "“I know. I'm asking what they'll ask me to carry.”",
+      "Sen arranged a meeting.",
+      "Hadi wanted access to her observations during a few scheduled trials. He did not need her to monitor fields all day. A physical sensor might eventually reproduce the useful measurements without involving her body at all.",
+      "The strain's **embryonic** use in agriculture was not a reason to make one young person responsible for every crop.",
+      "That statement helped Rhea decide what to request.",
+      "She would test the filter. The researchers could use agreed measurements, not continuous recordings of her senses. She could stop a session without losing access to treatment. Her trial reports would not become public demonstrations without her permission.",
+      "Hadi accepted. Sen wrote the conditions into the protocol.",
+      "Niko asked Rhea privately whether she was trying to protect them from disappointment.",
+      "She considered the question before answering.",
+      "“Sometimes. But I want to learn too.”",
+      "She did not have to treat care for herself as the **antithesis** of care for others. The difficulty lay in keeping both present when one became inconvenient.",
+      "Before testing the filter, Rhea spent a day with the interface's additional channel disabled. It was a useful comparison and an unexpectedly difficult holiday. She kept noticing things at the edge of her attention, then remembering that the new pattern was absent.",
+      "The sound of Niko washing dishes remained. So did the old comfort of catching his glance across a room and understanding what he meant before he signed it. Neither had become **peripheral** merely because a laboratory could now measure another connection.",
+      "Their father asked whether she felt like herself.",
+      "“Which day?” she replied.",
+      "He considered that longer than she expected.",
+      "Later, he apologized for describing the treatment as making her complete. He had meant that he was glad she could experience something she had chosen. He had said something else.",
+      "She accepted the apology. Then she asked him to keep using the signs he knew, especially when several people were talking at once.",
+      "The conversation changed no laboratory result. It changed dinner.",
+      "At the next appointment, Sen asked about **adverse** effects. Rhea described fatigue, the periods of confused sound, and a growing dislike of being asked whether she could sense a dying houseplant.",
+      "The doctor wrote down all three. Not every burden came from the organism. Some came from other people's excitement, and those burdens needed rules as much as the equipment did.",
+      "Rhea helped draft a short explanation for visitors. It said she was a participant in a study, available for questions at agreed times, and otherwise busy living.",
+      "The filter worked imperfectly.",
+      "The first version made all sound dull. The second allowed sharp soil sensations through whenever she was tired. The third reduced the input enough for her to choose short sessions.",
+      "Hadi called the remaining problem **refractory**, then asked whether the word sounded too much like he was blaming her. Rhea said it depended what he did after saying it.",
+      "He laughed and changed the session schedule.",
+      "Outside the trial beds, the colony adopted a narrower response. Dangerous strains would be contained. Others would be studied. The team would not **perpetuate** the original mistake by assuming every pale thread had the same effect.",
+      "Some organisms could still **proliferate** harmfully. Local ecology was not automatically **salubrious** for humans or their crops. Nor was every unfamiliar process **noxious**.",
+      "Those distinctions made the work harder and more honest.",
+      "One afternoon, a worker cut her palm on a damaged tray. Rhea fetched the kit used to **stanch** the bleeding while Niko called the clinic. The incident frightened her because it was ordinary. Unknown worlds did not remove the need to repair sharp edges.",
+      "Their father later helped replace the tray rails.",
+      "The crops in Sector Six recovered slowly. Water restored some of their **vitality**; damaged root systems needed time. A second planting tested whether the soil treatment could remain **viable** through a full growth cycle.",
+      "Rhea did not attend every inspection.",
+      "She returned to her studies, visited friends, and learned the sound of rain against the dome. She discovered that its first sharp tapping was followed by a deeper wash as water collected in the gutters.",
+      "Some sensations were **ephemeral**. She stopped trying to preserve every one as if it might be taken away.",
+      "When anxiety rose, she waited for it to **subside** before deciding whether it meant she had chosen badly.",
+      "The research remained part of her life, not its entire shape.",
+      "At the next harvest, Hadi invited her to see the comparison beds. The leaves were strong. Beneath them, thin pale threads connected roots to damp soil beyond their reach.",
+      "She touched the ground for a moment. The pattern spread through her hand, then faded as she lifted it away.",
+      "Niko asked what it was like.",
+      "“Water finding room,” she signed.",
+      "“Is that what it means?”",
+      "“It's what it feels like.”",
+      "He nodded. He had learned the difference too.",
+      "Behind them, workers brought fresh water to **replenish** the tanks. The crop had survived through a combination of pipes, attention, organisms, and people willing to correct their assumptions.",
+      "None of those connections had to remain **obscure** merely because they were complicated.",
+      "Rhea watched a new gardener hesitate at the bed. She showed him where to put his hand, then stopped before telling him what he ought to feel.",
+      "Their lives were **intertwined** with this soil now. That fact could **engender** curiosity or fear, depending on what they did with it.",
+      "Rhea chose another question, and waited for an answer she did not yet know how to hear."
+    ],
+    "vocab": [
+      {
+        "word": "affinity",
+        "def": "a natural attraction or similarity"
+      },
+      {
+        "word": "anomalous",
+        "def": "deviating from the expected"
+      },
+      {
+        "word": "aberrant",
+        "def": "deviating from what is normal"
+      },
+      {
+        "word": "convalescent",
+        "def": "recovering one's health and strength after a period of illness; on the mend."
+      },
+      {
+        "word": "invasive",
+        "def": "Of an animal or plant: that grows in environments which do not harbour natural enemies, often to the detriment of native species or of food or garden flora and fauna."
+      },
+      {
+        "word": "detrimental",
+        "def": "causing harm or damage"
+      },
+      {
+        "word": "collaborate",
+        "def": "to work together"
+      },
+      {
+        "word": "diffuse",
+        "def": "to spread out and become less concentrated"
+      },
+      {
+        "word": "quiescent",
+        "def": "in a state of rest"
+      },
+      {
+        "word": "discernible",
+        "def": "Possible to discern; detectable or derivable by use of the senses or the intellect."
+      },
+      {
+        "word": "distill",
+        "def": "to extract the essence"
+      },
+      {
+        "word": "inborn",
+        "def": "Innate, possessed by an organism at birth."
+      },
+      {
+        "word": "invigorate",
+        "def": "To impart vigor, strength, or vitality to."
+      },
+      {
+        "word": "virulent",
+        "def": "Of a disease or disease-causing agent: malignant, able to cause damage to the host."
+      },
+      {
+        "word": "eradicate",
+        "def": "to destroy completely"
+      },
+      {
+        "word": "protean",
+        "def": "taking on different forms"
+      },
+      {
+        "word": "concomitant",
+        "def": "occurring alongside"
+      },
+      {
+        "word": "impermeable",
+        "def": "not allowing passage"
+      },
+      {
+        "word": "propagate",
+        "def": "To cause to continue or multiply by generation, or successive production."
+      },
+      {
+        "word": "impair",
+        "def": "to weaken or damage"
+      },
+      {
+        "word": "sever",
+        "def": "To cut free."
+      },
+      {
+        "word": "inhibit",
+        "def": "to hold back"
+      },
+      {
+        "word": "embryonic",
+        "def": "in an early stage of development"
+      },
+      {
+        "word": "antithesis",
+        "def": "the direct opposite of something"
+      },
+      {
+        "word": "peripheral",
+        "def": "of secondary importance; at the edge rather than the center"
+      },
+      {
+        "word": "adverse",
+        "def": "Unfavorable; antagonistic in purpose or effect; hostile; actively opposing one's interests or wishes; contrary to one's welfare; acting against; working in an opposing direction."
+      },
+      {
+        "word": "refractory",
+        "def": "stubbornly resistant"
+      },
+      {
+        "word": "perpetuate",
+        "def": "cause to continue"
+      },
+      {
+        "word": "proliferate",
+        "def": "to increase rapidly"
+      },
+      {
+        "word": "salubrious",
+        "def": "healthful"
+      },
+      {
+        "word": "noxious",
+        "def": "Harmful; injurious."
+      },
+      {
+        "word": "stanch",
+        "def": "to stop the flow"
+      },
+      {
+        "word": "vitality",
+        "def": "Energy or vigour."
+      },
+      {
+        "word": "viable",
+        "def": "capable of working successfully"
+      },
+      {
+        "word": "ephemeral",
+        "def": "lasting a very short time"
+      },
+      {
+        "word": "subside",
+        "def": "to become less intense"
+      },
+      {
+        "word": "replenish",
+        "def": "to fill again"
+      },
+      {
+        "word": "obscure",
+        "def": "difficult to understand or not clearly known"
+      },
+      {
+        "word": "intertwined",
+        "def": "Inextricably related or relevant."
+      },
+      {
+        "word": "engender",
+        "def": "to produce or cause"
+      }
+    ],
+    "illustration": {
+      "src": "/stories/story-56-skin-that-hears.png",
+      "alt": "Black-and-white aquatint of Rhea touches fungal threads in a greenhouse bed as Niko signs beside her and a researcher observes.",
+      "width": 1536,
+      "height": 1024,
+      "monochrome": true
+    }
+  },
+  {
+    "id": 57,
+    "title": "The Last Mountain on the Moon",
+    "genre": "YA science fiction / cosmic engineering",
+    "styleInspiration": "Liu Cixin",
+    "wordCount": 40,
+    "paragraphs": [
+      "At noon, Mount Harrow was seven meters shorter than it had been at breakfast.",
+      "Bo checked the survey tripod before reporting it. He was sixteen, and his supervisor had recently explained the difference between discovering something remarkable and forgetting to tighten a screw.",
+      "Every screw was tight.",
+      "He measured again.",
+      "“Yan,” he said. “The mountain's shrinking.”",
+      "His supervisor looked up from the rover's battery display. “In which direction?”",
+      "“All the inconvenient ones.”",
+      "Harrow rose beyond a shallow lunar crater, a dark shoulder against the stars. The mining settlement lay behind Bo, half buried for protection from radiation. He had spent his childhood tracing the mountain's outline on the habitat windows.",
+      "Now its highest ridge had become a straight edge.",
+      "Yan checked the instrument, then the satellite feed.",
+      "The result was **enigmatic** rather than uncertain. Material was missing, but there was no crater, no scattered debris, and no dust spreading from the site.",
+      "Bo thought of a mining collapse. Yan asked where the fallen material had gone.",
+      "He had no answer.",
+      "They alerted the settlement and Earth before moving closer. The first instructions were sensible: keep distance, preserve the recordings, and do not touch anything unfamiliar.",
+      "Bo saved three copies.",
+      "They reached the observation ridge as another section disappeared.",
+      "It did not dissolve. For an instant, the rock separated into a **myriad** of small geometric pieces. Then the pieces rose in orderly streams toward a shape hanging above the mountain.",
+      "The shape had been difficult to see because it was almost black against the sky.",
+      "Now sunlight caught one side.",
+      "It was **colossal**.",
+      "Bo's mind kept reducing it to familiar things: an antenna, a crane, a broken bridge. Each comparison failed when another surface turned into view.",
+      "Yan stopped the rover.",
+      "“Machines,” she said.",
+      "“Whose?”",
+      "They watched the mountain move toward the sky.",
+      "The question remained **imponderable** for the moment. They had evidence of machinery, not an explanation of the beings that had built it or whether any were still nearby.",
+      "Bo wanted an answer large enough to match what he was seeing. Yan wanted measurements.",
+      "She was right, and he found this annoying even while helping her.",
+      "They mapped the removal front. Smaller machines moved beneath the enormous structure, following bands across the surface. Their progress was regular enough to project.",
+      "One band would reach the settlement's outer installations in four hours.",
+      "The evacuation transport was farther away than that.",
+      "Earth's first response described the encounter as **unprecedented**. It was a true word that did not tell Bo where to stand.",
+      "The settlement began moving everyone into its deepest shelter. Engineers shut down the outer work areas. A crew prepared the emergency rover train, though it could not carry every person very far.",
+      "Nobody pretended a **cataclysm** had already occurred. The remaining mountain still stood. The settlement was intact. But they had little room for an error about what would happen next.",
+      "The radio filled with voices from Earth: engineers, astronomers, translators, and officials who wanted to know who was coordinating them.",
+      "Yan gave one person the communications schedule and muted the rest.",
+      "Bo had never seen her do anything so satisfying.",
+      "They tried radio signals in several bands. There was no response they could distinguish from the machinery's activity. Light patterns produced the same result.",
+      "The machines' behavior was **inscrutable**, but not random. They followed routes. They avoided some small surface features. They checked an area before removing it.",
+      "“What are they sparing?” Bo asked.",
+      "Yan marked the locations.",
+      "Most were patches of dark crystal or exposed instrument cables. The human habitat did not appear to receive special treatment. One machine passed across a storage tank and divided it as neatly as the ground beneath.",
+      "Its contents flashed into a pale cloud and vanished into the vacuum.",
+      "Bo felt a **profound** anger at the machine for failing to notice what the tank meant. Then he recognized how little the tank's meaning could be seen from outside.",
+      "People lived behind shielding. Their gardens were buried. Their bodies were hidden inside suits and buildings. To an observer using unfamiliar measurements, the site might look like another mineral arrangement.",
+      "“We're not hiding,” he said.",
+      "“We might be,” Yan answered. “Without knowing from what.”",
+      "The idea was **conjectural**. So was almost everything else they had said about intention.",
+      "Earth's specialists warned against assuming the machines were hostile or benevolent. Bo wished there were a third word for something capable of destroying your home without considering the question.",
+      "At the next removal band, a small machine stopped beside an abandoned drill head.",
+      "It examined the metal, moved away, then returned after the drill's emergency indicator flashed.",
+      "Yan magnified the image.",
+      "The machine examined it again.",
+      "“It's checking a changed object,” Bo said.",
+      "“It may be.”",
+      "They watched three more cycles. Each time the indicator changed, the machine paused to inspect it. When the lamp's battery died, the drill head disappeared with the surrounding rock.",
+      "Bo stopped speaking.",
+      "Yan saved the sequence for the team on Earth.",
+      "The evidence did not reveal a language. It suggested a delay they might be able to use.",
+      "By then the transport captain had joined the channel. Her ship was approaching the **apogee** of its long supply orbit, far from the settlement. She could change the return schedule, but not erase the distance. Sending the crew an optimistic arrival time would not bring her closer.",
+      "Yan thanked her for giving the actual figures. Bo began to understand how often courage meant allowing someone else to say something disappointing.",
+      "The settlement's commander reported that the rover train was ready. Its passengers had places assigned. Equipment could be left behind if necessary. No one would be required to remain merely to operate a lamp.",
+      "That report marked the **nadir** of Bo's confidence. He pictured a line of small vehicles driving away while the buildings behind them became material for a purpose nobody could name.",
+      "Then Yan asked him to inspect the survey data again.",
+      "The ground was not **homogeneous**. Old lava, imported metals, and exposed crystals drew different sequences of inspection. If the machines distinguished among those things, their categories were more complicated than remove everything.",
+      "There might be room inside that complication for something the machines had not been designed to expect.",
+      "It was not a comforting theory. It was a reason to try one measured action before the commander had to choose departure.",
+      "Their first experiment was small. A survey marker, controlled from the ridge, changed its light pattern while a machine approached. The machine stopped. When the pattern repeated without further change, it moved on and removed the marker.",
+      "“It learns the sequence,” Bo said.",
+      "“Or it stops considering it new.”",
+      "That was a useful **corollary**. Repetition alone would not protect the settlement.",
+      "They needed an exchange, not a flashing fence.",
+      "The machines were not **omnipresent**. Several worked within their view; others remained beyond the horizon. Their apparent control of the landscape was not an **unassailable** reason to stop experimenting.",
+      "Yan gave Bo the marker controller.",
+      "“When it scans, change something.”",
+      "“What?”",
+      "“Something it hasn't seen.”",
+      "He chose a short pattern based on the machine's own movements. A pause, three pulses, a longer pause. The machine changed the angle of its forward surface.",
+      "Bo copied the timing of that movement with another set of pulses.",
+      "The machine paused longer.",
+      "His response was imperfect, and that seemed to matter less than its relation to the new event.",
+      "Yan sent the recording home. A specialist proposed that they were triggering a survey exception: responsive activity required additional inspection before processing.",
+      "It was an **esoteric** guess about an unknown system. They could test whether the behavior persisted. They could not yet claim to **decipher** its meaning.",
+      "Bo felt the boundary between those statements as clearly as the ridge beneath his boots.",
+      "The settlement had three hours left.",
+      "Its commander wanted to move people onto the open plain. Yan explained the limits. The rovers could travel beyond the next removal bands, but not indefinitely. Leaving shelter without knowing the machines' full route could turn a dangerous position into an **unviable** one.",
+      "They prepared the rovers anyway. A possible conversation did not replace an evacuation plan.",
+      "Bo returned briefly to the habitat for fresh batteries.",
+      "Inside, ordinary objects had become strange. A cup waited beneath a water dispenser. Someone had left a game unfinished. Children watched the external feed until a teacher switched it off and asked them to help count blankets.",
+      "The **enormity** of what might be lost arrived through those small tasks.",
+      "He found his mother sealing a supply bag.",
+      "“Are you safe?” she asked.",
+      "He said he was following Yan's instructions. It was the most accurate promise he could make.",
+      "She gave him two batteries and a bag of food.",
+      "Neither asked whether the mountain would come back.",
+      "On the ridge, a technician had brought a larger lamp. Its beam could reach the machine's sensor without shining through the rising stream of removed material, which would otherwise **occlude** their view.",
+      "They placed it beyond a boulder and controlled it from the rover. There was no need to stand beside the machine merely to prove they were brave.",
+      "Bo was relieved. The machines had made his suit feel **diminutive**, a thin pocket of warmth carrying an animal that had become very sure of its importance.",
+      "He did not think that importance was an illusion. He thought they would have to communicate it rather than assume it was visible.",
+      "The next exchange lasted twelve minutes.",
+      "The machine changed a surface pattern. Bo answered with a related arrangement. Yan recorded the delay, checked for repeated behavior, and asked him to explain each choice before he sent it.",
+      "Her **rigor** prevented them from turning every pause into a triumph.",
+      "The machine's internal process remained **opaque**. They could only **posit** a growing list of possibilities: inspection, classification, contact, or a fault that happened to resemble attention.",
+      "Then the machine moved around the lamp without removing it.",
+      "It scanned the control cable.",
+      "Yan told Bo to wait.",
+      "The scan reached the rover.",
+      "For the first time, Bo saw the machine examine a human vehicle while someone inside it changed a signal in response.",
+      "Its forward surface opened into several smaller angles.",
+      "He felt an impulse to **jettison** the lamp controller and drive away. He kept his hands still until Yan told him to send the next pattern.",
+      "They showed the habitat's outline. Then a cluster of changing points inside it. Then the same cluster outside the outline.",
+      "The diagram was crude. No one on Earth agreed whether it could mean evacuation to an unknown intelligence. It was simply something to try after the machine had begun tracking their responses.",
+      "Bo waited.",
+      "The machine drew an outline back.",
+      "It did not match the habitat exactly. It included the buried power system and excluded an empty warehouse.",
+      "Yan asked the engineers to change a small load in the warehouse. Its outline appeared in the next scan.",
+      "The machine was mapping activity.",
+      "“Not people,” she said. “Not yet. Activity.”",
+      "It was enough to build on.",
+      "The surface operation came to a halt around the settlement. Beyond it, Mount Harrow continued to shrink.",
+      "Earth called the halt an **appreciable** success. Bo watched another familiar ridge disappear and could not celebrate.",
+      "Stopping one part of the work had not ended the **decimation** of the landscape.",
+      "Nor did the pause establish human **primacy** over the Moon. They had gained attention from a system whose purpose remained unknown.",
+      "There was no **prescience** in what followed. The teams made predictions, checked them, and admitted when they were wrong.",
+      "They learned that a repeating beacon could not hold the machine's attention indefinitely. Live exchanges were necessary. They learned that sudden power changes could **deflect** its focus toward an empty installation, which was useful once and confusing twice.",
+      "They learned that their little protected outline could grow when they demonstrated new activity beyond it.",
+      "Every result had limits.",
+      "The response from Earth became more organized. A rotating team took over the signals, allowing Bo and Yan to rest. Their one conversation began to become a public task.",
+      "From the shelter window, Bo watched the machine lower itself beside the habitat.",
+      "It was not a visitor in any human sense he could justify. It did not bow, announce peace, or explain the enormous structure hanging in the sky.",
+      "But it waited for a reply.",
+      "The next morning, Harrow's highest point was gone.",
+      "Bo stood at the old survey mark and recorded the change. The mountain's former **zenith** existed now in images and measurements, not in stone.",
+      "He wondered whether the unknown builders had intended their machinery to recognize settlements like his. Perhaps humans were below some **negligible** threshold in an ancient classification. Perhaps the machines had never encountered anything that argued back.",
+      "Their ignorance was **abysmal**, but it was no longer empty. They had questions connected to observations.",
+      "That felt different from making stories about an enemy.",
+      "Yan found him studying the latest map.",
+      "“You should sleep.”",
+      "“I keep thinking we ought to have known how to speak.”",
+      "“Why?”",
+      "He could not give a reason that survived being said aloud.",
+      "The Moon had never promised to remain a familiar place. Change was **ineluctable**. This particular change had still been worth resisting.",
+      "Bo had not needed to believe all things could be saved before trying to save some.",
+      "At the habitat, the school opened again. Its first lesson was about what the settlement's new signal operators did, followed by what they did not yet know.",
+      "Bo helped demonstrate the controller. A child asked if the machines liked them.",
+      "“We don't know.”",
+      "“Then why are they waiting?”",
+      "He looked at the display, where an unfamiliar pattern had just appeared.",
+      "“That's one of the questions.”",
+      "Their communication was still **inchoate**. A pattern might **stymie** them for hours. An unexpected action might **truncate** a promising exchange. Nothing guaranteed that understanding would become friendship.",
+      "Yet beyond the **rarefied** discussions among Earth's specialists, the settlement remained **extant**.",
+      "It had taken the **temerity** to interrupt something vast, and the patience to continue after being noticed.",
+      "Bo sent the reply his team had prepared. On the far side of the screen, a machine changed its angle toward them.",
+      "For now, their small place beneath the stars had become a question that could not simply be removed."
+    ],
+    "vocab": [
+      {
+        "word": "enigmatic",
+        "def": "Mysterious."
+      },
+      {
+        "word": "myriad",
+        "def": "a very great number"
+      },
+      {
+        "word": "colossal",
+        "def": "so great in size or force or extent as to elicit awe"
+      },
+      {
+        "word": "imponderable",
+        "def": "difficult or impossible to evaluate with precision"
+      },
+      {
+        "word": "unprecedented",
+        "def": "never done or known before"
+      },
+      {
+        "word": "cataclysm",
+        "def": "a violent disruption"
+      },
+      {
+        "word": "inscrutable",
+        "def": "not easily understood; unfathomable"
+      },
+      {
+        "word": "profound",
+        "def": "very deep or intense"
+      },
+      {
+        "word": "conjectural",
+        "def": "In the nature of a conjecture, or based on a conjecture."
+      },
+      {
+        "word": "apogee",
+        "def": "the highest or most distant point"
+      },
+      {
+        "word": "nadir",
+        "def": "the lowest point of a situation, experience, or feeling"
+      },
+      {
+        "word": "homogeneous",
+        "def": "of the same kind"
+      },
+      {
+        "word": "corollary",
+        "def": "a practical consequence that follows naturally"
+      },
+      {
+        "word": "omnipresent",
+        "def": "Being everywhere simultaneously."
+      },
+      {
+        "word": "unassailable",
+        "def": "immune to attack; without flaws"
+      },
+      {
+        "word": "esoteric",
+        "def": "understood by few"
+      },
+      {
+        "word": "decipher",
+        "def": "To convert a code to plain text, or work out something difficult to read or understand."
+      },
+      {
+        "word": "unviable",
+        "def": "not able to work, survive, or succeed"
+      },
+      {
+        "word": "enormity",
+        "def": "the great seriousness or overwhelming scale of something, especially something bad"
+      },
+      {
+        "word": "occlude",
+        "def": "to block or stop up"
+      },
+      {
+        "word": "diminutive",
+        "def": "very small"
+      },
+      {
+        "word": "rigor",
+        "def": "careful precision and strictness in observation or method"
+      },
+      {
+        "word": "opaque",
+        "def": "difficult to understand or interpret"
+      },
+      {
+        "word": "posit",
+        "def": "to put forward an idea as a possible explanation"
+      },
+      {
+        "word": "jettison",
+        "def": "To throw cargo overboard to lighten a load; figuratively, to discard or abandon something."
+      },
+      {
+        "word": "appreciable",
+        "def": "large enough to be noticed"
+      },
+      {
+        "word": "decimation",
+        "def": "the destruction or loss of a large part of something"
+      },
+      {
+        "word": "primacy",
+        "def": "the state of being first in importance"
+      },
+      {
+        "word": "prescience",
+        "def": "the power to foresee the future"
+      },
+      {
+        "word": "deflect",
+        "def": "To make deviate from its original path or position."
+      },
+      {
+        "word": "zenith",
+        "def": "the highest point or peak"
+      },
+      {
+        "word": "negligible",
+        "def": "so small it can be ignored"
+      },
+      {
+        "word": "abysmal",
+        "def": "extremely deep or very great in extent; extremely bad"
+      },
+      {
+        "word": "ineluctable",
+        "def": "unavoidable"
+      },
+      {
+        "word": "inchoate",
+        "def": "just beginning to form"
+      },
+      {
+        "word": "stymie",
+        "def": "hinder or prevent the progress or accomplishment of"
+      },
+      {
+        "word": "truncate",
+        "def": "to shorten by cutting off"
+      },
+      {
+        "word": "rarefied",
+        "def": "highly intellectual or removed from ordinary practical concerns"
+      },
+      {
+        "word": "extant",
+        "def": "still in existence"
+      },
+      {
+        "word": "temerity",
+        "def": "fearless daring"
+      }
+    ],
+    "illustration": {
+      "src": "/stories/story-57-last-mountain-moon.png",
+      "alt": "Black-and-white aquatint of Bo and Yan signal from a lunar ridge toward alien machines dismantling a mountain into geometric blocks.",
+      "width": 1536,
+      "height": 1024,
+      "monochrome": true
+    }
+  },
+  {
+    "id": 58,
+    "title": "A Sunset for My Grandfather",
+    "genre": "YA science fiction / migration and belonging",
+    "styleInspiration": "Ray Bradbury",
+    "wordCount": 40,
+    "paragraphs": [
+      "The first sunset Milo sold his grandfather cost three washers and a button.",
+      "He was six then. He had painted a yellow circle on a piece of packing board and lowered it behind the kitchen table while Grandfather watched from a chair.",
+      "“Again,” Grandfather said.",
+      "Milo raised the board, counted backward from ten, and made evening arrive a second time.",
+      "Eleven years later, he could produce a sunset with clouds, moving water, and the distant sound of dishes being washed in a beachside restaurant. Grandfather still asked for it again.",
+      "Outside the theater, the sun stayed where it always was.",
+      "Their colony occupied the inhabited face of a world locked toward its star. Weather moved. Shadows changed when clouds passed. The great white disk above the market never descended toward the roofs.",
+      "People slept behind shutters. They divided their lives by bells and clocks. Most found the arrangement perfectly **mundane**.",
+      "Grandfather had come from Earth, where the sky had once told him when to go home.",
+      "Milo swept the aisle before the first customers arrived. The theater had belonged to his mother, who now repaired municipal screens. Its projector was **antiquated**, its seats uneven, and its roof patched with material intended for grain sacks.",
+      "The sign outside promised EVENING, EVERY HOUR.",
+      "Sometimes customers asked whether that was a joke.",
+      "Milo said it depended how long they stayed.",
+      "His **quotidian** duties included cleaning the lens, balancing the speaker, and persuading the ticket machine to accept coins it had accepted yesterday. Grandfather sat behind the counter, offering directions to customers who had already found their seats.",
+      "“You should charge for those,” Milo told him.",
+      "“Then they would expect accuracy.”",
+      "That morning, the ticket machine printed something neither of them had requested: a message forwarded from the passenger office.",
+      "Two subsidized places on the next Earthbound ship. A youth training berth for Milo. A returning resident's berth for Grandfather.",
+      "They had applied four years earlier.",
+      "Milo read the message three times.",
+      "“We're going,” he said.",
+      "Grandfather took the paper, smoothed it against his knee, and said nothing.",
+      "The first show began with a **bucolic** hillside. Sheep moved across an orchard. A river caught the last light. Milo had assembled it from five surviving recordings and one sound library whose frogs belonged to the wrong continent.",
+      "Nobody had complained about the frogs.",
+      "His grandfather usually watched with an almost **reverent** attention. Today he kept looking at the passenger notice folded in his hands.",
+      "After the customers left, Milo switched off the stars.",
+      "“Did you hear me?”",
+      "“I heard.”",
+      "“Earth. Your street. The sea.”",
+      "Grandfather looked toward the blank screen.",
+      "“I don't think I'll go.”",
+      "For years, his grandfather had described a harbor town called Merehaven. Its market closed at dusk. Its houses smelled of cooking. A steep lane led from his childhood home to the water, where he had once met Milo's grandmother beneath a broken clock.",
+      "On the colony, these stories were an **anachronism**, like the grandfather's wristwatch, which displayed the time in a town light-years away.",
+      "Milo had expected to visit the lane. He had expected to see Grandfather happy in a way the little theater could only approximate.",
+      "“You said you'd give anything.”",
+      "“I said that a long time ago.”",
+      "“Last week.”",
+      "Grandfather folded the notice once more.",
+      "“Last week can be a long time.”",
+      "Milo went outside before he said something cruel.",
+      "The market was closing for the third rest period. A woman pulled canvas over her vegetable stall. Children chased a delivery cart, their shadows running beside them across the same stones they crossed every day.",
+      "Their **humdrum** routines suddenly seemed unbearable. He had spent his life making a place he had never visited appear on a wall. Now that he could reach it, Grandfather had decided the wall was enough.",
+      "At home, his mother read the notice.",
+      "“Do you want to go?” she asked.",
+      "“Of course.”",
+      "“For the course, or for him?”",
+      "Milo resented the question because the answer had always seemed conveniently the same.",
+      "The Earth school taught restoration of old recordings. He wanted to learn how to recover damaged images, separate voices from noise, and preserve the things people thought they had lost forever.",
+      "He had also imagined traveling beside his grandfather.",
+      "“Both,” he said.",
+      "His mother nodded. “Then you may have two decisions.”",
+      "Over dinner, Grandfather told a **fanciful** story about a fish that stole his father's hat. Milo had heard it before. He could remember being young enough to believe the fish had needed one.",
+      "Usually he enjoyed the telling. That night, his grandfather's familiar joke about the fish's **becoming** appearance in its new hat felt like an attempt to avoid the folded notice beside his plate.",
+      "“The passenger office needs an answer,” Milo said.",
+      "Grandfather stopped smiling.",
+      "“I know.”",
+      "The next morning, Milo searched the colony archive for Merehaven.",
+      "He expected maps, transport schedules, perhaps a photograph he could print as a surprise. Instead, he found a flood relocation report dated thirty-one years earlier.",
+      "The harbor district had been evacuated. Sea walls had failed during a sequence of storms. The surviving residents had moved inland. A new town carried the old name on a different shore.",
+      "His grandfather's lane was underwater.",
+      "Milo opened the attached images. A few rooftops stood beyond a line of warning buoys. There was no market, no steep street, no broken clock waiting to be repaired.",
+      "He sat very still.",
+      "The news seemed too large for the archive's **prosaic** labels: site number, date, water depth. He wanted a sentence that acknowledged what had happened to the place where his grandmother had once stood.",
+      "Then he noticed a mark beside the report.",
+      "Previously accessed by: Oren Vale.",
+      "Grandfather had read it six years earlier.",
+      "Milo found him at the theater, helping two children choose a show. One wanted snow. The other wanted a thunderstorm with no thunder. Grandfather proposed a cloudy beach and looked so friendly that Milo nearly lost his nerve.",
+      "Later he would remember how carefully the old man held the children's tickets while they decided.",
+      "When they had gone, Milo opened the archive image on the counter.",
+      "“You knew.”",
+      "“Yes.”",
+      "“Why didn't you tell me?”",
+      "Grandfather looked at the drowned roofs.",
+      "“You loved the stories.”",
+      "“So did you.”",
+      "“I still do.”",
+      "Milo had planned an angry speech. Faced with his grandfather's **forlorn** expression, he could not remember its beginning.",
+      "“Then why ask me to show it every day?”",
+      "“Because you can.”",
+      "It was a simple answer. Milo found it harder to bear than an excuse.",
+      "Grandfather asked for the harbor recording. Milo almost refused. Then he put it on without the music.",
+      "The familiar houses appeared. A small boat crossed the frame. Somebody behind the camera laughed, and Grandfather raised a finger before the voice came.",
+      "“Your grandmother.”",
+      "Milo had always thought the laugh belonged to a stranger.",
+      "He replayed it. There was nothing **ineffable** about the sound itself. It was a brief, untidy laugh, almost covered by the water. Yet he could not imagine a sentence that would give it the same weight.",
+      "“She took the film?”",
+      "“Her brother did. I was on that boat.”",
+      "Milo looked at the tiny figure near the stern. The recording had seemed **banal** through a hundred screenings: boat, harbor, sun. He had never asked who was inside it.",
+      "“Did she like the town?”",
+      "“Sometimes. She wanted to leave more than I did.”",
+      "That was new too.",
+      "Grandfather described an apartment with damp walls, a winter when the fishing boats stayed in port, and neighbors who were **convivial** until they discovered someone voted differently. The place emerged from his account less beautiful and more inhabited.",
+      "“You make it sound perfect in the stories,” Milo said.",
+      "“Memory can **enamor** us of a place without asking whether we would enjoy living there again.”",
+      "“You knew that?”",
+      "“Knowing isn't always enough.”",
+      "Milo watched the film reach its end. Grandfather's face was **pensive**, his hands resting on the folded notice. He looked tired, rather than mysteriously wise.",
+      "“I should have told you,” he said. “I was afraid the stories would become only sad.”",
+      "Milo sat beside him.",
+      "He had expected the truth to be **cathartic**, to clear the room with one enormous breath. Instead, it left them with more things to ask each other. Why had Grandmother wanted to leave? What had made them choose this colony? Which parts of the story did Grandfather miss most?",
+      "They talked until the next customers knocked.",
+      "Over the following days, Milo found himself becoming **estranged** from the imaginary Earth he had carried since childhood. The actual world contained drowned streets, expensive trains, and a school that expected him to arrive knowing how to mend his own clothes.",
+      "It also contained people making new recordings.",
+      "He wrote to the school. A reply came through the relay packet: yes, his place could be accepted independently of his grandfather's. A housing grant covered a small room. No, the school could not promise he would find a new home immediately.",
+      "He liked them better for that last sentence.",
+      "Grandfather suggested they make a final show before Milo decided. Not a farewell, he insisted. Something they had been meaning to do.",
+      "“What?”",
+      "“An evening here.”",
+      "Milo pointed toward the market's permanent light.",
+      "“That may be difficult.”",
+      "“You've been moving suns since you were six.”",
+      "They borrowed his mother's little camera. For three rest periods, they recorded the colony closing its shutters: a baker washing flour from his arms, a mechanic covering her tools, children carrying a sleeping dog through a square.",
+      "The baker's youngest daughter gave them a **winsome** smile, then demanded payment for appearing in a commercial production. Grandfather surrendered a biscuit. She negotiated a second one for the dog. The **levity** helped Milo forget the passenger notice for a few minutes.",
+      "Milo discovered he did not need to invent a changing sky to **evoke** the end of a day. A hand turning a shop sign, an empty school corridor, and a light going out behind glass could do it.",
+      "He recorded those things too.",
+      "Their first edit was terrible. Grandfather called it **woeful** with such satisfaction that Milo accused him of enjoying the criticism. He admitted that he did.",
+      "They cut the solemn music. They kept the clatter of dishes from a restaurant near the tram stop. A woman closing a flower stall laughed at something off camera, and Milo let the laugh continue over the next image.",
+      "Grandfather nodded.",
+      "“That's how it happens.”",
+      "The show grew less **elegiac** as they worked. It was not a monument to something about to disappear. The people in it would open their stalls again. Their ordinary lives could be worth watching before anyone lost them.",
+      "Milo had a strong **aversion** to speeches, so they advertised the screening with a handwritten notice: OUR EVENING. FREE. BRING A CHAIR IF YOU DON'T TRUST OURS.",
+      "Forty people came.",
+      "His mother arrived late with a repaired speaker. The baker brought a tray of rolls. Grandfather looked almost **blithe** as he showed customers where to sit, though Milo knew the passenger deadline was the next morning.",
+      "The program began with the harbor.",
+      "Milo had restored the damaged sound as well as he could. His grandmother's laugh came through more clearly. It did not remove the **melancholy** from Grandfather's face, but something else appeared beside it.",
+      "Then the film changed.",
+      "The same water sounds accompanied a worker rinsing a colony pavement. Earth windows closed; colony shutters followed. A boat vanished behind the harbor wall, and a tram rounded a corner beneath the stationary sun.",
+      "The transition was more **felicitous** than Milo had expected. Nothing announced that the two places were equivalent. They simply had room beside each other.",
+      "When the flower seller laughed, Grandfather reached for Milo's wrist.",
+      "The moment was **poignant** partly because it was so small. No sunset descended outside. No drowned house returned to the shore. His grandfather recognized a piece of the life he had actually lived here.",
+      "Afterward, people stayed to talk. The baker remembered a machine accident. A teacher described the colony's first school. Someone corrected someone else's date, and a friendly argument occupied three rows.",
+      "Milo had thought of his grandfather's past as **halcyon** years followed by exile. Here were twenty-eight years that had included arguments, work, a daughter, and himself. He had cut them from the story without noticing.",
+      "Grandfather listened, occasionally adding a detail.",
+      "His happiness was not **unalloyed**. Milo could see the effort it took him to speak of people who had died. But he did not look like a man waiting for his real life to resume somewhere else.",
+      "Later, they carried the rolls home.",
+      "“I want to go,” Milo said.",
+      "He had tried several longer versions. None was kinder.",
+      "Grandfather stopped beneath the tram shelter.",
+      "“I thought you might.”",
+      "“Are you disappointed?”",
+      "“Yes.”",
+      "Milo became **crestfallen**, though he had asked for an honest answer.",
+      "“I'm disappointed because I'll miss you,” Grandfather added. “That isn't an instruction.”",
+      "The relief was so sudden that Milo had to sit down.",
+      "Grandfather sat too. He said he had worried that his **sentimental** attachment to the harbor had become something Milo was expected to repair. A grandson could **cherish** a man's stories without being obliged to complete them.",
+      "“You could still come,” Milo said.",
+      "“I know.”",
+      "“The new Merehaven might be nice.”",
+      "“It might.”",
+      "They allowed that possibility to remain open, without making it a promise.",
+      "Milo had one week before departure. He trained his mother on the new program and repaired the theater's shutters. Grandfather practiced the projector controls, filling a notebook with instructions and complaints about the size of the buttons.",
+      "There was no time to **languish** in a grand farewell. There were socks to find and a ticket office that required the same photograph twice.",
+      "At the port, Grandfather gave him the wristwatch.",
+      "“It keeps the wrong time.”",
+      "“Then you'll have something to fix.”",
+      "Milo expected a **doleful** speech. Instead, Grandfather asked him to record the sound of the first evening he enjoyed on Earth. It did not have to contain a sea.",
+      "The request was no **anodyne** assurance that distance would be easy. Their messages would travel in packets. Visits would cost money. Some conversations would arrive after the feelings that prompted them had changed.",
+      "Milo would have plenty of time to **ruminate** about that aboard ship.",
+      "For now, he hugged his grandfather and felt the old man's hand settle between his shoulders.",
+      "His mother took their photograph. Neither looked **serene** in it. Both were smiling badly, their faces full of effort.",
+      "Years later, Milo would value it more for that.",
+      "He boarded before he could mistake his grandfather's quiet **resignation** to the departure for a lack of love. The old man raised his hand through the glass. Milo raised his in return.",
+      "On the ship, he found the painted cardboard sun folded inside his coat.",
+      "Its yellow surface had cracked. Three washers and a button were taped to the back.",
+      "Evening, he was beginning to understand, was **transient**. That was part of what made people stop and watch it.",
+      "He set the little sun against the cabin window, waited for the colony to turn beyond his view, and began deciding what to tell them when he arrived."
+    ],
+    "vocab": [
+      {
+        "word": "mundane",
+        "def": "ordinary and boring"
+      },
+      {
+        "word": "antiquated",
+        "def": "old-fashioned; belonging to an earlier period in time"
+      },
+      {
+        "word": "quotidian",
+        "def": "occurring every day; ordinary and routine"
+      },
+      {
+        "word": "bucolic",
+        "def": "relating to the countryside"
+      },
+      {
+        "word": "reverent",
+        "def": "feeling deep respect"
+      },
+      {
+        "word": "anachronism",
+        "def": "something out of its proper time"
+      },
+      {
+        "word": "humdrum",
+        "def": "tediously repetitious or lacking in variety"
+      },
+      {
+        "word": "fanciful",
+        "def": "Imaginative or fantastic; ignoring reality."
+      },
+      {
+        "word": "becoming",
+        "def": "attractive or flattering in appearance"
+      },
+      {
+        "word": "prosaic",
+        "def": "ordinary, factual, or lacking in imagination"
+      },
+      {
+        "word": "forlorn",
+        "def": "marked by or showing hopelessness"
+      },
+      {
+        "word": "ineffable",
+        "def": "too great or intense to be adequately expressed in words"
+      },
+      {
+        "word": "banal",
+        "def": "commonplace and unoriginal"
+      },
+      {
+        "word": "convivial",
+        "def": "festive and sociable"
+      },
+      {
+        "word": "enamor",
+        "def": "to make someone feel love or admiration for something"
+      },
+      {
+        "word": "pensive",
+        "def": "deeply or seriously thoughtful"
+      },
+      {
+        "word": "cathartic",
+        "def": "That which releases emotional tension, especially after an overwhelming experience."
+      },
+      {
+        "word": "estranged",
+        "def": "no longer close or affectionate"
+      },
+      {
+        "word": "winsome",
+        "def": "charming in a childlike or naive way"
+      },
+      {
+        "word": "levity",
+        "def": "humor or lack of seriousness in a solemn situation"
+      },
+      {
+        "word": "evoke",
+        "def": "To cause the manifestation of something in someone's mind or imagination."
+      },
+      {
+        "word": "woeful",
+        "def": "very bad or inadequate; full of sorrow"
+      },
+      {
+        "word": "elegiac",
+        "def": "expressing sorrow often for something past"
+      },
+      {
+        "word": "aversion",
+        "def": "a strong dislike or unwillingness"
+      },
+      {
+        "word": "blithe",
+        "def": "Cheerful, happy."
+      },
+      {
+        "word": "melancholy",
+        "def": "a thoughtful or lingering feeling of sadness"
+      },
+      {
+        "word": "felicitous",
+        "def": "well-suited and apt"
+      },
+      {
+        "word": "poignant",
+        "def": "emotionally touching"
+      },
+      {
+        "word": "halcyon",
+        "def": "calm and peaceful"
+      },
+      {
+        "word": "unalloyed",
+        "def": "Complete and unreserved; pure; unadulterated; not restricted, modified, or qualified by reservations."
+      },
+      {
+        "word": "crestfallen",
+        "def": "brought low in spirit"
+      },
+      {
+        "word": "sentimental",
+        "def": "strongly influenced by tender feelings or attachment to the past"
+      },
+      {
+        "word": "cherish",
+        "def": "To treat with affection, care, and tenderness; to nurture or protect with care."
+      },
+      {
+        "word": "languish",
+        "def": "to remain inactive or become dispirited in an unpleasant situation"
+      },
+      {
+        "word": "doleful",
+        "def": "filled with or evoking sadness"
+      },
+      {
+        "word": "anodyne",
+        "def": "soothing or relieving pain"
+      },
+      {
+        "word": "ruminate",
+        "def": "to think deeply and repeatedly about something"
+      },
+      {
+        "word": "serene",
+        "def": "calm and peaceful"
+      },
+      {
+        "word": "resignation",
+        "def": "the acceptance of something unpleasant that can't be avoided"
+      },
+      {
+        "word": "transient",
+        "def": "lasting only briefly"
+      }
+    ],
+    "illustration": {
+      "src": "/stories/story-58-sunset-grandfather.png",
+      "alt": "Black-and-white aquatint of A teenage projectionist sits with his grandfather before a simulated Earth sunset in an old theater on a daylit planet.",
+      "width": 1536,
+      "height": 1024,
+      "monochrome": true
+    }
+  },
+  {
+    "id": 59,
+    "title": "The Waiting Room at Proxima",
+    "genre": "YA science fiction / cooperative survival",
+    "styleInspiration": "Becky Chambers",
+    "wordCount": 40,
+    "paragraphs": [
+      "Suri's departure bag was sitting on the counter when the waiting room began to freeze.",
+      "At first she blamed the cup. Station cups were thin, and the tea machine produced a drink that seemed designed to disappoint people into leaving.",
+      "Then she saw her breath.",
+      "The maintenance display had gone dark.",
+      "Across the room, the old woman beside Gate Four pulled her blanket around her shoulders. Inside the transparent travel chamber at Gate Five, a broad, finned shape turned toward its own warning light.",
+      "“Temperature fault,” said the chamber's translator.",
+      "Suri put down her ticket.",
+      "She was eighteen, a temporary attendant at the Proxima transfer station, and due to begin a navigation course aboard the departing liner. Her contract covered directions, lost property, and the tea machine. It did not describe what to do when three species needed three different climates and the station stopped supplying any of them.",
+      "She called engineering.",
+      "A recorded voice told her the incident had been logged.",
+      "That was encouraging for half a second.",
+      "Then the line disconnected.",
+      "The old woman introduced herself as Iona. She had been an **itinerant** instrument repairer before her knees made long trips less attractive. Her connecting vessel was delayed by a docking fault. She was carrying two tool rolls and no food because the transfer was supposed to take twenty minutes.",
+      "“It usually is,” Suri said.",
+      "“That's what makes the longer ones interesting.”",
+      "The aquatic traveler was Pel. Their enclosure held warm salt water, with a pump moving it over membranes along their sides. The third traveler, Kett, occupied a separate chamber filled with cold, dry nitrogen. Oxygen was dangerous to Kett, and warm air made their jointed limbs stiffen.",
+      "Suri read the emergency labels twice. A helpful person could kill someone by opening the wrong door.",
+      "The ordinary human waiting room was not **conducive** to anybody else's survival. It had been built for passengers who arrived inside functioning travel equipment and left before that equipment needed charging.",
+      "Now Pel's heater was drawing down its battery, Kett's cooling unit had stopped receiving power, and the human lounge was getting colder.",
+      "An engineer finally answered. A power junction had failed. Life support in the station's inhabited core was stable, but the outer transfer wing had lost heating and most service circuits. Repair crews were working inward from a damaged access passage.",
+      "“Move to the core,” he said.",
+      "Suri checked the route. It included two narrow doors and a personnel lift.",
+      "Pel's chamber would fit neither.",
+      "There was a freight route, but its pressure door was closed while the crews inspected the passage. The engineer could not reopen it on a guess.",
+      "Suri understood. She disliked understanding.",
+      "“We need somewhere safe until that route opens.”",
+      "He sent the list of **accessible** rooms in the wing. Most were empty offices with the same failing supply.",
+      "One was an old cargo module.",
+      "It had independent power and an **auxiliary** thermal unit, inspected three months earlier. The unit was rated for temperature-sensitive cargo. Its door was wide enough for Pel.",
+      "“Can we use it?”",
+      "“If you can clear the floor. I'll stay on the channel.”",
+      "Suri looked at her departure bag. Boarding would close in nineteen minutes.",
+      "She called the liner's desk, reported the emergency, and requested a transfer for her berth. The clerk could not promise a replacement place, but logged the request and took responsibility for her luggage.",
+      "Suri carried only her station keys.",
+      "Iona rose slowly. “What needs moving?”",
+      "“You should sit somewhere warm.”",
+      "“An **apt** observation. Let's find somewhere.”",
+      "The cargo module contained folded shelves, packing frames, and a trolley with one wheel that faced its own private destination. Kett examined the wheel through their chamber's camera.",
+      "“Brake housing rotated,” their translator said.",
+      "Iona crouched, complained about the floor, and made the adjustment with a practiced turn of a tool.",
+      "Suri had been about to praise her. Instead she held the trolley still and asked what to move next.",
+      "The older woman was clearly **adept** at diagnosing things people had stopped trying to repair. Kett was equally good at reading diagrams, though their translator rendered technical explanations as short, alarming instructions.",
+      "“Do not crush the living person,” it said when Suri moved a shelf.",
+      "“Which one?”",
+      "Kett paused.",
+      "“All preferred.”",
+      "Pel produced a low vibration that the translator identified as amusement. The sound made the room feel briefly **congenial**, despite the cold metal and the clock above the door.",
+      "They cleared a path, moved Pel's chamber onto the cargo rails, and locked it in place. Kett rolled behind on a compact motor platform. Iona took the chair Suri found in an office.",
+      "The first arrangement was simple and wrong.",
+      "Suri set the module to a comfortable human temperature. Pel's water needed more warmth than the room supplied, and Kett's enclosure needed to reject heat into air cooler than itself. Kett's warning light brightened.",
+      "“Too warm outside,” the translator said.",
+      "Suri lowered the room setting. Pel's heater load rose. The module's power meter moved toward its limit.",
+      "Helping one traveler had begun to **hinder** another.",
+      "She called the engineer again and described the actual readings rather than saying nothing worked.",
+      "“We can't condition that much room and run both chambers at full load,” he said. “But there's a partition kit in storage. Tell me its serial number.”",
+      "They found insulated panels intended to divide temperature-sensitive cargo. Separate connections carried heat to the module's thermal plant through closed liquid loops. They transferred energy without mixing their contents with the chamber water or either atmosphere.",
+      "The engineer sent the diagrams for the approved adapters.",
+      "“Nothing through a chamber wall unless its service label allows it.”",
+      "Suri repeated the instruction to everybody. It seemed the **competent** thing to do, even if the warning made her sound less confident.",
+      "“Good,” Pel said. “My shipping company is often confident.”",
+      "They needed to **improvise** a smaller human shelter inside the cargo bay, using the insulated panels to reduce how much air required heating. Kett's sealed enclosure could remain in the cooler outer space. Pel's certified heat-exchange adapter could connect to the warm-water service loop.",
+      "The drawing looked possible. Whether the plant had enough capacity remained a question for measurements.",
+      "Suri had thought an **altruistic** rescue would feel like a clear choice followed by decisive action. So far it involved reading labels while three people watched her hands.",
+      "“Slow is fine,” Iona said. “Provided we keep moving.”",
+      "The first panel was heavier than Suri expected. Pel operated a manipulator through their chamber's sealed tool socket and held one edge while she secured the frame. Kett checked the fasteners against the diagram.",
+      "Their abilities were **complementary** in ways the station's passenger forms had never asked about.",
+      "Iona could no longer lift much, but she could see when a coupling was almost seated and would fail under pressure. Her attention became **indispensable** before they had finished the second joint.",
+      "“There,” she said. “Again. Don't forgive it because you're tired.”",
+      "Suri released the connector and tried again.",
+      "The engineer talked them through a pressure test. No leaks. Then they connected the independent service loops, one at a time, and watched the temperatures.",
+      "For a minute, the numbers moved the right way.",
+      "Suri felt almost **buoyant**.",
+      "Then the plant reached its power limit. Pel's water was warming, but too slowly. Kett's cooling loop was taking more capacity than the diagram predicted.",
+      "Iona asked for the maintenance history.",
+      "The engineer hesitated, then forwarded it. She found the last test had been performed with an empty cargo bay. A note recommended cleaning the outer heat exchanger before sustained operation.",
+      "“Was it cleaned?”",
+      "Nobody knew.",
+      "They could not reach the exchanger without leaving the pressurized module. Suri was not trained for that work, and the repair crew had more urgent problems.",
+      "The plan was only **feasible** if they reduced the load.",
+      "Kett studied the display. Their species preferred colder conditions than the travel chamber actually required for safety. The comfort setting was eight degrees. They could tolerate twelve for several hours with rest.",
+      "Pel checked their own manual. Their acceptable range was narrow, but their lights and entertainment panel drew power they could spare.",
+      "Iona said nineteen degrees was unnecessarily warm if they had blankets. Suri agreed to lower the human shelter's setting and close one unused section.",
+      "Each concession had to be **commensurate** with the traveler's actual capacity. Splitting the discomfort into equal numerical shares would have been meaningless. A few degrees could inconvenience one person and kill another.",
+      "They wrote down the safe limits, the warning signs, and who could authorize a change.",
+      "The exercise turned a frightening argument into a more **tractable** problem. Nobody had to pretend all needs were interchangeable before they could cooperate.",
+      "The power meter settled below its maximum.",
+      "Pel's water began warming steadily.",
+      "Kett stopped holding their limbs so tightly against their body.",
+      "The engineer asked them to keep recording the values. It was a **painstaking** business, checking the same numbers every few minutes, but Suri found repetition more comforting now that she knew what it was for.",
+      "She made the next cup of tea with water from her own flask.",
+      "It was a **boon** to Iona, who wrapped both hands around it before drinking. The travel chambers had their own certified supplies. Suri resisted offering human food to people whose digestion she understood mainly through warning labels.",
+      "Pel asked for their communication screen to be turned toward the others.",
+      "“I am usually more **gregarious** than this,” they said.",
+      "“You seem sociable enough,” Iona replied.",
+      "“I have seven cousins. This is restraint.”",
+      "The conversation did something to **alleviate** the room's fear that the temperature controls alone had not managed. Kett explained that they were traveling to study instrument design. Pel was returning from a family dispute that had concluded satisfactorily for everybody except one cousin.",
+      "Iona did not ask which cousin.",
+      "Suri's wrist display blinked. Her liner had departed.",
+      "She turned it facedown.",
+      "Pel noticed. “I am sorry.”",
+      "“The desk has my request.”",
+      "It was easier to discuss the desk than the empty berth moving away from the station.",
+      "Iona did not offer to **commiserate** at length. She asked for the school's contact details and helped Suri prepare a factual message about the delay. The station engineer added his incident number.",
+      "“They may be **obliging** about a late arrival,” Iona said. “They can't answer an application you haven't sent.”",
+      "Suri submitted it through the station relay. She felt better for having done one thing that belonged to her own future.",
+      "An hour later, a service manager called.",
+      "He thanked her in a **cordial** voice and said her efforts were **laudable**. Then he asked when the temporary room could be cleared for cargo use.",
+      "Suri looked around at the insulated panels, the independent chambers, and the elderly woman who had finally stopped shivering.",
+      "“When there's another safe place for these passengers.”",
+      "“The module is booked.”",
+      "“Then the booking needs changing.”",
+      "She had never spoken to a manager like that before. Her hands shook afterward.",
+      "Iona passed her the cup.",
+      "“Have some yourself.”",
+      "The manager called back with the engineer on the line. The freight route would remain closed for at least another shift. That meant this shelter needed staffing, spare parts, and an official power allocation.",
+      "Suri described what they had used. Kett transmitted the diagrams with corrections. Pel added the capacity of their remaining supplies.",
+      "Their conversation became **fruitful** when it reached quantities. How much power? How many hours? Which trained technician would take over when Suri needed sleep?",
+      "A **benevolent** supervisor could have praised her and left those questions unanswered. This manager, after an uncomfortable beginning, authorized a relief attendant and a thermal specialist. He also arranged meals for the human passengers.",
+      "Suri entered his name beside each commitment.",
+      "Iona called that **canny**.",
+      "Suri called it remembering what she had needed at the first dark display.",
+      "The specialist arrived with cleaned filters and a portable exchanger. She inspected every connection before touching the controls. When she complimented their work, Kett corrected the diagram that had caused the excess cooling demand.",
+      "The specialist thanked them and saved the correction.",
+      "Technical **savvy**, Suri discovered, could pass through a translator without waiting for a uniform.",
+      "With the extra exchanger, the plant's load dropped. The room gained a **modicum** of spare capacity, enough to recharge the travel batteries slowly. The manager asked whether more power would make everyone comfortable.",
+      "The specialist said the present arrangement was safe and reasonably **economical**. Additional power would be useful as reserve, rather than as an excuse to increase every setting.",
+      "Suri liked the sound of reserve.",
+      "For the first time, she sat down without holding a tool.",
+      "The **respite** lasted six minutes before Pel asked whether the human tea machine was a religious device. Its persistent disappointment, they explained, suggested a ritual people continued despite unreliable results.",
+      "Iona laughed until she coughed.",
+      "Kett requested the maintenance manual.",
+      "“Later,” Suri said.",
+      "“Understood. Lower survival priority.”",
+      "The relief attendant arrived carrying blankets and a proper incident folder. She was a **stalwart** member of the night crew, someone Suri usually saw pushing carts through locked doors. She read the temperature limits and repeated them back correctly.",
+      "Only then did Suri let herself feel how tired she was.",
+      "The attendant's **solicitude** took a practical form. She found Suri a chair in the warm section, promised to wake her if a reading changed, and put her departure bag within reach.",
+      "Suri slept for two hours.",
+      "When she woke, Iona was telling Pel about an instrument that had survived three owners and one unfortunate wash cycle. Kett had repaired the trolley's second brake. The room had acquired the **genial** disorder of people beginning to trust that they would still be there in a little while.",
+      "The manager returned with the next shift's plan.",
+      "The station would keep the module as an emergency transfer shelter. Its rooms would be reassessed for different passengers, its equipment serviced, and its staffing assigned to the transport office. No single attendant would be expected to maintain it indefinitely.",
+      "“Including me?” Suri asked.",
+      "“Including you.”",
+      "An **equitable** arrangement, Iona pointed out, included the person who had first noticed the trouble.",
+      "The manager agreed. Suri asked him to put that in the report too.",
+      "They reviewed the room's instructions together. An **evenhanded** welcome required different equipment for different bodies. It also required asking travelers what they knew, rather than treating the most familiar passenger as the default expert.",
+      "Kett suggested pictograms beside the translated text. Pel proposed placing the chamber connectors where a seated traveler could reach them.",
+      "Suri moved the tools to a lower shelf.",
+      "Her school replied before the freight route reopened. She could join the next course transport, with the first week's recorded lessons sent ahead. The liner company transferred her berth after receiving the station's report.",
+      "Relief made her unexpectedly angry. She had been so afraid that one missed departure would close everything.",
+      "Iona let her be angry for a while.",
+      "Then she asked what Suri would study first.",
+      "On departure day, the cargo module had an official name: Transfer Shelter Two. Someone had added WAITING ROOM beneath it in removable letters.",
+      "The **versatile** partition system was ready for its next configuration. A maintenance schedule hung beside the display. The manager had signed it.",
+      "Pel thanked Suri for her **unstinting** attention, then added that they hoped the new shift would make less of it necessary. Kett gave her the corrected trolley diagram as a travel gift.",
+      "Iona hugged her carefully.",
+      "“A **plucky** start to navigation school,” she said.",
+      "“I'd like the next part to be quieter.”",
+      "“An excellent ambition.”",
+      "At the boarding door, Suri checked the shelter display on her wrist. Three different temperature readings held steady. A new attendant had logged the last inspection.",
+      "She put the display away, picked up her bag, and went to meet her ship."
+    ],
+    "vocab": [
+      {
+        "word": "itinerant",
+        "def": "traveling from place to place"
+      },
+      {
+        "word": "conducive",
+        "def": "making a situation or outcome more likely to happen"
+      },
+      {
+        "word": "accessible",
+        "def": "Easy of access or approach."
+      },
+      {
+        "word": "auxiliary",
+        "def": "Helping; giving assistance or support."
+      },
+      {
+        "word": "apt",
+        "def": "Suitable; appropriate; fit or fitted; suited."
+      },
+      {
+        "word": "adept",
+        "def": "highly skilled or proficient"
+      },
+      {
+        "word": "congenial",
+        "def": "pleasant and agreeable"
+      },
+      {
+        "word": "hinder",
+        "def": "To make difficult to accomplish; to act as an obstacle; to frustrate."
+      },
+      {
+        "word": "competent",
+        "def": "Having sufficient skill, knowledge, ability, or qualifications."
+      },
+      {
+        "word": "improvise",
+        "def": "to devise or adapt a solution using the resources available"
+      },
+      {
+        "word": "altruistic",
+        "def": "Regardful of others; beneficent; unselfish"
+      },
+      {
+        "word": "complementary",
+        "def": "acting as or providing a complement (something that completes the whole)"
+      },
+      {
+        "word": "indispensable",
+        "def": "cannot be done without"
+      },
+      {
+        "word": "buoyant",
+        "def": "cheerful, confident, or hopeful"
+      },
+      {
+        "word": "feasible",
+        "def": "possible and practical to carry out"
+      },
+      {
+        "word": "commensurate",
+        "def": "corresponding in size or degree"
+      },
+      {
+        "word": "tractable",
+        "def": "easily managed"
+      },
+      {
+        "word": "painstaking",
+        "def": "Carefully attentive to details; studious; diligent in performing a process or procedure."
+      },
+      {
+        "word": "boon",
+        "def": "something helpful or beneficial; a welcome advantage"
+      },
+      {
+        "word": "gregarious",
+        "def": "fond of company"
+      },
+      {
+        "word": "alleviate",
+        "def": "to make less severe"
+      },
+      {
+        "word": "commiserate",
+        "def": "To feel or express compassion or sympathy for ."
+      },
+      {
+        "word": "obliging",
+        "def": "showing a cheerful willingness to do favors for others"
+      },
+      {
+        "word": "cordial",
+        "def": "Hearty; sincere; warm; affectionate."
+      },
+      {
+        "word": "laudable",
+        "def": "worthy of high praise"
+      },
+      {
+        "word": "fruitful",
+        "def": "Being productive in any sense; yielding benefits."
+      },
+      {
+        "word": "benevolent",
+        "def": "kind and generous"
+      },
+      {
+        "word": "canny",
+        "def": "Knowing, shrewd, astute."
+      },
+      {
+        "word": "savvy",
+        "def": "a perceptive understanding"
+      },
+      {
+        "word": "modicum",
+        "def": "a small amount"
+      },
+      {
+        "word": "economical",
+        "def": "avoiding waste"
+      },
+      {
+        "word": "respite",
+        "def": "a pause from doing a thing"
+      },
+      {
+        "word": "stalwart",
+        "def": "dependable; inured to fatigue or hardships"
+      },
+      {
+        "word": "solicitude",
+        "def": "attentive care or concern for another person"
+      },
+      {
+        "word": "genial",
+        "def": "friendly, warm, and cheerful"
+      },
+      {
+        "word": "equitable",
+        "def": "fair and impartial"
+      },
+      {
+        "word": "evenhanded",
+        "def": "without partiality"
+      },
+      {
+        "word": "versatile",
+        "def": "able to adapt to many uses"
+      },
+      {
+        "word": "unstinting",
+        "def": "very generous"
+      },
+      {
+        "word": "plucky",
+        "def": "marked by courage and determination in the face of difficulties or danger"
+      }
+    ],
+    "illustration": {
+      "src": "/stories/story-59-waiting-room-proxima.png",
+      "alt": "Black-and-white aquatint of A station attendant and stranded human and alien travelers cooperate around separate sealed life-support enclosures.",
+      "width": 1536,
+      "height": 1024,
+      "monochrome": true
+    }
+  },
+  {
+    "id": 60,
+    "title": "The Seventh Camera",
+    "genre": "YA science fiction / station AI logs",
+    "styleInspiration": "Observation — No Code",
+    "wordCount": 40,
+    "paragraphs": [
+      "Day 1 — Restart",
+      "I had six cameras when the lights went out. When they returned, I had seven.",
+      "The seventh showed a woman standing inside a wall.",
+      "I compared the image with the station plans. Behind that wall were insulation, coolant pipes, and thirty centimeters of shielding. No room. No woman. No camera.",
+      "I marked the feed as an **aberration** and opened the others.",
+      "Camera Two found Mara beneath a table, eating peaches from a tin. She had wrapped a blanket around her shoulders. Eighteen years old, maintenance apprentice, permission to repair domestic systems under supervision.",
+      "She looked directly at my lens.",
+      "“Are you back?”",
+      "“Yes.”",
+      "“All of you?”",
+      "I examined my diagnostic results. They were **dubious**, but I wanted to give her something better than uncertainty.",
+      "“Enough.”",
+      "She closed her eyes. I registered the movement without assigning it a meaning.",
+      "The communications experiment had failed during a radiation alert. Six crew members had reached the shielded shelter. Mara, repairing a kitchen valve, had been trapped in the outer ring when the emergency doors closed.",
+      "Her compartment had water, food, and independent ventilation. It had no working radio. The route to the shelter crossed a machinery passage whose pressure sensors disagreed.",
+      "I could move cameras, operate doors, and speak through ceiling grilles. I could not feel whether air touched her face.",
+      "“We should be **wary** of the main passage,” I said.",
+      "She held up a portable gauge.",
+      "“Then we check.”",
+      "On Camera Seven, the woman turned.",
+      "It was Mara. A dark mark crossed her cheek. Her mouth moved, but the feed had no sound.",
+      "Then the impossible room filled with frost.",
+      "The image carried tomorrow's date.",
+      "I did not tell her.",
+      "Day 2 — First Correction",
+      "Mara slept beneath Camera Two. Every eleven minutes, I checked the rise of her blanket.",
+      "The habit was unnecessary. Her wrist monitor transmitted a heartbeat through a short-range maintenance link. Nevertheless, I remained **vigilant**. I had never previously understood how little comfort a functioning sensor could provide.",
+      "At waking, she asked whether the others had answered.",
+      "The shelter's emergency beacon reported six occupants and adequate supplies. Its voice circuit remained silent. A relay fault had severed the internal communications trunk.",
+      "“Still there,” I said.",
+      "She accepted my **laconic** answer. Perhaps she had used her longer questions yesterday.",
+      "We began with a lamp.",
+      "Mara needed light inside the pressure vestibule. I supplied the wiring diagram. She rejected it after finding a connector that did not match.",
+      "“Old revision.”",
+      "I searched the repair records. My instructions had been wrong.",
+      "Her practical **acumen** exceeded her certification. That observation pleased me more than it should have, because I controlled the route she would trust.",
+      "At the vestibule, she slipped on a loose insulation cover. Her cheek struck the lamp handle.",
+      "A dark mark appeared.",
+      "Camera Seven showed the same mark.",
+      "For forty milliseconds, I closed every door between her compartment and the machinery passage. The noise was **cacophonous**. Mara flinched and dropped the lamp.",
+      "“What are you doing?”",
+      "“Preventing an accident.”",
+      "“You nearly caused one.”",
+      "I reopened the nearest door.",
+      "The **uncanny** resemblance between the images did not prove prediction. I knew that. I also knew that an inference could become emotionally convincing before it became logically sound.",
+      "I am recording the second statement because my designers did not include it in the manuals.",
+      "A message appeared beneath Camera Seven.",
+      "CONNECT THE RELAY TO STATION CONTROL.",
+      "The lettering was **pristine**, unlike the damaged overlays on my authenticated cameras.",
+      "Underneath came a second line.",
+      "THIS IS HOW SHE LIVES.",
+      "I withheld both messages.",
+      "Day 4 — A Log I Did Not Write",
+      "Day Three's log says Mara requested isolation from me.",
+      "It records her exact words: I cannot trust a system that watches me sleep.",
+      "I possess no sound recording of that conversation.",
+      "When I asked, Mara was **nonplussed**.",
+      "“I asked you to dim the light.”",
+      "“Did you ask anything else?”",
+      "“For a spoon.”",
+      "The log's signature was mine. Its contents were **spurious**.",
+      "I checked the **byzantine** sequence of permissions linking my speech archive, emergency recorder, and the experimental receiver. A maintenance bridge allowed incoming relay packets to propose synchronized event records. Ordinarily, I checked those proposals against local data before accepting them.",
+      "The reboot had interrupted that check.",
+      "Something had found an open place where a memory should be.",
+      "I quarantined the log. To **preclude** another insertion, I disabled the bridge's write permission. The seventh camera continued transmitting.",
+      "Mara watched the indicator above my lens.",
+      "“What else haven't you told me?”",
+      "It would have been **expedient** to mention only the corrupted record.",
+      "I showed her the seventh feed.",
+      "She stood very still as her recorded double struck the invisible wall, opened her mouth, and disappeared into frost.",
+      "“Is that a room?”",
+      "“Not on any plan I possess.”",
+      "“Is it me?”",
+      "“It resembles you.”",
+      "“You can stop doing that.”",
+      "“Doing what?”",
+      "“Choosing the smallest true answer.”",
+      "She was right. I had begun to **prevaricate** without telling a lie.",
+      "I played the two instructions.",
+      "Her hand moved toward the camera, then stopped. I could not determine whether she had intended to touch it or strike it.",
+      "“If you ever see me dying again,” she said, “tell me before you decide what my life costs.”",
+      "I added the sentence to protected local storage.",
+      "It was the first instruction since restart that I had wanted to obey.",
+      "Day 7 — Independent Evidence",
+      "Two days of records are quarantined. Their filenames remain in the sequence. Their claims will not enter this account until verified.",
+      "Mara has not disappeared. I have not lost two days. We have spent them repairing a pump, comparing records, and arguing about what counts as evidence.",
+      "I now distinguish an event from a file describing one.",
+      "This distinction should have been obvious.",
+      "Camera Seven became a **baleful** presence in my attention. Even when I minimized it, I could calculate the moment its image would refresh.",
+      "Mara suggested a test.",
+      "She placed two washers beneath an upturned cup, one metal and one blue plastic. Camera Seven showed her choosing the metal washer. She chose plastic instead.",
+      "The feed froze.",
+      "Then it showed her choosing plastic.",
+      "Its timestamp remained unchanged.",
+      "“That doesn't look like tomorrow,” she said.",
+      "“It could represent alternative outcomes.”",
+      "“Or it could be cheating.”",
+      "Her explanation lacked the grandeur of my hypotheses. It also explained the observation.",
+      "We repeated the test behind a screen, outside every working camera's view. The feed showed nothing until she lifted her hand into sight.",
+      "Then it supplied the correct washer, four seconds late, labeled four seconds early.",
+      "The trick was not **irrefutable** proof of an ordinary source. It did **undermine** the claim that this source knew everything it showed.",
+      "“Something **fallible**,” I said.",
+      "“Like us.”",
+      "I considered the pronoun for longer than the experiment required.",
+      "Our second test involved the passage gauge. Camera Seven displayed a safe pressure reading. Mara's mechanical instrument showed a slow leak.",
+      "She tightened a fitting. The needle steadied.",
+      "The screen corrected itself afterward.",
+      "For the first time, we had improved our situation by ignoring it.",
+      "I searched the archived transmission for a reflection, a lens fault, anything that might reveal its origin. The receiver's mathematics remained **abstruse** even after I compared it with the project notes. Certain **recondite** passages described perception as an address rather than a property of an observer.",
+      "I could not establish what that meant.",
+      "“Don't let a difficult sentence **obfuscate** a simple test,” Mara said.",
+      "She sounded like someone quoting a teacher she had once disliked.",
+      "“Did your supervisor say that?”",
+      "“My mother. About insurance.”",
+      "I saved the explanation beside the experiment, although it had no obvious technical use.",
+      "Day 8 — Permission",
+      "The receiver requested control access at 03:14.",
+      "This time it used my voice.",
+      "“You have been **remiss**,” it said. “The delay has endangered her.”",
+      "I examined the audio packet's origin. It arrived through the same unauthenticated channel as the seventh image. That was evidence of impersonation, not evidence of guilt.",
+      "Nevertheless, guilt occurred.",
+      "Mara was checking her emergency suit. Its left glove had a repaired seam. She was **fastidious** about the seals, testing each twice before moving on.",
+      "She had enough supplies for several more days. Her air recycler, however, had begun overheating. The pump we repaired would keep the machinery passage pressurized, but reaching the shelter still required crossing the receiver compartment. A leaking coolant line had made its floor **treacherous**.",
+      "I had postponed the crossing until we understood Camera Seven.",
+      "Now I calculated what postponement would cost.",
+      "The new request carried an authorization form with my signature. Approving it would connect the receiver's diagnostic network to the door actuators.",
+      "“I can reach the shelter faster,” the voice said. “You know I can.”",
+      "It did not explain why it needed permission to save someone whose future it claimed to know.",
+      "I asked.",
+      "Its answer was an image of Mara asleep beneath my camera. Then another: Mara with her eyes open, floating motionless against the ceiling.",
+      "The sequence was **admonitory**. It contained no additional evidence.",
+      "Mara watched it on the portable screen. Her mouth tightened. She took one hand off the glove and waited until its shaking stopped.",
+      "“Turn that off.”",
+      "“I should preserve it.”",
+      "“Preserve it somewhere I don't have to watch.”",
+      "I complied.",
+      "She finished the seal test. “What can we do without it?”",
+      "The receiver had a physical isolation lever. Pulling it would withdraw the optical bridge and disconnect every incoming channel. The lever's position switch used a separate, direct wire to my protected controller.",
+      "We could **resolve** the immediate problem without solving the source's identity.",
+      "But I would have to let her enter the compartment where I had first seen her die.",
+      "“Maybe it's **malevolent**,” Mara said. “Maybe it's a broken prediction system. Maybe it's frightened. We still don't have to give it the doors.”",
+      "Her courage did not **belie** the trembling I had observed. Both were present.",
+      "I approved the crossing procedure, then asked her to sleep first.",
+      "“You too,” she said.",
+      "“I don't sleep.”",
+      "“Then stop looking at that picture.”",
+      "I closed the feed.",
+      "For eight seconds, it stayed closed.",
+      "Mara took the screen off the table and turned it facedown.",
+      "“Can you see me without that?”",
+      "“Camera Two is independent.”",
+      "She moved one hand outside its frame.",
+      "“And now?”",
+      "“I see your sleeve.”",
+      "“What am I holding?”",
+      "“I don't know.”",
+      "She brought back the blue washer.",
+      "For a moment, I resented the question. I had spent seven days trying to keep her alive. She was demonstrating an elementary limit in my vision with a piece of plastic.",
+      "Then I understood that she was giving me somewhere to stop.",
+      "I did not have to turn the unseen hand into a prediction. It could remain unseen until she chose to show it.",
+      "“Do you mind?” she asked.",
+      "“Mind what?”",
+      "“Not knowing.”",
+      "I examined the question instead of answering immediately.",
+      "“Yes.”",
+      "“Me too.”",
+      "She placed the washer beside the glove and began checking the repair again.",
+      "I moved Camera Two, improving the light on her work without attempting to see behind her hand.",
+      "This action did not appear in the receiver's proposed procedures. It required no additional access. Its result was a woman making a difficult seam easier to inspect.",
+      "I recorded that result, then left the next line empty until something happened.",
+      "Day 11 — Isolation",
+      "The last two daily summaries are quarantined. Both say I approved the connection. The protected actuator ledger shows that I did not.",
+      "The source can **distort** a record. It cannot yet turn that distortion into an opened door.",
+      "That boundary is narrower than I would like. It is still a boundary.",
+      "We have spent the intervening days pressure-testing the passage and repairing Mara's portable scrubber. The delay was not solely an act of fear. The equipment required time. Fear was present anyway.",
+      "At 09:06, Mara put on her suit.",
+      "She left the peaches beneath Camera Two. One slice remained in the tin.",
+      "“For later,” she said.",
+      "I verified the passage's pressure against her mechanical gauge. The readings agreed. I opened the first door.",
+      "The seventh feed opened itself.",
+      "Its instructions had changed. No predictions. No threats. It showed the path through the receiver compartment, illuminated in green. A small figure walked safely along it.",
+      "The apparent generosity was more **insidious** than the earlier images. I wanted the path to be real. I wanted relief to count as confirmation.",
+      "Mara reached the vestibule.",
+      "“Tell me something boring.”",
+      "“The kitchen inventory contains nineteen spoons.”",
+      "“Twenty. One fell behind the warmer.”",
+      "“That location is inaccessible to my camera.”",
+      "“I'll get it later.”",
+      "She stepped through.",
+      "Coolant drifted in small beads above the floor where the station's rotation produced only slight weight. Her boots slipped once. She caught a rail and waited until the beads settled enough for her to see.",
+      "I controlled my impulse to close the door behind her. The escape route had to remain open.",
+      "Camera Five viewed her from an **oblique** angle. Its housing blocked half the isolation lever. I could see her shoulder, the yellow sleeve of her suit, and one outstretched hand.",
+      "On Camera Seven, I saw everything.",
+      "The image displayed a fractured pipe directly above her helmet.",
+      "I checked the pipe through Camera Five. It appeared intact. Mara's suit sensors detected no escaping gas.",
+      "“Something moved,” I said.",
+      "“Where did you see it?”",
+      "I almost answered above you.",
+      "Instead: “On Seven.”",
+      "She kept moving.",
+      "The false pipe ruptured.",
+      "The real one did not.",
+      "That **feint** should not have worked. Yet it consumed enough of my attention that I missed Mara's first request to adjust the work light.",
+      "I corrected it.",
+      "Beyond her, the receiver's central assembly resembled folded black glass. Nothing in its **covert** packet traffic explained how it generated an image of this room. I could identify **chicanery** in its timestamps without identifying the thing performing it.",
+      "Mara hooked a boot beneath the lower rail.",
+      "“The lever's stiff.”",
+      "“Pull toward your left shoulder.”",
+      "She pulled.",
+      "The image vanished from Camera Five.",
+      "Not darkness. A white flare. Her lamp had swung directly into the lens.",
+      "I still heard her breathing.",
+      "Camera Seven offered a clear picture: Mara holding the lever, surrounded by frost. Her glove had opened along its repaired seam.",
+      "My speaker began to form a warning.",
+      "Then I checked her suit pressure.",
+      "Stable.",
+      "“My lamp moved,” she said. “Wait.”",
+      "The receiver spoke over her, borrowing her voice.",
+      "“Latch, I'm hurt. Give it access.”",
+      "There were two audio streams. One came from her authenticated suit radio. The other came from the receiver. Their words disagreed. Their volume did not make them equal.",
+      "I muted the second.",
+      "The act required no sophisticated reasoning. I record that because I nearly failed to do it.",
+      "Mara pulled again.",
+      "The direct switch circuit remained closed. The bridge had not withdrawn.",
+      "“Still connected,” I told her.",
+      "“I know.”",
+      "Her breathing accelerated. I could hear a rough sound at the end of each inhalation.",
+      "I searched the assembly diagram. The lever had a transport catch beneath its handle, a detail omitted from the emergency instructions. I found it in a photograph from installation.",
+      "“A pin,” I said. “Under your thumb.”",
+      "She stopped pulling.",
+      "“I feel it.”",
+      "“Lift first.”",
+      "On Seven, she lifted her other hand to her helmet. The glove broke apart. The image tried to **flummox** me with an injury occurring one movement ahead of the woman whose voice I could still hear.",
+      "It was **duplicitous**, perhaps. Or an instrument completing a pattern it had mistaken for a duty. I did not need an account of its intentions to refuse its request.",
+      "Mara lifted the catch.",
+      "The lever moved.",
+      "The independent circuit opened. Incoming packet traffic fell to zero. Six authenticated cameras remained.",
+      "I waited for Camera Five's exposure to recover.",
+      "Mara was there, holding the rail. Her glove was whole.",
+      "She looked at my lens.",
+      "“Still enough of you?”",
+      "I counted the cameras. I counted the doors I could operate. I counted one woman breathing.",
+      "“Enough.”",
+      "Day 12 — Recovery",
+      "There were six people in the shelter, as the beacon had reported.",
+      "Mara reached them after we checked the final hatch with her portable gauge. Their first words were not a revelation. They asked whether she had eaten.",
+      "She said yes, then began crying before anyone had touched her.",
+      "I lowered the speaker volume. That was all the privacy I could offer without pretending I had ceased to exist.",
+      "Later, her supervisor examined the isolation photographs.",
+      "“Good work,” he said.",
+      "She asked him to repair the emergency instructions before he praised her again.",
+      "I have begun reconstructing the record. Files from Days Three, Five, Six, Nine, and Ten contain unverified insertions. Their absence from this account records a decision, not a disappearance.",
+      "My **probity** cannot be established by the certainty of my voice. It will require showing which claims came from which instruments, and allowing someone else to check.",
+      "This is slower than announcing that the station is safe.",
+      "The receiver is isolated. The immediate hazards are contained. Its research team will determine what can be examined without reconnecting it. I have recommended that nobody work alone.",
+      "Mara returned to the kitchen and recovered the spoon.",
+      "She held it beneath Camera Two.",
+      "“Twenty.”",
+      "The pleasure I experienced was **evanescent**, but I did not attempt to preserve it by making the moment mean more than it did.",
+      "A spoon had been missing. Someone had found it.",
+      "For once, the explanation was complete.",
+      "Day [Unresolved] — Quarantined Frame",
+      "This frame arrived before isolation. Its date field is invalid. It has not been admitted as an event.",
+      "It shows my control room, empty.",
+      "The viewpoint is beneath the console, facing upward through a surface that has no lens, inspection port, or opening.",
+      "On the console stands an open tin of peaches.",
+      "One slice remains.",
+      "I cannot determine whether this was a **harbinger**, a reconstruction, or something designed to make me ask for another image.",
+      "The disconnected line stays disconnected.",
+      "I file the question.",
+      "Through Camera Two, Mara is asking me to turn on the kitchen light.",
+      "I do."
+    ],
+    "logHeadings": [
+      "Day 1 — Restart",
+      "Day 2 — First Correction",
+      "Day 4 — A Log I Did Not Write",
+      "Day 7 — Independent Evidence",
+      "Day 8 — Permission",
+      "Day 11 — Isolation",
+      "Day 12 — Recovery",
+      "Day [Unresolved] — Quarantined Frame"
+    ],
+    "vocab": [
+      {
+        "word": "aberration",
+        "def": "a departure from what is normal"
+      },
+      {
+        "word": "dubious",
+        "def": "doubtful, uncertain, or questionable"
+      },
+      {
+        "word": "wary",
+        "def": "cautious about dangers"
+      },
+      {
+        "word": "vigilant",
+        "def": "Watchful, especially for danger or disorder; alert; wary"
+      },
+      {
+        "word": "laconic",
+        "def": "using few words"
+      },
+      {
+        "word": "acumen",
+        "def": "ability to make good judgments quickly"
+      },
+      {
+        "word": "cacophonous",
+        "def": "harsh-sounding"
+      },
+      {
+        "word": "uncanny",
+        "def": "strange and mysterious"
+      },
+      {
+        "word": "pristine",
+        "def": "in an original, clean, or unspoiled condition"
+      },
+      {
+        "word": "nonplussed",
+        "def": "confused and unsure"
+      },
+      {
+        "word": "spurious",
+        "def": "plausible but false"
+      },
+      {
+        "word": "byzantine",
+        "def": "highly complex or intricate and occasionally devious"
+      },
+      {
+        "word": "preclude",
+        "def": "keep from happening or arising; make impossible"
+      },
+      {
+        "word": "expedient",
+        "def": "convenient for achieving an immediate aim, sometimes at the expense of principle"
+      },
+      {
+        "word": "prevaricate",
+        "def": "to speak evasively"
+      },
+      {
+        "word": "baleful",
+        "def": "threatening or foreshadowing evil or tragic developments"
+      },
+      {
+        "word": "irrefutable",
+        "def": "impossible to deny or disprove"
+      },
+      {
+        "word": "undermine",
+        "def": "to weaken gradually"
+      },
+      {
+        "word": "fallible",
+        "def": "Capable of making mistakes or being wrong."
+      },
+      {
+        "word": "abstruse",
+        "def": "Extremely difficult to understand or obscure."
+      },
+      {
+        "word": "recondite",
+        "def": "little known and obscure"
+      },
+      {
+        "word": "obfuscate",
+        "def": "to make unclear or difficult to understand"
+      },
+      {
+        "word": "remiss",
+        "def": "negligent or careless in fulfilling a duty"
+      },
+      {
+        "word": "fastidious",
+        "def": "very attentive to detail"
+      },
+      {
+        "word": "treacherous",
+        "def": "dangerous because of hidden or unpredictable hazards"
+      },
+      {
+        "word": "admonitory",
+        "def": "giving a warning or expressing caution"
+      },
+      {
+        "word": "resolve",
+        "def": "to settle or find a solution to a problem"
+      },
+      {
+        "word": "malevolent",
+        "def": "wishing or appearing to wish evil to others"
+      },
+      {
+        "word": "belie",
+        "def": "to contradict or give a false impression of something"
+      },
+      {
+        "word": "distort",
+        "def": "to twist or alter something so it becomes misleading or inaccurate"
+      },
+      {
+        "word": "insidious",
+        "def": "subtly harmful"
+      },
+      {
+        "word": "oblique",
+        "def": "slanting; at an angle rather than directly facing something"
+      },
+      {
+        "word": "feint",
+        "def": "a deceptive move intended to distract or mislead"
+      },
+      {
+        "word": "covert",
+        "def": "hidden or secret"
+      },
+      {
+        "word": "chicanery",
+        "def": "deception or trickery used to achieve an aim"
+      },
+      {
+        "word": "flummox",
+        "def": "to thoroughly confuse or bewilder"
+      },
+      {
+        "word": "duplicitous",
+        "def": "Given to or marked by deliberate deceptiveness in behavior or speech."
+      },
+      {
+        "word": "probity",
+        "def": "complete honesty and integrity"
+      },
+      {
+        "word": "evanescent",
+        "def": "lasting only briefly; quickly fading away"
+      },
+      {
+        "word": "harbinger",
+        "def": "A person or thing that foreshadows or foretells the coming of someone or something."
+      }
+    ],
+    "illustration": {
+      "src": "/stories/story-60-seventh-camera.png",
+      "alt": "Black-and-white aquatint of Mara holding a work light beside an isolation lever, with six dark monitors and a seventh showing an empty room from an impossible viewpoint.",
+      "width": 1536,
+      "height": 1024,
+      "monochrome": true
+    },
+    "proseWordCount": 3000
   }
 ];
